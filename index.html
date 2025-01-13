@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>The SeTT ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/net/sett/vocab#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/net/sett/vocab#","name":"The SeTT ontology", "headline":"The negative impact of human activities on our planet has increased the interest of stakeholders-from policymakers to citizens-in monitoring and understanding local changes, including both environmental and socio-economic factors. However, these data are often complex and challenging for non-experts to interpret. We introduce the SeTT (Semantic Trajectory of a Territorial Unit) ontology to describe the semantic trajectories of Territorial Units (TUs), making this information accessible to both expert and non-expert users.", "dateReleased":"October 2024", "version":"1.0", "license":"http://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"(1) Daniela Fernanda Milon-Flores"},{"@type":"Person","name":"(2) Camille Bernard"},{"@type":"Person","name":"(3) Jérôme Gensel"},{"@type":"Person","name":"(4) Gregory Giuliani"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The SeTT ontology</h1>
+<h2>Release: October 2024</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://purl.org/net/sett/vocab#1.0">http://purl.org/net/sett/vocab#1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://purl.org/net/sett/vocab#">http://purl.org/net/sett/vocab#</a></dd>
+<dt>Revision:</dt>
+<dd>1.0</dd>
+<dt>Authors:</dt>
+<dd>(1) Daniela Fernanda Milon-Flores</dd><dd>(2) Camille Bernard</dd><dd>(3) Jérôme Gensel</dd><dd>(4) Gregory Giuliani</dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://www.w3.org/2004/02/skos/core">core</a></dd>
+
+<dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Cite this vocabulary as Milon-Flores, D.; Bernard, C.; Gensel, J. and Giuliani, G. The SeTT ontology 1.0</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The negative impact of human activities on our planet has increased the interest of stakeholders-from policymakers to citizens-in monitoring and understanding local changes, including both environmental and socio-economic factors. However, these data are often complex and challenging for non-experts to interpret. We introduce the SeTT (Semantic Trajectory of a Territorial Unit) ontology to describe the semantic trajectories of Territorial Units (TUs), making this information accessible to both expert and non-expert users.</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The SeTT ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">
+         <span>Attribute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BEAST" title="http://purl.org/net/sett/vocab#BEAST">
+         <span>B E A S T</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BFAST" title="http://purl.org/net/sett/vocab#BFAST">
+         <span>B F A S T</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BreakPoint" title="http://purl.org/net/sett/vocab#BreakPoint">
+         <span>Break Point</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BreakpointMagnitude"
+         title="http://purl.org/net/sett/vocab#BreakpointMagnitude">Breakpoint Magnitude</a>
+   </li>
+   <li>
+      <a href="#BreakpointProbability"
+         title="http://purl.org/net/sett/vocab#BreakpointProbability">Breakpoint Probability</a>
+   </li>
+   <li>
+      <a href="#Component" title="http://purl.org/net/sett/vocab#Component">
+         <span>Component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Episode" title="http://purl.org/net/sett/vocab#Episode">
+         <span>Episode</span>
+      </a>
+   </li>
+   <li>
+      <a href="#EpisodeEndDate" title="http://purl.org/net/sett/vocab#EpisodeEndDate">Episode End Date</a>
+   </li>
+   <li>
+      <a href="#EpisodeStartDate" title="http://purl.org/net/sett/vocab#EpisodeStartDate">Episode Start Date</a>
+   </li>
+   <li>
+      <a href="#Event" title="http://purl.org/net/sett/vocab#Event">
+         <span>Event</span>
+      </a>
+   </li>
+   <li>
+      <a href="#EventDate" title="http://purl.org/net/sett/vocab#EventDate">Event Date</a>
+   </li>
+   <li>
+      <a href="#ExplanatoryFactor" title="http://purl.org/net/sett/vocab#ExplanatoryFactor">Explanatory Factor</a>
+   </li>
+   <li>
+      <a href="#ExternalAttributes"
+         title="http://purl.org/net/sett/vocab#ExternalAttributes">
+         <span>External Attributes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">
+         <span>Indicator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#InflexionPoint" title="http://purl.org/net/sett/vocab#InflexionPoint">
+         <span>Inflexion Point</span>
+      </a>
+   </li>
+   <li>
+      <a href="#InterruptionPoint" title="http://purl.org/net/sett/vocab#InterruptionPoint">
+         <span>Interruption Point</span>
+      </a>
+   </li>
+   <li>
+      <a href="#IntrinsicAttributes"
+         title="http://purl.org/net/sett/vocab#IntrinsicAttributes">
+         <span>Intrinsic Attributes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LinearRegression" title="http://purl.org/net/sett/vocab#LinearRegression">
+         <span>Linear Regression</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LinearSegment" title="http://purl.org/net/sett/vocab#LinearSegment">
+         <span>Linear Segment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LinearTrendGradualMagnitude"
+         title="http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude">Linear Trend Gradual Magnitude</a>
+   </li>
+   <li>
+      <a href="#LinearTrendPValue" title="http://purl.org/net/sett/vocab#LinearTrendPValue">Linear Trend p-value</a>
+   </li>
+   <li>
+      <a href="#NonLinearSegment" title="http://purl.org/net/sett/vocab#NonLinearSegment">
+         <span>Non Linear Segment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RawComponent" title="http://purl.org/net/sett/vocab#RawComponent">
+         <span>Raw Component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">
+         <span>Raw Trajectory</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RegimeChangePoint" title="http://purl.org/net/sett/vocab#RegimeChangePoint">
+         <span>Regime Change Point</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">
+         <span>Se T T</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SeasonalSegment" title="http://purl.org/net/sett/vocab#SeasonalSegment">
+         <span>Seasonal Segment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">
+         <span>Segment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SegmentDuration" title="http://purl.org/net/sett/vocab#SegmentDuration">Segment Duration</a>
+   </li>
+   <li>
+      <a href="#SegmentEndX" title="http://purl.org/net/sett/vocab#SegmentEndX">Segment End X</a>
+   </li>
+   <li>
+      <a href="#SegmentEndY" title="http://purl.org/net/sett/vocab#SegmentEndY">Segment End Y</a>
+   </li>
+   <li>
+      <a href="#SegmentStartX" title="http://purl.org/net/sett/vocab#SegmentStartX">Segment Start X</a>
+   </li>
+   <li>
+      <a href="#SegmentStartY" title="http://purl.org/net/sett/vocab#SegmentStartY">Segment Start Y</a>
+   </li>
+   <li>
+      <a href="#SegmentationMethod"
+         title="http://purl.org/net/sett/vocab#SegmentationMethod">
+         <span>Segmentation Method</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Slice" title="http://purl.org/net/sett/vocab#Slice">
+         <span>Slice</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SlopeDirection" title="http://purl.org/net/sett/vocab#SlopeDirection">Slope Direction</a>
+   </li>
+   <li>
+      <a href="#SlopeIntercept" title="http://purl.org/net/sett/vocab#SlopeIntercept">Slope Intercept</a>
+   </li>
+   <li>
+      <a href="#SlopeMagnitude" title="http://purl.org/net/sett/vocab#SlopeMagnitude">Slope Magnitude</a>
+   </li>
+   <li>
+      <a href="#StateSegment" title="http://purl.org/net/sett/vocab#StateSegment">
+         <span>State Segment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StructuredComponent"
+         title="http://purl.org/net/sett/vocab#StructuredComponent">
+         <span>Structured Component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StructuredTrajectory"
+         title="http://purl.org/net/sett/vocab#StructuredTrajectory">
+         <span>Structured Trajectory</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">
+         <span>Territorial Unit</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ThematicComponent"
+         title="http://purl.org/net/sett/vocab#ThematicComponent">
+         <span>Thematic Component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ThematicTrajectory"
+         title="http://purl.org/net/sett/vocab#ThematicTrajectory">
+         <span>Thematic Trajectory</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">
+         <span>Theme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">
+         <span>Transition Point</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TransitionPointDetectionMethod"
+         title="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod">
+         <span>Transition Point Detection Method</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TransitionPointX" title="http://purl.org/net/sett/vocab#TransitionPointX">Transition Point X</a>
+   </li>
+   <li>
+      <a href="#TransitionPointY" title="http://purl.org/net/sett/vocab#TransitionPointY">Transition Point Y</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#calculatedUsingSegmentMethod"
+         title="http://purl.org/net/sett/vocab#calculatedUsingSegmentMethod">
+         <span>calculated Using Segment Method</span>
+      </a>
+   </li>
+   <li>
+      <a href="#calculatedUsingTransitionPointMethod"
+         title="http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod">
+         <span>calculated Using Transition Point Method</span>
+      </a>
+   </li>
+   <li>
+      <a href="#episodeIsAnnotatedFrom"
+         title="http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom">
+         <span>episode Is Annotated From</span>
+      </a>
+   </li>
+   <li>
+      <a href="#eventIsAnnotatedFrom"
+         title="http://purl.org/net/sett/vocab#eventIsAnnotatedFrom">
+         <span>event Is Annotated From</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasAttribute" title="http://purl.org/net/sett/vocab#hasAttribute">
+         <span>has Attribute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasEpisode" title="http://purl.org/net/sett/vocab#hasEpisode">
+         <span>has Episode</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasEvent" title="http://purl.org/net/sett/vocab#hasEvent">
+         <span>has Event</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasExternalAttribute"
+         title="http://purl.org/net/sett/vocab#hasExternalAttribute">
+         <span>has External Attribute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasFocusOn" title="http://purl.org/net/sett/vocab#hasFocusOn">
+         <span>has Focus On</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasIntrinsicAttribute"
+         title="http://purl.org/net/sett/vocab#hasIntrinsicAttribute">
+         <span>has Intrinsic Attribute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSeTT" title="http://purl.org/net/sett/vocab#hasSeTT">
+         <span>has Se T T</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSegment" title="http://purl.org/net/sett/vocab#hasSegment">
+         <span>has Segment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSemanticAnnotation"
+         title="http://purl.org/net/sett/vocab#hasSemanticAnnotation">
+         <span>has Semantic Annotation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSlice" title="http://purl.org/net/sett/vocab#hasSlice">
+         <span>has Slice</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSubIndicator" title="http://purl.org/net/sett/vocab#hasSubIndicator">
+         <span>has Sub Indicator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasThematicTrajectory"
+         title="http://purl.org/net/sett/vocab#hasThematicTrajectory">
+         <span>has Thematic Trajectory</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasTheme" title="http://purl.org/net/sett/vocab#hasTheme">
+         <span>has Theme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasTransitionPoint"
+         title="http://purl.org/net/sett/vocab#hasTransitionPoint">
+         <span>has Transition Point</span>
+      </a>
+   </li>
+   <li>
+      <a href="#indicatorMonitoredBy"
+         title="http://purl.org/net/sett/vocab#indicatorMonitoredBy">
+         <span>indicator Monitored By</span>
+      </a>
+   </li>
+   <li>
+      <a href="#IsEventOf" title="http://purl.org/net/sett/vocab#IsEventOf">
+         <span>Is Event Of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isExternalAttributeOf"
+         title="http://purl.org/net/sett/vocab#isExternalAttributeOf">
+         <span>is External Attribute Of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isIntrinsicAttributeOf"
+         title="http://purl.org/net/sett/vocab#isIntrinsicAttributeOf">
+         <span>is Intrinsic Attribute Of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#monitorsIndicator" title="http://purl.org/net/sett/vocab#monitorsIndicator">
+         <span>monitors Indicator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#segmentIsCalculadedFrom"
+         title="http://purl.org/net/sett/vocab#segmentIsCalculadedFrom">
+         <span>segment Is Calculaded From</span>
+      </a>
+   </li>
+   <li>
+      <a href="#semanticAnnotationBasedOnAttribute"
+         title="http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute">
+         <span>semantic Annotation Based On Attribute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sliceDelimitedBy" title="http://purl.org/net/sett/vocab#sliceDelimitedBy">
+         <span>slice Delimited By</span>
+      </a>
+   </li>
+   <li>
+      <a href="#transitionPointDelimitSlice"
+         title="http://purl.org/net/sett/vocab#transitionPointDelimitSlice">
+         <span>transition Point Delimit Slice</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasAttributeValue" title="http://purl.org/net/sett/vocab#hasAttributeValue">
+         <span>has Attribute Value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasSequenceOrder" title="http://purl.org/net/sett/vocab#hasSequenceOrder">
+         <span>has Sequence Order</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The SeTT ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">SeTT is a multi-layer ontology specifically designed to describe the semantic trajectories of Territorial Units (TUs). It models three types of trajectories: raw, structured, and semantic. Together, these trajectories create a comprehensive framework for capturing, organizing, and analyzing the evolution of TUs across various thematic domains, thereby improving users' ability to interpret and understand complex data.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for The SeTT ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The SeTT ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute"> <span>Attribute</span> </a></li>
+  <li><a href="#BEAST" title="http://purl.org/net/sett/vocab#BEAST"> <span>B E A S T</span> </a></li>
+  <li><a href="#BFAST" title="http://purl.org/net/sett/vocab#BFAST"> <span>B F A S T</span> </a></li>
+  <li><a href="#BreakPoint" title="http://purl.org/net/sett/vocab#BreakPoint"> <span>Break Point</span> </a></li>
+  <li><a href="#BreakpointMagnitude" title="http://purl.org/net/sett/vocab#BreakpointMagnitude">Breakpoint Magnitude</a></li>
+  <li><a href="#BreakpointProbability" title="http://purl.org/net/sett/vocab#BreakpointProbability">Breakpoint Probability</a></li>
+  <li><a href="#Component" title="http://purl.org/net/sett/vocab#Component"> <span>Component</span> </a></li>
+  <li><a href="#Episode" title="http://purl.org/net/sett/vocab#Episode"> <span>Episode</span> </a></li>
+  <li><a href="#EpisodeEndDate" title="http://purl.org/net/sett/vocab#EpisodeEndDate">Episode End Date</a></li>
+  <li><a href="#EpisodeStartDate" title="http://purl.org/net/sett/vocab#EpisodeStartDate">Episode Start Date</a></li>
+  <li><a href="#Event" title="http://purl.org/net/sett/vocab#Event"> <span>Event</span> </a></li>
+  <li><a href="#EventDate" title="http://purl.org/net/sett/vocab#EventDate">Event Date</a></li>
+  <li><a href="#ExplanatoryFactor" title="http://purl.org/net/sett/vocab#ExplanatoryFactor">Explanatory Factor</a></li>
+  <li><a href="#ExternalAttributes" title="http://purl.org/net/sett/vocab#ExternalAttributes"> <span>External Attributes</span> </a></li>
+  <li><a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator"> <span>Indicator</span> </a></li>
+  <li><a href="#InflexionPoint" title="http://purl.org/net/sett/vocab#InflexionPoint"> <span>Inflexion Point</span> </a></li>
+  <li><a href="#InterruptionPoint" title="http://purl.org/net/sett/vocab#InterruptionPoint"> <span>Interruption Point</span> </a></li>
+  <li><a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes"> <span>Intrinsic Attributes</span> </a></li>
+  <li><a href="#LinearRegression" title="http://purl.org/net/sett/vocab#LinearRegression"> <span>Linear Regression</span> </a></li>
+  <li><a href="#LinearSegment" title="http://purl.org/net/sett/vocab#LinearSegment"> <span>Linear Segment</span> </a></li>
+  <li><a href="#LinearTrendGradualMagnitude" title="http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude">Linear Trend Gradual Magnitude</a></li>
+  <li><a href="#LinearTrendPValue" title="http://purl.org/net/sett/vocab#LinearTrendPValue">Linear Trend p-value</a></li>
+  <li><a href="#NonLinearSegment" title="http://purl.org/net/sett/vocab#NonLinearSegment"> <span>Non Linear Segment</span> </a></li>
+  <li><a href="#RawComponent" title="http://purl.org/net/sett/vocab#RawComponent"> <span>Raw Component</span> </a></li>
+  <li><a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory"> <span>Raw Trajectory</span> </a></li>
+  <li><a href="#RegimeChangePoint" title="http://purl.org/net/sett/vocab#RegimeChangePoint"> <span>Regime Change Point</span> </a></li>
+  <li><a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT"> <span>Se T T</span> </a></li>
+  <li><a href="#SeasonalSegment" title="http://purl.org/net/sett/vocab#SeasonalSegment"> <span>Seasonal Segment</span> </a></li>
+  <li><a href="#Segment" title="http://purl.org/net/sett/vocab#Segment"> <span>Segment</span> </a></li>
+  <li><a href="#SegmentDuration" title="http://purl.org/net/sett/vocab#SegmentDuration">Segment Duration</a></li>
+  <li><a href="#SegmentEndX" title="http://purl.org/net/sett/vocab#SegmentEndX">Segment End X</a></li>
+  <li><a href="#SegmentEndY" title="http://purl.org/net/sett/vocab#SegmentEndY">Segment End Y</a></li>
+  <li><a href="#SegmentStartX" title="http://purl.org/net/sett/vocab#SegmentStartX">Segment Start X</a></li>
+  <li><a href="#SegmentStartY" title="http://purl.org/net/sett/vocab#SegmentStartY">Segment Start Y</a></li>
+  <li><a href="#SegmentationMethod" title="http://purl.org/net/sett/vocab#SegmentationMethod"> <span>Segmentation Method</span> </a></li>
+  <li><a href="#Slice" title="http://purl.org/net/sett/vocab#Slice"> <span>Slice</span> </a></li>
+  <li><a href="#SlopeDirection" title="http://purl.org/net/sett/vocab#SlopeDirection">Slope Direction</a></li>
+  <li><a href="#SlopeIntercept" title="http://purl.org/net/sett/vocab#SlopeIntercept">Slope Intercept</a></li>
+  <li><a href="#SlopeMagnitude" title="http://purl.org/net/sett/vocab#SlopeMagnitude">Slope Magnitude</a></li>
+  <li><a href="#StateSegment" title="http://purl.org/net/sett/vocab#StateSegment"> <span>State Segment</span> </a></li>
+  <li><a href="#StructuredComponent" title="http://purl.org/net/sett/vocab#StructuredComponent"> <span>Structured Component</span> </a></li>
+  <li><a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory"> <span>Structured Trajectory</span> </a></li>
+  <li><a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit"> <span>Territorial Unit</span> </a></li>
+  <li><a href="#ThematicComponent" title="http://purl.org/net/sett/vocab#ThematicComponent"> <span>Thematic Component</span> </a></li>
+  <li><a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory"> <span>Thematic Trajectory</span> </a></li>
+  <li><a href="#Theme" title="http://purl.org/net/sett/vocab#Theme"> <span>Theme</span> </a></li>
+  <li><a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint"> <span>Transition Point</span> </a></li>
+  <li><a href="#TransitionPointDetectionMethod" title="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"> <span>Transition Point Detection Method</span> </a></li>
+  <li><a href="#TransitionPointX" title="http://purl.org/net/sett/vocab#TransitionPointX">Transition Point X</a></li>
+  <li><a href="#TransitionPointY" title="http://purl.org/net/sett/vocab#TransitionPointY">Transition Point Y</a></li>
+ </ul>
+ <div class="entity" id="Attribute">
+  <h3>Attribute<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#Attribute</p>
+  <div class="comment">
+   <span class="markdown">Trajectory components have Attributes that enhance their descriptions. The value of an Attribute is flexible enough to represent various literal values regardless of the context.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ExternalAttributes" title="http://purl.org/net/sett/vocab#ExternalAttributes">External Attributes</a> <sup class="type-c" title="class">c</sup>, <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAttributeValue" title="http://purl.org/net/sett/vocab#hasAttributeValue">has Attribute Value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAttribute" title="http://purl.org/net/sett/vocab#hasAttribute">has Attribute</a> <sup class="type-op" title="object property">op</sup>, <a href="#semanticAnnotationBasedOnAttribute" title="http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute">semantic Annotation Based On Attribute</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">Territorial Unit</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BEAST">
+  <h3>B E A S T<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#BEAST</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SegmentationMethod" title="http://purl.org/net/sett/vocab#SegmentationMethod">Segmentation Method</a> <sup class="type-c" title="class">c</sup>, <a href="#TransitionPointDetectionMethod" title="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod">Transition Point Detection Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BFAST">
+  <h3>B F A S T<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#BFAST</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SegmentationMethod" title="http://purl.org/net/sett/vocab#SegmentationMethod">Segmentation Method</a> <sup class="type-c" title="class">c</sup>, <a href="#TransitionPointDetectionMethod" title="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod">Transition Point Detection Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BreakPoint">
+  <h3>Break Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#BreakPoint</p>
+  <div class="comment">
+   <span class="markdown">A Breakpoint is a specific type of Transition Point (TP) defined as a moment in time when an abrupt change occurs in a time series. It is used to annotate an Event.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">Transition Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#InflexionPoint" title="http://purl.org/net/sett/vocab#InflexionPoint">Inflexion Point</a> <sup class="type-c" title="class">c</sup>, <a href="#InterruptionPoint" title="http://purl.org/net/sett/vocab#InterruptionPoint">Interruption Point</a> <sup class="type-c" title="class">c</sup>, <a href="#RegimeChangePoint" title="http://purl.org/net/sett/vocab#RegimeChangePoint">Regime Change Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BreakpointMagnitude">
+  <h3>Breakpoint Magnitude<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#BreakpointMagnitude</p>
+  <div class="comment">
+   <span class="markdown">A Breakpoint Magnitude is a specific type of External Attribute that quantifies the change at a Breakpoint. It is calculated as the distance between the Breakpoint and its subsequent point in time.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalAttributes" title="http://purl.org/net/sett/vocab#ExternalAttributes">External Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BreakpointProbability">
+  <h3>Breakpoint Probability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#BreakpointProbability</p>
+  <div class="comment">
+   <span class="markdown">BreakpointProbability is a specific type of External Attribute that indicates the likelihood of a Breakpoint occurring based on statistical analysis.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalAttributes" title="http://purl.org/net/sett/vocab#ExternalAttributes">External Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Component">
+  <h3>Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#Component</p>
+  <div class="comment">
+   <span class="markdown">Trajectories consist of Components, each defined by its position in the sequence, the algorithm used for its calculation, and a set of Attributes that enrich its description. In the SeTT ontology, there are three types of components: thematic, structured, and raw.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#RawComponent" title="http://purl.org/net/sett/vocab#RawComponent">Raw Component</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredComponent" title="http://purl.org/net/sett/vocab#StructuredComponent">Structured Component</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicComponent" title="http://purl.org/net/sett/vocab#ThematicComponent">Thematic Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAttribute" title="http://purl.org/net/sett/vocab#hasAttribute">has Attribute</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasExternalAttribute" title="http://purl.org/net/sett/vocab#hasExternalAttribute">has External Attribute</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIntrinsicAttribute" title="http://purl.org/net/sett/vocab#hasIntrinsicAttribute">has Intrinsic Attribute</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSequenceOrder" title="http://purl.org/net/sett/vocab#hasSequenceOrder">has Sequence Order</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>, <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">Territorial Unit</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Episode">
+  <h3>Episode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#Episode</p>
+  <div class="comment">
+   <span class="markdown">An Episode is a component of the Thematic Trajectory, derived from the semantic annotation of its corresponding Segment within a Structured Trajectory. Each Episode is defined by its position in the trajectory sequence and characterized by semantic annotations that provide context for interpreting the trajectory's behavior. A set of attributes further enriches its contextual information. An Episode period culminates when an Event occurs, marking a discontinuity between Episodes.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ThematicComponent" title="http://purl.org/net/sett/vocab#ThematicComponent">Thematic Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#episodeIsAnnotatedFrom" title="http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom">episode Is Annotated From</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEpisode" title="http://purl.org/net/sett/vocab#hasEpisode">has Episode</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Event" title="http://purl.org/net/sett/vocab#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EpisodeEndDate">
+  <h3>Episode End Date<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#EpisodeEndDate</p>
+  <div class="comment">
+   <span class="markdown">Episode End Date is a specific type of Intrinsic Attribute that indicates the date when an Episode concludes.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EpisodeStartDate">
+  <h3>Episode Start Date<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#EpisodeStartDate</p>
+  <div class="comment">
+   <span class="markdown">Episode Start Date is a specific type of Intrinsic Attribute that marks the date when an Episode begins.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#Event</p>
+  <div class="comment">
+   <span class="markdown">An Event is a component of a Thematic Trajectory, derived from the semantic annotation of a Transition Point within a Structured Trajectory. Each Event is defined by its position in the trajectory and comprises semantic annotations and attributes that provide context and enhance the interpretation of the Thematic Trajectory's behavior. Unlike Episodes, Events have an instantaneous duration and signify the discontinuity between Episodes.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ThematicComponent" title="http://purl.org/net/sett/vocab#ThematicComponent">Thematic Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#eventIsAnnotatedFrom" title="http://purl.org/net/sett/vocab#eventIsAnnotatedFrom">event Is Annotated From</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEvent" title="http://purl.org/net/sett/vocab#hasEvent">has Event</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Episode" title="http://purl.org/net/sett/vocab#Episode">Episode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EventDate">
+  <h3>Event Date<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#EventDate</p>
+  <div class="comment">
+   <span class="markdown">Event Date is a specific type of Intrinsic Attribute that specifies the date when an Event occurred.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExplanatoryFactor">
+  <h3>Explanatory Factor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#ExplanatoryFactor</p>
+  <div class="comment">
+   <span class="markdown">Explanatory Factors are a specific type of External Attribute that provides additional context regarding the occurrence of a Transition Point such as a Breakpoint. Various resources, such as available URLs or bibliographic citations, can be used to enrich the Event.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalAttributes" title="http://purl.org/net/sett/vocab#ExternalAttributes">External Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExternalAttributes">
+  <h3>External Attributes<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#ExternalAttributes</p>
+  <div class="comment">
+   <span class="markdown">An external attribute is an optional or supplementary characteristic that enhances the description of a component. These attributes may be added by expert users or derived from specific methods. For instance, the p-value is an external attribute derived from applying the linear regression method.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BreakpointMagnitude" title="http://purl.org/net/sett/vocab#BreakpointMagnitude">Breakpoint Magnitude</a> <sup class="type-c" title="class">c</sup>, <a href="#BreakpointProbability" title="http://purl.org/net/sett/vocab#BreakpointProbability">Breakpoint Probability</a> <sup class="type-c" title="class">c</sup>, <a href="#ExplanatoryFactor" title="http://purl.org/net/sett/vocab#ExplanatoryFactor">Explanatory Factor</a> <sup class="type-c" title="class">c</sup>, <a href="#LinearTrendGradualMagnitude" title="http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude">Linear Trend Gradual Magnitude</a> <sup class="type-c" title="class">c</sup>, <a href="#LinearTrendPValue" title="http://purl.org/net/sett/vocab#LinearTrendPValue">Linear Trend p-value</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasExternalAttribute" title="http://purl.org/net/sett/vocab#hasExternalAttribute">has External Attribute</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Indicator">
+  <h3>Indicator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#Indicator</p>
+  <div class="comment">
+   <span class="markdown">An Indicator is defined as a quantitative measure that captures the status of a situation or its variations over time. In the context of a Raw trajectory, it represents the data being monitored. The concept of an Indicator is sufficiently abstract to encompass various domains, including environmental and socio-economic. Indicators correspond to the Indicator dimension of the RDF Data Cube and can exist as standalone measures or be composed of other indicators. Indicators can be further enriched with metadata such as bibliography citations, formula descriptions, and open-linked data resources.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasSubIndicator" title="http://purl.org/net/sett/vocab#hasSubIndicator">has Sub Indicator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSubIndicator" title="http://purl.org/net/sett/vocab#hasSubIndicator">has Sub Indicator</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitorsIndicator" title="http://purl.org/net/sett/vocab#monitorsIndicator">monitors Indicator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>, <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>, <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">Territorial Unit</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InflexionPoint">
+  <h3>Inflexion Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#InflexionPoint</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">Transition Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BreakPoint" title="http://purl.org/net/sett/vocab#BreakPoint">Break Point</a> <sup class="type-c" title="class">c</sup>, <a href="#InterruptionPoint" title="http://purl.org/net/sett/vocab#InterruptionPoint">Interruption Point</a> <sup class="type-c" title="class">c</sup>, <a href="#RegimeChangePoint" title="http://purl.org/net/sett/vocab#RegimeChangePoint">Regime Change Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InterruptionPoint">
+  <h3>Interruption Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#InterruptionPoint</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">Transition Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BreakPoint" title="http://purl.org/net/sett/vocab#BreakPoint">Break Point</a> <sup class="type-c" title="class">c</sup>, <a href="#InflexionPoint" title="http://purl.org/net/sett/vocab#InflexionPoint">Inflexion Point</a> <sup class="type-c" title="class">c</sup>, <a href="#RegimeChangePoint" title="http://purl.org/net/sett/vocab#RegimeChangePoint">Regime Change Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntrinsicAttributes">
+  <h3>Intrinsic Attributes<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#IntrinsicAttributes</p>
+  <div class="comment">
+   <span class="markdown">An intrinsic attribute is inherent to the component's nature. For example, in a linear segment, attributes such as the start and end points, as well as the slope, are considered intrinsic because they are essential for defining the segment.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#EpisodeEndDate" title="http://purl.org/net/sett/vocab#EpisodeEndDate">Episode End Date</a> <sup class="type-c" title="class">c</sup>, <a href="#EpisodeStartDate" title="http://purl.org/net/sett/vocab#EpisodeStartDate">Episode Start Date</a> <sup class="type-c" title="class">c</sup>, <a href="#EventDate" title="http://purl.org/net/sett/vocab#EventDate">Event Date</a> <sup class="type-c" title="class">c</sup>, <a href="#SegmentDuration" title="http://purl.org/net/sett/vocab#SegmentDuration">Segment Duration</a> <sup class="type-c" title="class">c</sup>, <a href="#SegmentEndX" title="http://purl.org/net/sett/vocab#SegmentEndX">Segment End X</a> <sup class="type-c" title="class">c</sup>, <a href="#SegmentEndY" title="http://purl.org/net/sett/vocab#SegmentEndY">Segment End Y</a> <sup class="type-c" title="class">c</sup>, <a href="#SegmentStartX" title="http://purl.org/net/sett/vocab#SegmentStartX">Segment Start X</a> <sup class="type-c" title="class">c</sup>, <a href="#SegmentStartY" title="http://purl.org/net/sett/vocab#SegmentStartY">Segment Start Y</a> <sup class="type-c" title="class">c</sup>, <a href="#SlopeDirection" title="http://purl.org/net/sett/vocab#SlopeDirection">Slope Direction</a> <sup class="type-c" title="class">c</sup>, <a href="#SlopeIntercept" title="http://purl.org/net/sett/vocab#SlopeIntercept">Slope Intercept</a> <sup class="type-c" title="class">c</sup>, <a href="#SlopeMagnitude" title="http://purl.org/net/sett/vocab#SlopeMagnitude">Slope Magnitude</a> <sup class="type-c" title="class">c</sup>, <a href="#TransitionPointX" title="http://purl.org/net/sett/vocab#TransitionPointX">Transition Point X</a> <sup class="type-c" title="class">c</sup>, <a href="#TransitionPointY" title="http://purl.org/net/sett/vocab#TransitionPointY">Transition Point Y</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasIntrinsicAttribute" title="http://purl.org/net/sett/vocab#hasIntrinsicAttribute">has Intrinsic Attribute</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ExternalAttributes" title="http://purl.org/net/sett/vocab#ExternalAttributes">External Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LinearRegression">
+  <h3>Linear Regression<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#LinearRegression</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SegmentationMethod" title="http://purl.org/net/sett/vocab#SegmentationMethod">Segmentation Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LinearSegment">
+  <h3>Linear Segment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#LinearSegment</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#NonLinearSegment" title="http://purl.org/net/sett/vocab#NonLinearSegment">Non Linear Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#SeasonalSegment" title="http://purl.org/net/sett/vocab#SeasonalSegment">Seasonal Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#StateSegment" title="http://purl.org/net/sett/vocab#StateSegment">State Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LinearTrendGradualMagnitude">
+  <h3>Linear Trend Gradual Magnitude<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude</p>
+  <div class="comment">
+   <span class="markdown">A Gradual Magnitude is a specific type of External Attribute that describes the magnitude of change within a Linear Trend. It is calculated by multiplying the Intrinsic attributes Slope magnitude and Segment duration.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalAttributes" title="http://purl.org/net/sett/vocab#ExternalAttributes">External Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LinearTrendPValue">
+  <h3>Linear Trend p-value<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#LinearTrendPValue</p>
+  <div class="comment">
+   <span class="markdown">A p-value is a specific type of External Attribute that indicates the statistical significance of a Trend line.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalAttributes" title="http://purl.org/net/sett/vocab#ExternalAttributes">External Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NonLinearSegment">
+  <h3>Non Linear Segment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#NonLinearSegment</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#LinearSegment" title="http://purl.org/net/sett/vocab#LinearSegment">Linear Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#SeasonalSegment" title="http://purl.org/net/sett/vocab#SeasonalSegment">Seasonal Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#StateSegment" title="http://purl.org/net/sett/vocab#StateSegment">State Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RawComponent">
+  <h3>Raw Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#RawComponent</p>
+  <div class="comment">
+   <span class="markdown">A Raw Component is a type of Component used to form a Raw trajectory.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Slice" title="http://purl.org/net/sett/vocab#Slice">Slice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#StructuredComponent" title="http://purl.org/net/sett/vocab#StructuredComponent">Structured Component</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicComponent" title="http://purl.org/net/sett/vocab#ThematicComponent">Thematic Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RawTrajectory">
+  <h3>Raw Trajectory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#RawTrajectory</p>
+  <div class="comment">
+   <span class="markdown">A raw trajectory, or simply a trajectory, of Territorial Units (TUs) refers to a sequence of chronologically ordered measurements, tracking the temporal changes of domain-specific indicators. To efficiently manage large volumes of data, the Indicator measurements are represented as Observations using the RDF Data Cube vocabulary, structured across three dimensions: Time, Space, and Indicator. Pre-calculated Slices are then employed to store these Observations, each fixed over a defined period.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasSlice" title="http://purl.org/net/sett/vocab#hasSlice">has Slice</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitorsIndicator" title="http://purl.org/net/sett/vocab#monitorsIndicator">monitors Indicator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>, <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">Territorial Unit</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RegimeChangePoint">
+  <h3>Regime Change Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#RegimeChangePoint</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">Transition Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#BreakPoint" title="http://purl.org/net/sett/vocab#BreakPoint">Break Point</a> <sup class="type-c" title="class">c</sup>, <a href="#InflexionPoint" title="http://purl.org/net/sett/vocab#InflexionPoint">Inflexion Point</a> <sup class="type-c" title="class">c</sup>, <a href="#InterruptionPoint" title="http://purl.org/net/sett/vocab#InterruptionPoint">Interruption Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SeTT">
+  <h3>Se T T<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SeTT</p>
+  <div class="comment">
+   <span class="markdown">The Semantic Trajectory of a Territorial Unit (SeTT) represents the collection of Thematic Trajectories associated with a Territorial Unit (TU). It is sufficiently abstract to contain Thematic Trajectories regardless of their Thematic domain. A Territorial Unit (TU) can be composed of one ore multiple SeTTs.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasFocusOn" title="http://purl.org/net/sett/vocab#hasFocusOn">has Focus On</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasThematicTrajectory" title="http://purl.org/net/sett/vocab#hasThematicTrajectory">has Thematic Trajectory</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSeTT" title="http://purl.org/net/sett/vocab#hasSeTT">has Se T T</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>, <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">Territorial Unit</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SeasonalSegment">
+  <h3>Seasonal Segment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SeasonalSegment</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#LinearSegment" title="http://purl.org/net/sett/vocab#LinearSegment">Linear Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#NonLinearSegment" title="http://purl.org/net/sett/vocab#NonLinearSegment">Non Linear Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#StateSegment" title="http://purl.org/net/sett/vocab#StateSegment">State Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Segment">
+  <h3>Segment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#Segment</p>
+  <div class="comment">
+   <span class="markdown">A Segment is a component of a Structured Trajectory, calculated from its corresponding Slice within a Raw Trajectory. Each Segment is characterized by its position in the trajectory, along with intrinsic and external attributes that provide detailed information about the Segment's properties and behavior of the data. The Segment period culminates when a Transition Point occurs, marking a discontinuity between Segments.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuredComponent" title="http://purl.org/net/sett/vocab#StructuredComponent">Structured Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#LinearSegment" title="http://purl.org/net/sett/vocab#LinearSegment">Linear Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#NonLinearSegment" title="http://purl.org/net/sett/vocab#NonLinearSegment">Non Linear Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#SeasonalSegment" title="http://purl.org/net/sett/vocab#SeasonalSegment">Seasonal Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#StateSegment" title="http://purl.org/net/sett/vocab#StateSegment">State Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#segmentIsCalculadedFrom" title="http://purl.org/net/sett/vocab#segmentIsCalculadedFrom">segment Is Calculaded From</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#episodeIsAnnotatedFrom" title="http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom">episode Is Annotated From</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSegment" title="http://purl.org/net/sett/vocab#hasSegment">has Segment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">Transition Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SegmentDuration">
+  <h3>Segment Duration<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SegmentDuration</p>
+  <div class="comment">
+   <span class="markdown">Segment Duration is a specific type of Intrinsic Attribute that indicates the length of time over which a Segment is observed.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SegmentEndX">
+  <h3>Segment End X<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SegmentEndX</p>
+  <div class="comment">
+   <span class="markdown">SegmentEndX is a specific type of Intrinsic Attribute that specifies the x-coordinate at the conclusion of a Segment.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SegmentEndY">
+  <h3>Segment End Y<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SegmentEndY</p>
+  <div class="comment">
+   <span class="markdown">Segment End Y is a specific type of Intrinsic Attribute that specifies the y-coordinate at the conclusion of a Segment.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SegmentStartX">
+  <h3>Segment Start X<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SegmentStartX</p>
+  <div class="comment">
+   <span class="markdown">Segment Start X is a specific type of Intrinsic Attribute that indicates the x-coordinate at the beginning of a Segment.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SegmentStartY">
+  <h3>Segment Start Y<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SegmentStartY</p>
+  <div class="comment">
+   <span class="markdown">Segment Start Y is a specific type of Intrinsic Attribute that indicates the y-coordinate at the beginning of a Segment.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SegmentationMethod">
+  <h3>Segmentation Method<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SegmentationMethod</p>
+  <div class="comment">
+   <span class="markdown">A computational process is used to organize a raw trajectory into distinct segments. Examples of segmentation methods are BFAST (Breaks for Additive Season and Trend), BEAST (Bayesian Ensemble Algorithm for Change-Point Detection and Time Series Decomposition), and Linear Regression.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BEAST" title="http://purl.org/net/sett/vocab#BEAST">B E A S T</a> <sup class="type-c" title="class">c</sup>, <a href="#BFAST" title="http://purl.org/net/sett/vocab#BFAST">B F A S T</a> <sup class="type-c" title="class">c</sup>, <a href="#LinearRegression" title="http://purl.org/net/sett/vocab#LinearRegression">Linear Regression</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#calculatedUsingSegmentMethod" title="http://purl.org/net/sett/vocab#calculatedUsingSegmentMethod">calculated Using Segment Method</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Slice">
+  <h3>Slice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#Slice</p>
+  <div class="comment">
+   <span class="markdown">Pre-calculated Slices are components of the Raw trajectory which offers an efficient method for storing data, originally organized in RDF data cubes across the dimensions of Space, Time, and Indicator. The detected Transition Points define each slice time period. Importantly, Slices are used to calculate the Segment component within the Structured trajectory.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#RawComponent" title="http://purl.org/net/sett/vocab#RawComponent">Raw Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSlice" title="http://purl.org/net/sett/vocab#hasSlice">has Slice</a> <sup class="type-op" title="object property">op</sup>, <a href="#segmentIsCalculadedFrom" title="http://purl.org/net/sett/vocab#segmentIsCalculadedFrom">segment Is Calculaded From</a> <sup class="type-op" title="object property">op</sup>, <a href="#transitionPointDelimitSlice" title="http://purl.org/net/sett/vocab#transitionPointDelimitSlice">transition Point Delimit Slice</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SlopeDirection">
+  <h3>Slope Direction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SlopeDirection</p>
+  <div class="comment">
+   <span class="markdown">Slope Direction is a specific type of Intrinsic Attribute that describes the direction of the slope within a Trend Segment, indicating whether it is increasing or decreasing.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SlopeIntercept">
+  <h3>Slope Intercept<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SlopeIntercept</p>
+  <div class="comment">
+   <span class="markdown">Slope Intercept is a specific type of Intrinsic Attribute. In the context of a linear trend, the Slope Intercept is the y-value at which the trend line intersects the y-axis when the x-value is zero.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SlopeMagnitude">
+  <h3>Slope Magnitude<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#SlopeMagnitude</p>
+  <div class="comment">
+   <span class="markdown">The slope magnitude is a specific type of intrinsic attribute that represents the absolute numerical value of the slope.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StateSegment">
+  <h3>State Segment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#StateSegment</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#LinearSegment" title="http://purl.org/net/sett/vocab#LinearSegment">Linear Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#NonLinearSegment" title="http://purl.org/net/sett/vocab#NonLinearSegment">Non Linear Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#SeasonalSegment" title="http://purl.org/net/sett/vocab#SeasonalSegment">Seasonal Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StructuredComponent">
+  <h3>Structured Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#StructuredComponent</p>
+  <div class="comment">
+   <span class="markdown">A Structured Component is a type of Component used to form a Structured trajectory.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">Segment</a> <sup class="type-c" title="class">c</sup>, <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">Transition Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#RawComponent" title="http://purl.org/net/sett/vocab#RawComponent">Raw Component</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicComponent" title="http://purl.org/net/sett/vocab#ThematicComponent">Thematic Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StructuredTrajectory">
+  <h3>Structured Trajectory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#StructuredTrajectory</p>
+  <div class="comment">
+   <span class="markdown">A Structured trajectory results from organizing a Raw trajectory into a more structured format. It alternates between a chronologically ordered sequence of Segments and Transition Points, always concluding with a Segment. If no Transition Point is detected, the Structured Trajectory consists solely of a single Segment, indicating no transitional changes within the sequence.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#calculatedUsingSegmentMethod" title="http://purl.org/net/sett/vocab#calculatedUsingSegmentMethod">calculated Using Segment Method</a> <sup class="type-op" title="object property">op</sup>, <a href="#calculatedUsingTransitionPointMethod" title="http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod">calculated Using Transition Point Method</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSegment" title="http://purl.org/net/sett/vocab#hasSegment">has Segment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTransitionPoint" title="http://purl.org/net/sett/vocab#hasTransitionPoint">has Transition Point</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>, <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>, <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">Territorial Unit</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TerritorialUnit">
+  <h3>Territorial Unit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#TerritorialUnit</p>
+  <div class="comment">
+   <span class="markdown">A Territorial Unit (TU) denotes a geographic area at the lowest level of administrative division (e.g., municipalities, sub-districts, townships). TUs are spatially fixed entities, although they may evolve over time due to environmental shifts (e.g., land use changes, climate effects) or socioeconomic factors (e.g., population dynamics). To approach cases where TU boundaries are not permanently fixed, we exploit the Territorial Statistical Nomenclature (TSN) ontology, specifically the tsn:UnitVersion class, which describes a unique representation of a Territorial Unit that remains stable for a defined period. TUs are composed of one or more SeTT.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasSeTT" title="http://purl.org/net/sett/vocab#hasSeTT">has Se T T</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>, <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ThematicComponent">
+  <h3>Thematic Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#ThematicComponent</p>
+  <div class="comment">
+   <span class="markdown">A Thematic Component is a type of Component used to form a Thematic trajectory.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Episode" title="http://purl.org/net/sett/vocab#Episode">Episode</a> <sup class="type-c" title="class">c</sup>, <a href="#Event" title="http://purl.org/net/sett/vocab#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasSemanticAnnotation" title="http://purl.org/net/sett/vocab#hasSemanticAnnotation">has Semantic Annotation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#RawComponent" title="http://purl.org/net/sett/vocab#RawComponent">Raw Component</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredComponent" title="http://purl.org/net/sett/vocab#StructuredComponent">Structured Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ThematicTrajectory">
+  <h3>Thematic Trajectory<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#ThematicTrajectory</p>
+  <div class="comment">
+   <span class="markdown">A Thematic Trajectory is a semantically enriched representation of a Territorial Unit's (TU) trajectory, associated with a specific theme. It is derived from the annotation of a Structured Trajectory and alternates between a chronologically ordered sequence of Episodes and Events, always concluding with an Episode. A Thematic Trajectory consists solely of a single Episode if no Event is present.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasEpisode" title="http://purl.org/net/sett/vocab#hasEpisode">has Episode</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEvent" title="http://purl.org/net/sett/vocab#hasEvent">has Event</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTheme" title="http://purl.org/net/sett/vocab#hasTheme">has Theme</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasThematicTrajectory" title="http://purl.org/net/sett/vocab#hasThematicTrajectory">has Thematic Trajectory</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>, <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">Territorial Unit</a> <sup class="type-c" title="class">c</sup>, <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Theme">
+  <h3>Theme<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#Theme</p>
+  <div class="comment">
+   <span class="markdown">A Theme characterizes the subject of a Thematic trajectory, providing a descriptive label for the whole trajectory.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasFocusOn" title="http://purl.org/net/sett/vocab#hasFocusOn">has Focus On</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTheme" title="http://purl.org/net/sett/vocab#hasTheme">has Theme</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>, <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>, <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>, <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>, <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">Territorial Unit</a> <sup class="type-c" title="class">c</sup>, <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransitionPoint">
+  <h3>Transition Point<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#TransitionPoint</p>
+  <div class="comment">
+   <span class="markdown">A Transition Point (TP) is a component of a Structure trajectory. Each TP is characterized by its position in the trajectory, as well as, intrinsic and external attributes that provide detailed information about its nature. Unlike Trends, TPs have an instantaneous duration, indicating that the change occurs at a precise moment. A TP marks the discontinuity between Segments.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuredComponent" title="http://purl.org/net/sett/vocab#StructuredComponent">Structured Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BreakPoint" title="http://purl.org/net/sett/vocab#BreakPoint">Break Point</a> <sup class="type-c" title="class">c</sup>, <a href="#InflexionPoint" title="http://purl.org/net/sett/vocab#InflexionPoint">Inflexion Point</a> <sup class="type-c" title="class">c</sup>, <a href="#InterruptionPoint" title="http://purl.org/net/sett/vocab#InterruptionPoint">Interruption Point</a> <sup class="type-c" title="class">c</sup>, <a href="#RegimeChangePoint" title="http://purl.org/net/sett/vocab#RegimeChangePoint">Regime Change Point</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#transitionPointDelimitSlice" title="http://purl.org/net/sett/vocab#transitionPointDelimitSlice">transition Point Delimit Slice</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#eventIsAnnotatedFrom" title="http://purl.org/net/sett/vocab#eventIsAnnotatedFrom">event Is Annotated From</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTransitionPoint" title="http://purl.org/net/sett/vocab#hasTransitionPoint">has Transition Point</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">Segment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransitionPointDetectionMethod">
+  <h3>Transition Point Detection Method<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#TransitionPointDetectionMethod</p>
+  <div class="comment">
+   <span class="markdown">A computational process is used to detect Transition Points from a Raw trajectory. Examples of Transition Points detection methods are BFAST (Breaks for Additive Season and Trend), BEAST (Bayesian Ensemble Algorithm for Change-Point Detection and Time Series Decomposition), and CCDC (Continuous Change Detection and Classification),</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/net/sett/vocab#StructurationMethod" target="_blank" title="http://purl.org/net/sett/vocab#StructurationMethod">Structuration Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BEAST" title="http://purl.org/net/sett/vocab#BEAST">B E A S T</a> <sup class="type-c" title="class">c</sup>, <a href="#BFAST" title="http://purl.org/net/sett/vocab#BFAST">B F A S T</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#calculatedUsingTransitionPointMethod" title="http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod">calculated Using Transition Point Method</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransitionPointX">
+  <h3>Transition Point X<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#TransitionPointX</p>
+  <div class="comment">
+   <span class="markdown">Transition Point X is a specific type of Intrinsic Attribute that denotes the x-coordinate of a Transition Point within the trajectory.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransitionPointY">
+  <h3>Transition Point Y<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#TransitionPointY</p>
+  <div class="comment">
+   <span class="markdown">Transition Point Y is a specific type of Intrinsic Attribute that denotes the y-coordinate of a Transition Point within the trajectory</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#calculatedUsingSegmentMethod" title="http://purl.org/net/sett/vocab#calculatedUsingSegmentMethod"> <span>calculated Using Segment Method</span> </a></li>
+  <li><a href="#calculatedUsingTransitionPointMethod" title="http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod"> <span>calculated Using Transition Point Method</span> </a></li>
+  <li><a href="#episodeIsAnnotatedFrom" title="http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom"> <span>episode Is Annotated From</span> </a></li>
+  <li><a href="#eventIsAnnotatedFrom" title="http://purl.org/net/sett/vocab#eventIsAnnotatedFrom"> <span>event Is Annotated From</span> </a></li>
+  <li><a href="#hasAttribute" title="http://purl.org/net/sett/vocab#hasAttribute"> <span>has Attribute</span> </a></li>
+  <li><a href="#hasEpisode" title="http://purl.org/net/sett/vocab#hasEpisode"> <span>has Episode</span> </a></li>
+  <li><a href="#hasEvent" title="http://purl.org/net/sett/vocab#hasEvent"> <span>has Event</span> </a></li>
+  <li><a href="#hasExternalAttribute" title="http://purl.org/net/sett/vocab#hasExternalAttribute"> <span>has External Attribute</span> </a></li>
+  <li><a href="#hasFocusOn" title="http://purl.org/net/sett/vocab#hasFocusOn"> <span>has Focus On</span> </a></li>
+  <li><a href="#hasIntrinsicAttribute" title="http://purl.org/net/sett/vocab#hasIntrinsicAttribute"> <span>has Intrinsic Attribute</span> </a></li>
+  <li><a href="#hasSeTT" title="http://purl.org/net/sett/vocab#hasSeTT"> <span>has Se T T</span> </a></li>
+  <li><a href="#hasSegment" title="http://purl.org/net/sett/vocab#hasSegment"> <span>has Segment</span> </a></li>
+  <li><a href="#hasSemanticAnnotation" title="http://purl.org/net/sett/vocab#hasSemanticAnnotation"> <span>has Semantic Annotation</span> </a></li>
+  <li><a href="#hasSlice" title="http://purl.org/net/sett/vocab#hasSlice"> <span>has Slice</span> </a></li>
+  <li><a href="#hasSubIndicator" title="http://purl.org/net/sett/vocab#hasSubIndicator"> <span>has Sub Indicator</span> </a></li>
+  <li><a href="#hasThematicTrajectory" title="http://purl.org/net/sett/vocab#hasThematicTrajectory"> <span>has Thematic Trajectory</span> </a></li>
+  <li><a href="#hasTheme" title="http://purl.org/net/sett/vocab#hasTheme"> <span>has Theme</span> </a></li>
+  <li><a href="#hasTransitionPoint" title="http://purl.org/net/sett/vocab#hasTransitionPoint"> <span>has Transition Point</span> </a></li>
+  <li><a href="#indicatorMonitoredBy" title="http://purl.org/net/sett/vocab#indicatorMonitoredBy"> <span>indicator Monitored By</span> </a></li>
+  <li><a href="#IsEventOf" title="http://purl.org/net/sett/vocab#IsEventOf"> <span>Is Event Of</span> </a></li>
+  <li><a href="#isExternalAttributeOf" title="http://purl.org/net/sett/vocab#isExternalAttributeOf"> <span>is External Attribute Of</span> </a></li>
+  <li><a href="#isIntrinsicAttributeOf" title="http://purl.org/net/sett/vocab#isIntrinsicAttributeOf"> <span>is Intrinsic Attribute Of</span> </a></li>
+  <li><a href="#monitorsIndicator" title="http://purl.org/net/sett/vocab#monitorsIndicator"> <span>monitors Indicator</span> </a></li>
+  <li><a href="#segmentIsCalculadedFrom" title="http://purl.org/net/sett/vocab#segmentIsCalculadedFrom"> <span>segment Is Calculaded From</span> </a></li>
+  <li><a href="#semanticAnnotationBasedOnAttribute" title="http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute"> <span>semantic Annotation Based On Attribute</span> </a></li>
+  <li><a href="#sliceDelimitedBy" title="http://purl.org/net/sett/vocab#sliceDelimitedBy"> <span>slice Delimited By</span> </a></li>
+  <li><a href="#transitionPointDelimitSlice" title="http://purl.org/net/sett/vocab#transitionPointDelimitSlice"> <span>transition Point Delimit Slice</span> </a></li>
+ </ul>
+ <div class="entity" id="calculatedUsingSegmentMethod">
+  <h3>calculated Using Segment Method<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#calculatedUsingSegmentMethod</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SegmentationMethod" title="http://purl.org/net/sett/vocab#SegmentationMethod">Segmentation Method</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isUsedAsSegmentMethodFor" target="_blank" title="http://purl.org/net/sett/vocab#isUsedAsSegmentMethodFor">is Used As Segment Method For</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="calculatedUsingTransitionPointMethod">
+  <h3>calculated Using Transition Point Method<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TransitionPointDetectionMethod" title="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod">Transition Point Detection Method</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isUsedAsTransitionPointMethodFor" target="_blank" title="http://purl.org/net/sett/vocab#isUsedAsTransitionPointMethodFor">is Used As Transition Point Method For</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="episodeIsAnnotatedFrom">
+  <h3>episode Is Annotated From<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Episode" title="http://purl.org/net/sett/vocab#Episode">Episode</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">Segment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#segmentAnnotatesEpisode" target="_blank" title="http://purl.org/net/sett/vocab#segmentAnnotatesEpisode">segment Annotates Episode</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="eventIsAnnotatedFrom">
+  <h3>event Is Annotated From<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#eventIsAnnotatedFrom</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://purl.org/net/sett/vocab#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">Transition Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent" target="_blank" title="http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent">transition Point Annotates Event</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAttribute">
+  <h3>has Attribute<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasAttribute</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasExternalAttribute" title="http://purl.org/net/sett/vocab#hasExternalAttribute">has External Attribute</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIntrinsicAttribute" title="http://purl.org/net/sett/vocab#hasIntrinsicAttribute">has Intrinsic Attribute</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isAttributeOf" target="_blank" title="http://purl.org/net/sett/vocab#isAttributeOf">is Attribute Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEpisode">
+  <h3>has Episode<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasEpisode</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Episode" title="http://purl.org/net/sett/vocab#Episode">Episode</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isEpisodeOf" target="_blank" title="http://purl.org/net/sett/vocab#isEpisodeOf">is Episode Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEvent">
+  <h3>has Event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasEvent</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Event" title="http://purl.org/net/sett/vocab#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#IsEventOf" title="http://purl.org/net/sett/vocab#IsEventOf">Is Event Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExternalAttribute">
+  <h3>has External Attribute<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasExternalAttribute</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasAttribute" title="http://purl.org/net/sett/vocab#hasAttribute">has Attribute</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ExternalAttributes" title="http://purl.org/net/sett/vocab#ExternalAttributes">External Attributes</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isExternalAttributeOf" title="http://purl.org/net/sett/vocab#isExternalAttributeOf">is External Attribute Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFocusOn">
+  <h3>has Focus On<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasFocusOn</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isFocusOf" target="_blank" title="http://purl.org/net/sett/vocab#isFocusOf">is Focus Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasIntrinsicAttribute">
+  <h3>has Intrinsic Attribute<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasIntrinsicAttribute</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#hasAttribute" title="http://purl.org/net/sett/vocab#hasAttribute">has Attribute</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#IntrinsicAttributes" title="http://purl.org/net/sett/vocab#IntrinsicAttributes">Intrinsic Attributes</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isIntrinsicAttributeOf" title="http://purl.org/net/sett/vocab#isIntrinsicAttributeOf">is Intrinsic Attribute Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSeTT">
+  <h3>has Se T T<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasSeTT</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TerritorialUnit" title="http://purl.org/net/sett/vocab#TerritorialUnit">Territorial Unit</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isSeTTOf" target="_blank" title="http://purl.org/net/sett/vocab#isSeTTOf">is Se T T Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSegment">
+  <h3>has Segment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasSegment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">Segment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isSegmentOf" target="_blank" title="http://purl.org/net/sett/vocab#isSegmentOf">is Segment Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSemanticAnnotation">
+  <h3>has Semantic Annotation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasSemanticAnnotation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ThematicComponent" title="http://purl.org/net/sett/vocab#ThematicComponent">Thematic Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isSemanticAnnotationOf" target="_blank" title="http://purl.org/net/sett/vocab#isSemanticAnnotationOf">is Semantic Annotation Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSlice">
+  <h3>has Slice<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasSlice</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Slice" title="http://purl.org/net/sett/vocab#Slice">Slice</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isSliceOf" target="_blank" title="http://purl.org/net/sett/vocab#isSliceOf">is Slice Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSubIndicator">
+  <h3>has Sub Indicator<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasSubIndicator</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasThematicTrajectory">
+  <h3>has Thematic Trajectory<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasThematicTrajectory</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SeTT" title="http://purl.org/net/sett/vocab#SeTT">Se T T</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isThematicTrajectoryOf" target="_blank" title="http://purl.org/net/sett/vocab#isThematicTrajectoryOf">is Thematic Trajectory Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTheme">
+  <h3>has Theme<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasTheme</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ThematicTrajectory" title="http://purl.org/net/sett/vocab#ThematicTrajectory">Thematic Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Theme" title="http://purl.org/net/sett/vocab#Theme">Theme</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isThemeOf" target="_blank" title="http://purl.org/net/sett/vocab#isThemeOf">is Theme Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTransitionPoint">
+  <h3>has Transition Point<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasTransitionPoint</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StructuredTrajectory" title="http://purl.org/net/sett/vocab#StructuredTrajectory">Structured Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">Transition Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isTransitionPointOf" target="_blank" title="http://purl.org/net/sett/vocab#isTransitionPointOf">is Transition Point Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="indicatorMonitoredBy">
+  <h3>indicator Monitored By<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#indicatorMonitoredBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#monitorsIndicator" title="http://purl.org/net/sett/vocab#monitorsIndicator">monitors Indicator</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="IsEventOf">
+  <h3>Is Event Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#IsEventOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasEvent" title="http://purl.org/net/sett/vocab#hasEvent">has Event</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isExternalAttributeOf">
+  <h3>is External Attribute Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#isExternalAttributeOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isAttributeOf" target="_blank" title="http://purl.org/net/sett/vocab#isAttributeOf">is Attribute Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasExternalAttribute" title="http://purl.org/net/sett/vocab#hasExternalAttribute">has External Attribute</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isIntrinsicAttributeOf">
+  <h3>is Intrinsic Attribute Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#isIntrinsicAttributeOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#isAttributeOf" target="_blank" title="http://purl.org/net/sett/vocab#isAttributeOf">is Attribute Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasIntrinsicAttribute" title="http://purl.org/net/sett/vocab#hasIntrinsicAttribute">has Intrinsic Attribute</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="monitorsIndicator">
+  <h3>monitors Indicator<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#monitorsIndicator</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#RawTrajectory" title="http://purl.org/net/sett/vocab#RawTrajectory">Raw Trajectory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Indicator" title="http://purl.org/net/sett/vocab#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#indicatorMonitoredBy" title="http://purl.org/net/sett/vocab#indicatorMonitoredBy">indicator Monitored By</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="segmentIsCalculadedFrom">
+  <h3>segment Is Calculaded From<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#segmentIsCalculadedFrom</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Segment" title="http://purl.org/net/sett/vocab#Segment">Segment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Slice" title="http://purl.org/net/sett/vocab#Slice">Slice</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/sett/vocab#sliceUsedToCalculateSegment" target="_blank" title="http://purl.org/net/sett/vocab#sliceUsedToCalculateSegment">slice Used To Calculate Segment</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="semanticAnnotationBasedOnAttribute">
+  <h3>semantic Annotation Based On Attribute<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sliceDelimitedBy">
+  <h3>slice Delimited By<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#sliceDelimitedBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#transitionPointDelimitSlice" title="http://purl.org/net/sett/vocab#transitionPointDelimitSlice">transition Point Delimit Slice</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="transitionPointDelimitSlice">
+  <h3>transition Point Delimit Slice<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#transitionPointDelimitSlice</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TransitionPoint" title="http://purl.org/net/sett/vocab#TransitionPoint">Transition Point</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Slice" title="http://purl.org/net/sett/vocab#Slice">Slice</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#sliceDelimitedBy" title="http://purl.org/net/sett/vocab#sliceDelimitedBy">slice Delimited By</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasAttributeValue" title="http://purl.org/net/sett/vocab#hasAttributeValue"> <span>has Attribute Value</span> </a></li>
+  <li><a href="#hasSequenceOrder" title="http://purl.org/net/sett/vocab#hasSequenceOrder"> <span>has Sequence Order</span> </a></li>
+ </ul>
+ <div class="entity" id="hasAttributeValue">
+  <h3>has Attribute Value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasAttributeValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Attribute" title="http://purl.org/net/sett/vocab#Attribute">Attribute</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSequenceOrder">
+  <h3>has Sequence Order<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/net/sett/vocab#hasSequenceOrder</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="http://purl.org/net/sett/vocab#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

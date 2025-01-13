@@ -1,0 +1,3258 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://purl.org/net/sett/vocab", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "The SeTT ontology"
+    },
+    "iri" : "http://purl.org/net/sett/vocab#",
+    "version" : "1.0",
+    "author" : [ "(3) Jérôme Gensel", "(4) Gregory Giuliani", "(1) Daniela Fernanda Milon-Flores", "(2) Camille Bernard" ],
+    "description" : {
+      "en" : "SeTT is a multi-layer ontology specifically designed to describe the semantic trajectories of Territorial Units (TUs). It models three types of trajectories: raw, structured, and semantic. Together, these trajectories create a comprehensive framework for capturing, organizing, and analyzing the evolution of TUs across various thematic domains, thereby improving users' ability to interpret and understand complex data."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "(1) Daniela Fernanda Milon-Flores",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "(2) Camille Bernard",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "(4) Gregory Giuliani",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "(3) Jérôme Gensel",
+        "type" : "label"
+      } ],
+      "citation" : [ {
+        "identifier" : "citation",
+        "language" : "en",
+        "value" : "Cite this vocabulary as Milon-Flores, D.; Bernard, C.; Gensel, J. and Giuliani, G. The SeTT ontology 1.0",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "October 2024",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "The negative impact of human activities on our planet has increased the interest of stakeholders-from policymakers to citizens-in monitoring and understanding local changes, including both environmental and socio-economic factors. However, these data are often complex and challenging for non-experts to interpret. We introduce the SeTT (Semantic Trajectory of a Territorial Unit) ontology to describe the semantic trajectories of Territorial Units (TUs), making this information accessible to both expert and non-expert users.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The SeTT ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "124",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "71",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "9",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "122",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "153",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/net/sett/vocab#SegmentStartY",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Segment Start Y",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SegmentStartY",
+      "undefined" : "Segment Start Y"
+    },
+    "comment" : {
+      "undefined" : "Segment Start Y is a specific type of Intrinsic Attribute that indicates the y-coordinate at the beginning of a Segment."
+    },
+    "id" : "22",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SegmentStartX",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Segment Start X",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SegmentStartX",
+      "undefined" : "Segment Start X"
+    },
+    "comment" : {
+      "undefined" : "Segment Start X is a specific type of Intrinsic Attribute that indicates the x-coordinate at the beginning of a Segment."
+    },
+    "id" : "24",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#InterruptionPoint",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterruptionPoint"
+    },
+    "id" : "29",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#EventDate",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Event Date",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventDate",
+      "undefined" : "Event Date"
+    },
+    "comment" : {
+      "undefined" : "Event Date is a specific type of Intrinsic Attribute that specifies the date when an Event occurred."
+    },
+    "id" : "31",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#OrderedCollection",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An ordered collection of concepts, where both the grouping and the ordering are meaningful.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OrderedCollection",
+      "en" : "Ordered Collection"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SegmentEndX",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Segment End X",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SegmentEndX",
+      "undefined" : "Segment End X"
+    },
+    "comment" : {
+      "undefined" : "SegmentEndX is a specific type of Intrinsic Attribute that specifies the x-coordinate at the conclusion of a Segment."
+    },
+    "id" : "34",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SegmentEndY",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Segment End Y",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SegmentEndY",
+      "undefined" : "Segment End Y"
+    },
+    "comment" : {
+      "undefined" : "Segment End Y is a specific type of Intrinsic Attribute that specifies the y-coordinate at the conclusion of a Segment."
+    },
+    "id" : "38",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#StructurationMethod",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructurationMethod"
+    },
+    "subClasses" : [ "27", "50" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SegmentDuration",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Segment Duration",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SegmentDuration",
+      "undefined" : "Segment Duration"
+    },
+    "comment" : {
+      "undefined" : "Segment Duration is a specific type of Intrinsic Attribute that indicates the length of time over which a Segment is observed."
+    },
+    "id" : "44",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "List"
+    },
+    "attributes" : [ "external" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SeTT",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeTT"
+    },
+    "comment" : {
+      "undefined" : "The Semantic Trajectory of a Territorial Unit (SeTT) represents the collection of Thematic Trajectories associated with a Territorial Unit (TU). \nIt is sufficiently abstract to contain Thematic Trajectories regardless of their Thematic domain. \nA Territorial Unit (TU) can be composed of one ore multiple SeTTs."
+    },
+    "id" : "74"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#Attribute",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Attribute"
+    },
+    "subClasses" : [ "5", "23" ],
+    "comment" : {
+      "undefined" : "Trajectory components have Attributes that enhance their descriptions. \nThe value of an Attribute is flexible enough to represent various literal values regardless of the context."
+    },
+    "id" : "76"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#EpisodeEndDate",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Episode End Date",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EpisodeEndDate",
+      "undefined" : "Episode End Date"
+    },
+    "comment" : {
+      "undefined" : "Episode End Date is a specific type of Intrinsic Attribute that indicates the date when an Episode concludes."
+    },
+    "id" : "48",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#BreakPoint",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BreakPoint"
+    },
+    "comment" : {
+      "undefined" : "A Breakpoint is a specific type of Transition Point (TP) defined as a moment in time when an abrupt change occurs in a time series. It is used to annotate an Event."
+    },
+    "id" : "77",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#BFAST",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BFAST"
+    },
+    "id" : "78",
+    "superClasses" : [ "27", "50" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#RawComponent",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RawComponent"
+    },
+    "subClasses" : [ "84" ],
+    "comment" : {
+      "undefined" : "A Raw Component is a type of Component used to form a Raw trajectory."
+    },
+    "id" : "40",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Collection",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A meaningful collection of concepts.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Labelled collections can be used where you would like a set of concepts to be displayed under a 'node label' in the hierarchy.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Collection",
+      "en" : "Collection"
+    },
+    "subClasses" : [ "32" ],
+    "attributes" : [ "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#BreakpointProbability",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Breakpoint Probability",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BreakpointProbability",
+      "undefined" : "Breakpoint Probability"
+    },
+    "comment" : {
+      "undefined" : "BreakpointProbability is a specific type of External Attribute that indicates the likelihood of a Breakpoint occurring based on statistical analysis."
+    },
+    "id" : "19",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#NonLinearSegment",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NonLinearSegment"
+    },
+    "id" : "87",
+    "superClasses" : [ "88" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#EpisodeStartDate",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Episode Start Date",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EpisodeStartDate",
+      "undefined" : "Episode Start Date"
+    },
+    "comment" : {
+      "undefined" : "Episode Start Date is a specific type of Intrinsic Attribute that marks the date when an Episode begins."
+    },
+    "id" : "46",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#Event",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "comment" : {
+      "undefined" : "An Event is a component of a Thematic Trajectory, derived from the semantic annotation of a Transition Point within a Structured Trajectory. \nEach Event is defined by its position in the trajectory and comprises semantic annotations and attributes that provide context and enhance the interpretation of the Thematic Trajectory's behavior. \nUnlike Episodes, Events have an instantaneous duration and signify the discontinuity between Episodes."
+    },
+    "id" : "89",
+    "superClasses" : [ "42" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#ExplanatoryFactor",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Explanatory Factor",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ExplanatoryFactor",
+      "undefined" : "Explanatory Factor"
+    },
+    "comment" : {
+      "undefined" : "Explanatory Factors are a specific type of External Attribute that provides additional context regarding the occurrence of a Transition Point such as a Breakpoint. \nVarious resources, such as available URLs or bibliographic citations, can be used to enrich the Event."
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#ThematicComponent",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThematicComponent"
+    },
+    "subClasses" : [ "89", "90" ],
+    "comment" : {
+      "undefined" : "A Thematic Component is a type of Component used to form a Thematic trajectory."
+    },
+    "id" : "42",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#BreakpointMagnitude",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Breakpoint Magnitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BreakpointMagnitude",
+      "undefined" : "Breakpoint Magnitude"
+    },
+    "comment" : {
+      "undefined" : "A Breakpoint Magnitude is a specific type of External Attribute that quantifies the change at a Breakpoint. It is calculated as the distance between the Breakpoint and its subsequent point in time."
+    },
+    "id" : "17",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#LinearRegression",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LinearRegression"
+    },
+    "id" : "101",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#RegimeChangePoint",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RegimeChangePoint"
+    },
+    "id" : "104",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept scheme may be defined to include concepts from different sources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "en" : "Concept Scheme"
+    },
+    "attributes" : [ "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#TransitionPointY",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Transition Point Y",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TransitionPointY",
+      "undefined" : "Transition Point Y"
+    },
+    "comment" : {
+      "undefined" : "Transition Point Y is a specific type of Intrinsic Attribute that denotes the y-coordinate of a Transition Point within the trajectory"
+    },
+    "id" : "65",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#TransitionPointX",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Transition Point X",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TransitionPointX",
+      "undefined" : "Transition Point X"
+    },
+    "comment" : {
+      "undefined" : "Transition Point X is a specific type of Intrinsic Attribute that denotes the x-coordinate of a Transition Point within the trajectory."
+    },
+    "id" : "69",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#Slice",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Slice"
+    },
+    "comment" : {
+      "undefined" : "Pre-calculated Slices are components of the Raw trajectory which offers an efficient method for storing data, originally organized in RDF data cubes across the dimensions of Space, Time, and Indicator. \nThe detected Transition Points define each slice time period. \nImportantly, Slices are used to calculate the Segment component within the Structured trajectory."
+    },
+    "id" : "84",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#TerritorialUnit",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TerritorialUnit"
+    },
+    "comment" : {
+      "undefined" : "A Territorial Unit (TU) denotes a geographic area at the lowest level of administrative division (e.g., municipalities, sub-districts, townships). \nTUs are spatially fixed entities, although they may evolve over time due to environmental shifts (e.g., land use changes, climate effects) or socioeconomic factors (e.g., population dynamics). \nTo approach cases where TU boundaries are not permanently fixed, we exploit the Territorial Statistical Nomenclature (TSN) ontology, specifically the tsn:UnitVersion class, which describes a unique representation of a Territorial Unit that remains stable for a defined period. \nTUs are composed of one or more SeTT."
+    },
+    "id" : "97"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#Segment",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Segment"
+    },
+    "subClasses" : [ "87", "111", "112", "113" ],
+    "comment" : {
+      "undefined" : "A Segment is a component of a Structured Trajectory, calculated from its corresponding Slice within a Raw Trajectory. \nEach Segment is characterized by its position in the trajectory, along with intrinsic and external attributes that provide detailed information about the Segment's properties and behavior of the data. \nThe Segment period culminates when a Transition Point occurs, marking a discontinuity between Segments."
+    },
+    "id" : "88",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SlopeIntercept",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Slope Intercept",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SlopeIntercept",
+      "undefined" : "Slope Intercept"
+    },
+    "comment" : {
+      "undefined" : "Slope Intercept is a specific type of Intrinsic Attribute. In the context of a linear trend, the Slope Intercept is the y-value at which the trend line intersects the y-axis when the x-value is zero."
+    },
+    "id" : "55",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#ThematicTrajectory",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThematicTrajectory"
+    },
+    "comment" : {
+      "undefined" : "A Thematic Trajectory is a semantically enriched representation of a Territorial Unit's (TU) trajectory, associated with a specific theme. It is derived from the annotation of a Structured Trajectory and alternates between a chronologically ordered sequence of Episodes and Events, always concluding with an Episode. \nA Thematic Trajectory consists solely of a single Episode if no Event is present."
+    },
+    "id" : "92"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#LinearTrendPValue",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Linear Trend  p-value",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LinearTrendPValue",
+      "undefined" : "Linear Trend p-value"
+    },
+    "comment" : {
+      "undefined" : "A p-value is a specific type of External Attribute that indicates the statistical significance of a Trend line."
+    },
+    "id" : "21",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An idea or notion; a unit of thought.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept"
+    },
+    "subClasses" : [ "124" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#TransitionPoint",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TransitionPoint"
+    },
+    "subClasses" : [ "104", "77", "29", "125" ],
+    "comment" : {
+      "undefined" : "A Transition Point (TP) is a component of a Structure trajectory. \nEach TP is characterized by its position in the trajectory, as well as, intrinsic and external attributes that provide detailed information about its nature. \nUnlike Trends, TPs have an instantaneous duration, indicating that the change occurs at a precise moment. \nA TP marks the discontinuity between Segments."
+    },
+    "id" : "30",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#LinearSegment",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LinearSegment"
+    },
+    "id" : "113",
+    "superClasses" : [ "88" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SegmentationMethod",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SegmentationMethod"
+    },
+    "subClasses" : [ "78", "101", "153" ],
+    "comment" : {
+      "undefined" : "A computational process is used to organize a raw trajectory into distinct segments.\nExamples of segmentation methods are BFAST (Breaks for Additive Season and Trend), BEAST (Bayesian Ensemble Algorithm for Change-Point Detection and Time Series Decomposition), and Linear Regression."
+    },
+    "id" : "27",
+    "superClasses" : [ "49" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#StructuredComponent",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuredComponent"
+    },
+    "subClasses" : [ "88", "30" ],
+    "comment" : {
+      "undefined" : "A Structured Component is a type of Component used to form a Structured trajectory."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#Theme",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Theme"
+    },
+    "comment" : {
+      "undefined" : "A Theme characterizes the subject of a Thematic trajectory, providing a descriptive label for the whole trajectory."
+    },
+    "id" : "124",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SeasonalSegment",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeasonalSegment"
+    },
+    "id" : "111",
+    "superClasses" : [ "88" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SlopeDirection",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Slope Direction",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SlopeDirection",
+      "undefined" : "Slope Direction"
+    },
+    "comment" : {
+      "undefined" : "Slope Direction is a specific type of Intrinsic Attribute that describes the direction of the slope within a Trend Segment, indicating whether it is increasing or decreasing."
+    },
+    "id" : "59",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#InflexionPoint",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InflexionPoint"
+    },
+    "id" : "125",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#RawTrajectory",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RawTrajectory"
+    },
+    "comment" : {
+      "undefined" : "A raw trajectory, or simply a trajectory, of Territorial Units (TUs) refers to a sequence of chronologically ordered measurements, tracking the temporal changes of domain-specific indicators.\nTo efficiently manage large volumes of data, the Indicator measurements are represented as Observations using the RDF Data Cube vocabulary, structured across three dimensions: Time, Space, and Indicator.\nPre-calculated Slices are then employed to store these Observations, each fixed over a defined period."
+    },
+    "id" : "103"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "71",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "9",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "80",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "180",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "33", "11" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "122"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#StructuredTrajectory",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuredTrajectory"
+    },
+    "comment" : {
+      "undefined" : "A Structured trajectory results from organizing a Raw trajectory into a more structured format. It alternates between a chronologically ordered sequence of Segments and Transition Points, always concluding with a Segment. If no Transition Point is detected, the Structured Trajectory consists solely of a single Segment, indicating no transitional changes within the sequence."
+    },
+    "id" : "26"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Linear Trend Gradual Magnitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LinearTrendGradualMagnitude",
+      "undefined" : "Linear Trend Gradual Magnitude"
+    },
+    "comment" : {
+      "undefined" : "A Gradual Magnitude is a specific type of External Attribute that describes the magnitude of change within a Linear Trend. It is calculated by multiplying the Intrinsic attributes Slope magnitude and Segment duration."
+    },
+    "id" : "7",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#StateSegment",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StateSegment"
+    },
+    "id" : "112",
+    "superClasses" : [ "88" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TransitionPointDetectionMethod"
+    },
+    "subClasses" : [ "78", "153" ],
+    "comment" : {
+      "undefined" : "A computational process is used to detect Transition Points from a Raw trajectory.\nExamples of Transition Points detection methods are BFAST (Breaks for Additive Season and Trend), BEAST (Bayesian Ensemble Algorithm for Change-Point Detection and Time Series Decomposition), and CCDC (Continuous Change Detection and Classification),"
+    },
+    "id" : "50",
+    "superClasses" : [ "49" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#SlopeMagnitude",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Slope Magnitude",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SlopeMagnitude",
+      "undefined" : "Slope Magnitude"
+    },
+    "comment" : {
+      "undefined" : "The slope magnitude is a specific type of intrinsic attribute that represents the absolute numerical value of the slope."
+    },
+    "id" : "57",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#IntrinsicAttributes",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntrinsicAttributes"
+    },
+    "subClasses" : [ "22", "65", "24", "69", "44", "46", "48", "31", "34", "38", "55", "57", "59" ],
+    "comment" : {
+      "undefined" : "An intrinsic attribute is inherent to the component's nature. For example, in a linear segment, attributes such as the start and end points, as well as the slope, are considered intrinsic because they are essential for defining the segment."
+    },
+    "id" : "23",
+    "superClasses" : [ "76" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#Component",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Component"
+    },
+    "subClasses" : [ "40", "42", "1" ],
+    "comment" : {
+      "undefined" : "Trajectories consist of Components, each defined by its position in the sequence, the algorithm used for its calculation, and a set of Attributes that enrich its description.\nIn the SeTT ontology, there are three types of components: thematic, structured, and raw."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#ExternalAttributes",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExternalAttributes"
+    },
+    "subClasses" : [ "4", "7", "17", "19", "21" ],
+    "comment" : {
+      "undefined" : "An external attribute is an optional or supplementary characteristic that enhances the description of a component. These attributes may be added by expert users or derived from specific methods. For instance, the p-value is an external attribute derived from applying the linear regression method."
+    },
+    "id" : "5",
+    "superClasses" : [ "76" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#Indicator",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Indicator"
+    },
+    "comment" : {
+      "undefined" : "An Indicator is defined as a quantitative measure that captures the status of a situation or its variations over time. In the context of a Raw trajectory, it represents the data being monitored. \nThe concept of an Indicator is sufficiently abstract to encompass various domains, including environmental and socio-economic.\nIndicators correspond to the Indicator dimension of the RDF Data Cube and can exist as standalone measures or be composed of other indicators. \nIndicators can be further enriched with metadata such as bibliography citations, formula descriptions, and open-linked data resources."
+    },
+    "id" : "61"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#Episode",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Episode"
+    },
+    "comment" : {
+      "undefined" : "An Episode is a component of the Thematic Trajectory, derived from the semantic annotation of its corresponding Segment within a Structured Trajectory. \nEach Episode is defined by its position in the trajectory sequence and characterized by semantic annotations that provide context for interpreting the trajectory's behavior.\n A set of attributes further enriches its contextual information. \nAn Episode period culminates when an Event occurs, marking a discontinuity between Episodes."
+    },
+    "id" : "90",
+    "superClasses" : [ "42" ]
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#BEAST",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BEAST"
+    },
+    "id" : "153",
+    "superClasses" : [ "27", "50" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "126",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "130",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "131",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "132",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "133",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "134",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "135",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "136",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "137",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "138",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "139",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "141",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "142",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "144",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "145",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "146",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "147",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "148",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "149",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "150",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "151",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "152",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "155",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "156",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "157",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "158",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "159",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "160",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "161",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "120",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "163",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "164",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "165",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "166",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "168",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "169",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "171",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "172",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "173",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "174",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "175",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "176",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "178",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "179",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "181",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "182",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "183",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "184",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "185",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "186",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "187",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "188",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "167",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "190",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "191",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "192",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "193",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "194",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "195",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "196",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "197",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "198",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "200",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "202",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "204",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "205",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "206",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "207",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "208",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "209",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "210",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "211",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "212",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "213",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "214",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "215",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "216",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "217",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "218",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "219",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "220",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "221",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "222",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "223",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "224",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "225",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "226",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "227",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "228",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "229",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "170",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "230",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "231",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "232",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "234",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "235",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "3"
+  }, {
+    "range" : "5",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isFocusOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isFocusOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#semanticRelation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Links a concept to a concept related by meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "semanticRelation",
+      "en" : "is in semantic relation with"
+    },
+    "domain" : "11",
+    "subproperty" : [ "12", "13", "14", "15" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "10"
+  }, {
+    "range" : "5",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "16"
+  }, {
+    "range" : "5",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "5",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#calculatedUsingSegmentMethod",
+    "inverse" : "28",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "calculatedUsingSegmentMethod"
+    },
+    "domain" : "26",
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
+    "inverse" : "36",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more specific in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrower",
+      "en" : "has narrower"
+    },
+    "superproperty" : [ "12" ],
+    "domain" : "9",
+    "subproperty" : [ "37" ],
+    "comment" : {
+      "en" : "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "2",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "2",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "23",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "23",
+    "domain" : "46",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "23",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "23",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "23",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "range" : "23",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
+  }, {
+    "range" : "23",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "range" : "23",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "range" : "23",
+    "domain" : "59",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasSubIndicator",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "hasSubIndicator"
+    },
+    "domain" : "61",
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#related",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept with which there is an associative semantic relationship.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "related",
+      "en" : "has related"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "9",
+    "subproperty" : [ "62" ],
+    "comment" : {
+      "en" : "skos:related is disjoint with skos:broaderTransitive"
+    },
+    "attributes" : [ "symmetric", "external", "object" ],
+    "id" : "14"
+  }, {
+    "range" : "23",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "23",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "range" : "23",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "range" : "23",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#inScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "72",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a resource (for example a concept) to a concept scheme in which it is included.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept may be a member of more than one concept scheme.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "inScheme",
+      "en" : "is in scheme"
+    },
+    "domain" : "71",
+    "subproperty" : [ "73" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+    "inverse" : "73",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopConcept",
+      "en" : "has top concept"
+    },
+    "domain" : "72",
+    "attributes" : [ "external", "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasSequenceOrder",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "hasSequenceOrder"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isIntrinsicAttributeOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isIntrinsicAttributeOf"
+    },
+    "superproperty" : [ "82" ],
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isUsedAsTransitionPointMethodFor",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isUsedAsTransitionPointMethodFor"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "exactMatch",
+      "en" : "has exact match"
+    },
+    "superproperty" : [ "86" ],
+    "domain" : "9",
+    "comment" : {
+      "en" : "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
+    },
+    "attributes" : [ "symmetric", "transitive", "external", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasThematicTrajectory",
+    "inverse" : "93",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "92",
+    "label" : {
+      "IRI-based" : "hasThematicTrajectory"
+    },
+    "domain" : "74",
+    "attributes" : [ "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom",
+    "inverse" : "95",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "episodeIsAnnotatedFrom"
+    },
+    "domain" : "90",
+    "attributes" : [ "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasSeTT",
+    "inverse" : "98",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "hasSeTT"
+    },
+    "domain" : "97",
+    "attributes" : [ "object" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+    "inverse" : "37",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broadMatch",
+      "en" : "has broader match"
+    },
+    "superproperty" : [ "36", "15" ],
+    "domain" : "9",
+    "attributes" : [ "external", "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isEpisodeOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isEpisodeOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#monitorsIndicator",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "monitorsIndicator"
+    },
+    "domain" : "103",
+    "attributes" : [ "functional", "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isSeTTOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isSeTTOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#sliceDelimitedBy",
+    "inverse" : "106",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "sliceDelimitedBy"
+    },
+    "domain" : "84",
+    "attributes" : [ "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#notation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "108",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:notation is used with a typed literal in the object position of the triple.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "notation",
+      "en" : "notation"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#IsEventOf",
+    "inverse" : "110",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "92",
+    "label" : {
+      "IRI-based" : "IsEventOf"
+    },
+    "domain" : "89",
+    "attributes" : [ "object" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#relatedMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "relatedMatch",
+      "en" : "has related match"
+    },
+    "superproperty" : [ "14", "15" ],
+    "domain" : "9",
+    "attributes" : [ "symmetric", "external", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isSemanticAnnotationOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isSemanticAnnotationOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "transitionPointAnnotatesEvent"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "72",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to the concept scheme that it is a top level concept of.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "topConceptOf",
+      "en" : "is top concept in scheme"
+    },
+    "superproperty" : [ "70" ],
+    "domain" : "11",
+    "attributes" : [ "external", "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrowMatch",
+      "en" : "has narrower match"
+    },
+    "superproperty" : [ "35", "15" ],
+    "domain" : "9",
+    "attributes" : [ "external", "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isThemeOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isThemeOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "116"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#transitionPointDelimitSlice",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "transitionPointDelimitSlice"
+    },
+    "domain" : "30",
+    "attributes" : [ "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#memberList",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "63",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates an ordered collection to the RDF list containing its members.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "memberList",
+      "en" : "has member list"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "For any resource, every item in the list given as the value of the\n      skos:memberList property is also a value of the skos:member property."
+    },
+    "attributes" : [ "external", "functional", "object" ],
+    "id" : "117"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "semanticAnnotationBasedOnAttribute"
+    },
+    "domain" : "11",
+    "attributes" : [ "object" ],
+    "id" : "118"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasSegment",
+    "inverse" : "120",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "hasSegment"
+    },
+    "domain" : "26",
+    "attributes" : [ "object" ],
+    "id" : "119"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#member",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "122",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a collection to one of its members.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "member",
+      "en" : "has member"
+    },
+    "domain" : "33",
+    "attributes" : [ "external", "object" ],
+    "id" : "121"
+  }, {
+    "range" : "49",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasAttribute",
+    "inverse" : "82",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "hasAttribute"
+    },
+    "domain" : "2",
+    "subproperty" : [ "127", "128" ],
+    "attributes" : [ "object" ],
+    "id" : "126"
+  }, {
+    "range" : "124",
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "range" : "92",
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "130"
+  }, {
+    "range" : "49",
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "74",
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "97",
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "133"
+  }, {
+    "range" : "26",
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "97",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "range" : "26",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "range" : "124",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "137"
+  }, {
+    "range" : "92",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "138"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasFocusOn",
+    "inverse" : "8",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "124",
+    "label" : {
+      "IRI-based" : "hasFocusOn"
+    },
+    "domain" : "74",
+    "attributes" : [ "object" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#segmentAnnotatesEpisode",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "segmentAnnotatesEpisode"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "95"
+  }, {
+    "range" : "74",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "140"
+  }, {
+    "range" : "103",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "141"
+  }, {
+    "range" : "49",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "142"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isUsedAsSegmentMethodFor",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isUsedAsSegmentMethodFor"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "range" : "97",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "143"
+  }, {
+    "range" : "26",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "range" : "124",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "145"
+  }, {
+    "range" : "92",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "146"
+  }, {
+    "range" : "103",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "range" : "49",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "148"
+  }, {
+    "range" : "74",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
+  }, {
+    "range" : "104",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "150"
+  }, {
+    "range" : "23",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "151"
+  }, {
+    "range" : "89",
+    "domain" : "90",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "closeMatch",
+      "en" : "has close match"
+    },
+    "superproperty" : [ "15" ],
+    "domain" : "9",
+    "subproperty" : [ "85" ],
+    "attributes" : [ "symmetric", "external", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "104",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "154"
+  }, {
+    "range" : "29",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "155"
+  }, {
+    "range" : "104",
+    "domain" : "125",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "156"
+  }, {
+    "range" : "29",
+    "domain" : "125",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "157"
+  }, {
+    "range" : "124",
+    "domain" : "97",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "158"
+  }, {
+    "range" : "92",
+    "domain" : "97",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "159"
+  }, {
+    "range" : "125",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "160"
+  }, {
+    "range" : "124",
+    "domain" : "92",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isSegmentOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isSegmentOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "120"
+  }, {
+    "range" : "124",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "162"
+  }, {
+    "range" : "92",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "163"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasSemanticAnnotation",
+    "inverse" : "114",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasSemanticAnnotation"
+    },
+    "domain" : "42",
+    "attributes" : [ "object" ],
+    "id" : "164"
+  }, {
+    "range" : "97",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "165"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasTransitionPoint",
+    "inverse" : "167",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasTransitionPoint"
+    },
+    "domain" : "26",
+    "attributes" : [ "object" ],
+    "id" : "166"
+  }, {
+    "range" : "97",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "168"
+  }, {
+    "range" : "26",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "169"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isAttributeOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isAttributeOf"
+    },
+    "domain" : "9",
+    "subproperty" : [ "170", "81" ],
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "range" : "124",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "171"
+  }, {
+    "range" : "92",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "172"
+  }, {
+    "range" : "97",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "173"
+  }, {
+    "range" : "26",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "174"
+  }, {
+    "range" : "124",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "175"
+  }, {
+    "range" : "92",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "176"
+  }, {
+    "range" : "49",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "177"
+  }, {
+    "range" : "49",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "178"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasTheme",
+    "inverse" : "116",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "124",
+    "label" : {
+      "IRI-based" : "hasTheme"
+    },
+    "domain" : "92",
+    "attributes" : [ "object" ],
+    "id" : "179"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+    "inverse" : "12",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "skos:broaderTransitive is a transitive superproperty of skos:broader.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broaderTransitive",
+      "en" : "has broader transitive"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "9",
+    "subproperty" : [ "36" ],
+    "attributes" : [ "transitive", "external", "object" ],
+    "id" : "13"
+  }, {
+    "range" : "72",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "181"
+  }, {
+    "range" : "11",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "182"
+  }, {
+    "range" : "72",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "183"
+  }, {
+    "range" : "42",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "184"
+  }, {
+    "range" : "42",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "185"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isSliceOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "103",
+    "label" : {
+      "IRI-based" : "isSliceOf"
+    },
+    "domain" : "84",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "186"
+  }, {
+    "range" : "30",
+    "domain" : "88",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "187"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broader",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more general in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broader",
+      "en" : "has broader"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "9",
+    "subproperty" : [ "99" ],
+    "comment" : {
+      "en" : "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasSlice",
+    "inverse" : "189",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "hasSlice"
+    },
+    "domain" : "103",
+    "attributes" : [ "object" ],
+    "id" : "188"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasIntrinsicAttribute",
+    "inverse" : "81",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasIntrinsicAttribute"
+    },
+    "superproperty" : [ "126" ],
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "127"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isTransitionPointOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isTransitionPointOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "167"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#sliceUsedToCalculateSegment",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "sliceUsedToCalculateSegment"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "190"
+  }, {
+    "range" : "112",
+    "domain" : "111",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "191"
+  }, {
+    "range" : "112",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "192"
+  }, {
+    "range" : "1",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "193"
+  }, {
+    "range" : "111",
+    "domain" : "113",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "194"
+  }, {
+    "range" : "87",
+    "domain" : "113",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "195"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#mappingRelation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates two concepts coming, by convention, from different schemes, and that have comparable meanings",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "mappingRelation",
+      "en" : "is in mapping relation with"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "9",
+    "subproperty" : [ "86", "62", "37", "99" ],
+    "comment" : {
+      "en" : "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "111",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "196"
+  }, {
+    "range" : "112",
+    "domain" : "113",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "197"
+  }, {
+    "range" : "1",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "198"
+  }, {
+    "range" : "1",
+    "domain" : "88",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "199"
+  }, {
+    "range" : "50",
+    "domain" : "153",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "200"
+  }, {
+    "range" : "50",
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "201"
+  }, {
+    "range" : "27",
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "202"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isThematicTrajectoryOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isThematicTrajectoryOf"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "range" : "27",
+    "domain" : "153",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "203"
+  }, {
+    "range" : "27",
+    "domain" : "101",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "204"
+  }, {
+    "range" : "103",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "205"
+  }, {
+    "range" : "74",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "206"
+  }, {
+    "range" : "49",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "207"
+  }, {
+    "range" : "26",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "208"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#eventIsAnnotatedFrom",
+    "inverse" : "115",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "eventIsAnnotatedFrom"
+    },
+    "domain" : "89",
+    "attributes" : [ "object" ],
+    "id" : "209"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#indicatorMonitoredBy",
+    "inverse" : "102",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "103",
+    "label" : {
+      "IRI-based" : "indicatorMonitoredBy"
+    },
+    "domain" : "61",
+    "attributes" : [ "object" ],
+    "id" : "210"
+  }, {
+    "range" : "97",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "211"
+  }, {
+    "range" : "92",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "212"
+  }, {
+    "range" : "124",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "213"
+  }, {
+    "range" : "61",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "214"
+  }, {
+    "range" : "2",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "215"
+  }, {
+    "range" : "61",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "216"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#segmentIsCalculadedFrom",
+    "inverse" : "190",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "segmentIsCalculadedFrom"
+    },
+    "domain" : "88",
+    "attributes" : [ "object" ],
+    "id" : "217"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasAttributeValue",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "180",
+    "label" : {
+      "IRI-based" : "hasAttributeValue"
+    },
+    "domain" : "76",
+    "attributes" : [ "datatype" ],
+    "id" : "218"
+  }, {
+    "range" : "30",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "219"
+  }, {
+    "range" : "30",
+    "domain" : "104",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "220"
+  }, {
+    "range" : "30",
+    "domain" : "125",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "221"
+  }, {
+    "range" : "30",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "222"
+  }, {
+    "range" : "88",
+    "domain" : "112",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "223"
+  }, {
+    "range" : "88",
+    "domain" : "111",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "224"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasEvent",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "hasEvent"
+    },
+    "domain" : "92",
+    "attributes" : [ "object" ],
+    "id" : "110"
+  }, {
+    "range" : "11",
+    "domain" : "124",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "225"
+  }, {
+    "range" : "88",
+    "domain" : "113",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "226"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod",
+    "inverse" : "83",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "calculatedUsingTransitionPointMethod"
+    },
+    "domain" : "26",
+    "attributes" : [ "object" ],
+    "id" : "227"
+  }, {
+    "range" : "88",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "228"
+  }, {
+    "range" : "42",
+    "domain" : "90",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "229"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#isExternalAttributeOf",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isExternalAttributeOf"
+    },
+    "superproperty" : [ "82" ],
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "170"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasEpisode",
+    "inverse" : "100",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "hasEpisode"
+    },
+    "domain" : "92",
+    "attributes" : [ "object" ],
+    "id" : "230"
+  }, {
+    "iri" : "http://purl.org/net/sett/vocab#hasExternalAttribute",
+    "inverse" : "170",
+    "baseIri" : "http://purl.org/net/sett/vocab",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasExternalAttribute"
+    },
+    "superproperty" : [ "126" ],
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "128"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "skos:narrowerTransitive is a transitive superproperty of skos:narrower.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrowerTransitive",
+      "en" : "has narrower transitive"
+    },
+    "superproperty" : [ "10" ],
+    "domain" : "9",
+    "subproperty" : [ "35" ],
+    "attributes" : [ "transitive", "external", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "42",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "231"
+  }, {
+    "range" : "76",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "232"
+  }, {
+    "range" : "76",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "233"
+  }, {
+    "range" : "33",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "234"
+  }, {
+    "range" : "40",
+    "domain" : "84",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "235"
+  } ]
+}
