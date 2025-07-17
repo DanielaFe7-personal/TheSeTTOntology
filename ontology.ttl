@@ -8,11 +8,10 @@
 
 <http://purl.org/net/sett/vocab#> rdf:type owl:Ontology ;
                                    owl:versionIRI <http://purl.org/net/sett/vocab#1.0> ;
-                                   owl:imports <http://www.w3.org/2004/02/skos/core> ;
-                                   <http://purl.org/dc/elements/1.1/abstract> "The negative impact of human activities on our planet has increased the interest of stakeholders-from policymakers to citizens-in monitoring and understanding local changes, including both environmental and socio-economic factors. However, these data are often complex and challenging for non-experts to interpret. We introduce the SeTT (Semantic Trajectory of a Territorial Unit) ontology to describe the semantic trajectories of Territorial Units (TUs), making this information accessible to both expert and non-expert users."@en ;
-                                   <http://purl.org/dc/elements/1.1/description> "SeTT is a multi-layer ontology specifically designed to describe the semantic trajectories of Territorial Units (TUs). It models three types of trajectories: raw, structured, and semantic. Together, these trajectories create a comprehensive framework for capturing, organizing, and analyzing the evolution of TUs across various thematic domains, thereby improving users' ability to interpret and understand complex data."@en ;
+                                   <http://purl.org/dc/elements/1.1/abstract> "The negative impact of human activities on our planet has increased the interest of stakeholders—from policymakers to citizens—in monitoring and understanding local environmental changes. However, these data are often complex and difficult for non-experts to interpret. To address this, we introduce the SeTT (Semantic Trajectory of a Territorial Unit) ontology, which describes the environmental evolution of Territorial Units (e.g., municipalities) through different perspectives—Raw, Structured, and Thematic—making this information more synthesized, accessible, and understandable for both expert and non-expert users."@en ;
+                                   <http://purl.org/dc/elements/1.1/description> "SeTT is a multi-layered ontology specifically designed to describe the semantic trajectories of Territorial Units (TUs). It models three types of trajectories: Raw, Structured, and Semantic. Together, these trajectories create a comprehensive framework for capturing, organizing, and analyzing the evolution of TUs across various thematic domains, thereby improving users' ability to interpret and understand complex data."@en ;
                                    <http://purl.org/dc/elements/1.1/title> "The SeTT ontology"@en ;
-                                   <http://purl.org/dc/terms/created> "October 2024"@en ;
+                                   <http://purl.org/dc/terms/created> "July 2025"@en ;
                                    <http://purl.org/dc/terms/creator> "(1) Daniela Fernanda Milon-Flores"@en ,
                                                                       "(2) Camille Bernard"@en ,
                                                                       "(3) Jérôme Gensel"@en ,
@@ -45,8 +44,16 @@
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://schema.org/citation
@@ -76,6 +83,20 @@
                                       rdfs:range :TransitionPointDetectionMethod .
 
 
+###  http://purl.org/net/sett/vocab#country
+:country rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isCountryOf ;
+         rdfs:domain :TerritorialUnit ;
+         rdfs:range :Country .
+
+
+###  http://purl.org/net/sett/vocab#definesCriteriaFor
+:definesCriteriaFor rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :isDefinedByCriteria ;
+                    rdfs:domain :SemanticAnnotationCriteria ;
+                    rdfs:range :SemanticAnnotation .
+
+
 ###  http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom
 :episodeIsAnnotatedFrom rdf:type owl:ObjectProperty ;
                         owl:inverseOf :segmentAnnotatesEpisode ;
@@ -90,11 +111,23 @@
                       rdfs:range :TransitionPoint .
 
 
+###  http://purl.org/net/sett/vocab#givesDataTo
+:givesDataTo rdf:type owl:ObjectProperty ;
+             owl:inverseOf :takesDataFrom .
+
+
 ###  http://purl.org/net/sett/vocab#hasAttribute
 :hasAttribute rdf:type owl:ObjectProperty ;
               owl:inverseOf :isAttributeOf ;
               rdfs:domain :Component ;
               rdfs:range :Attribute .
+
+
+###  http://purl.org/net/sett/vocab#hasBroaderTheme
+:hasBroaderTheme rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isBroaderThemeOf ;
+                 rdfs:domain :SeTT ;
+                 rdfs:range :Theme .
 
 
 ###  http://purl.org/net/sett/vocab#hasEpisode
@@ -110,19 +143,19 @@
           rdfs:range :Event .
 
 
+###  http://purl.org/net/sett/vocab#hasExplanatoryFactor
+:hasExplanatoryFactor rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :isExplanatoryFactorOf ;
+                      rdfs:domain :Event ;
+                      rdfs:range :EventExplanatoryFactor .
+
+
 ###  http://purl.org/net/sett/vocab#hasExternalAttribute
 :hasExternalAttribute rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :hasAttribute ;
                       owl:inverseOf :isExternalAttributeOf ;
                       rdfs:domain :Component ;
                       rdfs:range :ExternalAttributes .
-
-
-###  http://purl.org/net/sett/vocab#hasFocusOn
-:hasFocusOn rdf:type owl:ObjectProperty ;
-            owl:inverseOf :isFocusOf ;
-            rdfs:domain :SeTT ;
-            rdfs:range :Theme .
 
 
 ###  http://purl.org/net/sett/vocab#hasIntrinsicAttribute
@@ -151,7 +184,14 @@
 :hasSemanticAnnotation rdf:type owl:ObjectProperty ;
                        owl:inverseOf :isSemanticAnnotationOf ;
                        rdfs:domain :ThematicComponent ;
-                       rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> .
+                       rdfs:range :SemanticAnnotation .
+
+
+###  http://purl.org/net/sett/vocab#hasSemanticAnnotationCriteria
+:hasSemanticAnnotationCriteria rdf:type owl:ObjectProperty ;
+                               owl:inverseOf :isSemanticAnnotationCriteriaOf ;
+                               rdfs:domain :ThematicTrajectory ;
+                               rdfs:range :SemanticAnnotationCriteria .
 
 
 ###  http://purl.org/net/sett/vocab#hasSlice
@@ -161,10 +201,18 @@
           rdfs:range :Slice .
 
 
-###  http://purl.org/net/sett/vocab#hasSubIndicator
-:hasSubIndicator rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Indicator ;
-                 rdfs:range :Indicator .
+###  http://purl.org/net/sett/vocab#hasTemporalGranularity
+:hasTemporalGranularity rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :isTemporalGranularityOf ;
+                        rdfs:domain :ThematicTrajectory ;
+                        rdfs:range :TemporalGranularity .
+
+
+###  http://purl.org/net/sett/vocab#hasTemporalScale
+:hasTemporalScale rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :isTemporalScaleOf ;
+                  rdfs:domain :ThematicTrajectory ;
+                  rdfs:range :TemporalScale .
 
 
 ###  http://purl.org/net/sett/vocab#hasThematicTrajectory
@@ -197,17 +245,34 @@
 :isAttributeOf rdf:type owl:ObjectProperty .
 
 
+###  http://purl.org/net/sett/vocab#isAttributeOfSemanticAnnotation
+:isAttributeOfSemanticAnnotation rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf :semanticAnnotationBasedOnAttribute .
+
+
+###  http://purl.org/net/sett/vocab#isBroaderThemeOf
+:isBroaderThemeOf rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/net/sett/vocab#isCountryOf
+:isCountryOf rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/net/sett/vocab#isDefinedByCriteria
+:isDefinedByCriteria rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.org/net/sett/vocab#isEpisodeOf
 :isEpisodeOf rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/net/sett/vocab#isExplanatoryFactorOf
+:isExplanatoryFactorOf rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.org/net/sett/vocab#isExternalAttributeOf
 :isExternalAttributeOf rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :isAttributeOf .
-
-
-###  http://purl.org/net/sett/vocab#isFocusOf
-:isFocusOf rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.org/net/sett/vocab#isIntrinsicAttributeOf
@@ -223,12 +288,29 @@
 :isSegmentOf rdf:type owl:ObjectProperty .
 
 
+###  http://purl.org/net/sett/vocab#isSemanticAnnotationCriteriaOf
+:isSemanticAnnotationCriteriaOf rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.org/net/sett/vocab#isSemanticAnnotationOf
 :isSemanticAnnotationOf rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.org/net/sett/vocab#isSliceOf
 :isSliceOf rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/net/sett/vocab#isStudyAreaOf
+:isStudyAreaOf rdf:type owl:ObjectProperty ;
+               owl:inverseOf :studyArea .
+
+
+###  http://purl.org/net/sett/vocab#isTemporalGranularityOf
+:isTemporalGranularityOf rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/net/sett/vocab#isTemporalScaleOf
+:isTemporalScaleOf rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.org/net/sett/vocab#isThematicTrajectoryOf
@@ -252,8 +334,7 @@
 
 
 ###  http://purl.org/net/sett/vocab#monitorsIndicator
-:monitorsIndicator rdf:type owl:ObjectProperty ,
-                            owl:FunctionalProperty ;
+:monitorsIndicator rdf:type owl:ObjectProperty ;
                    rdfs:domain :RawTrajectory ;
                    rdfs:range :Indicator .
 
@@ -262,16 +343,16 @@
 :segmentAnnotatesEpisode rdf:type owl:ObjectProperty .
 
 
-###  http://purl.org/net/sett/vocab#segmentIsCalculadedFrom
-:segmentIsCalculadedFrom rdf:type owl:ObjectProperty ;
-                         owl:inverseOf :sliceUsedToCalculateSegment ;
-                         rdfs:domain :Segment ;
-                         rdfs:range :Slice .
+###  http://purl.org/net/sett/vocab#segmentIsDerivatedFrom
+:segmentIsDerivatedFrom rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :sliceUsedToDerivateSegment ;
+                        rdfs:domain :Segment ;
+                        rdfs:range :Slice .
 
 
 ###  http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute
 :semanticAnnotationBasedOnAttribute rdf:type owl:ObjectProperty ;
-                                    rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                    rdfs:domain :SemanticAnnotation ;
                                     rdfs:range :Attribute .
 
 
@@ -280,8 +361,20 @@
                   owl:inverseOf :transitionPointDelimitSlice .
 
 
-###  http://purl.org/net/sett/vocab#sliceUsedToCalculateSegment
-:sliceUsedToCalculateSegment rdf:type owl:ObjectProperty .
+###  http://purl.org/net/sett/vocab#sliceUsedToDerivateSegment
+:sliceUsedToDerivateSegment rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/net/sett/vocab#studyArea
+:studyArea rdf:type owl:ObjectProperty ;
+           rdfs:domain :TerritorialUnit ;
+           rdfs:range :StudyArea .
+
+
+###  http://purl.org/net/sett/vocab#takesDataFrom
+:takesDataFrom rdf:type owl:ObjectProperty ;
+               rdfs:domain :Indicator ;
+               rdfs:range :Indicator .
 
 
 ###  http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent
@@ -298,10 +391,41 @@
 #    Data properties
 #################################################################
 
+###  http://purl.org/net/sett/vocab#areaInHAnLake
+:areaInHAnLake rdf:type owl:DatatypeProperty ;
+               rdfs:domain :TerritorialUnit ;
+               rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#areaInM2
+:areaInM2 rdf:type owl:DatatypeProperty ;
+          rdfs:domain :TerritorialUnit ;
+          rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#hasAnnotationCriteriaDescription
+:hasAnnotationCriteriaDescription rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain :SemanticAnnotationCriteria ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Provides a description of the semantic annotations- For instance, the thresholds used to classify certain values (e.g., slight, medium, strong) based on a given attribute." .
+
+
 ###  http://purl.org/net/sett/vocab#hasAttributeValue
 :hasAttributeValue rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Attribute ;
                    rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/net/sett/vocab#hasIndicatorDescription
+:hasIndicatorDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Indicator ;
+                         rdfs:range xsd:string .
+
+
+###  http://purl.org/net/sett/vocab#hasIndicatorFormula
+:hasIndicatorFormula rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Indicator ;
+                     rdfs:range xsd:string .
 
 
 ###  http://purl.org/net/sett/vocab#hasSequenceOrder
@@ -311,54 +435,191 @@
                   rdfs:range xsd:integer .
 
 
+###  http://purl.org/net/sett/vocab#hasStructurationMethodDescription
+:hasStructurationMethodDescription rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :StructurationMethod ;
+                                   rdfs:range xsd:string .
+
+
+###  http://purl.org/net/sett/vocab#hasTotalEpisodes
+:hasTotalEpisodes rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ThematicTrajectory ;
+                  rdfs:range xsd:integer .
+
+
+###  http://purl.org/net/sett/vocab#hasTotalEvents
+:hasTotalEvents rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ThematicTrajectory ;
+                rdfs:range xsd:integer .
+
+
+###  http://purl.org/net/sett/vocab#hasTotalSegments
+:hasTotalSegments rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :StructuredTrajectory ;
+                  rdfs:range xsd:integer .
+
+
+###  http://purl.org/net/sett/vocab#hasTotalSlices
+:hasTotalSlices rdf:type owl:DatatypeProperty ;
+                rdfs:domain :RawTrajectory ;
+                rdfs:range xsd:integer .
+
+
+###  http://purl.org/net/sett/vocab#hasTotalTransitionPoints
+:hasTotalTransitionPoints rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :StructuredTrajectory ;
+                          rdfs:range xsd:integer .
+
+
+###  http://purl.org/net/sett/vocab#maxElevationMeters
+:maxElevationMeters rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :TerritorialUnit ;
+                    rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#maxSlopeDegrees
+:maxSlopeDegrees rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :TerritorialUnit ;
+                 rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#meanElevationMeters
+:meanElevationMeters rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :TerritorialUnit ;
+                     rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#meanSlopeDegrees
+:meanSlopeDegrees rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :TerritorialUnit ;
+                  rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#minElevationMeters
+:minElevationMeters rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :TerritorialUnit ;
+                    rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#minSlopeDegrees
+:minSlopeDegrees rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :TerritorialUnit ;
+                 rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#stdElevationMeters
+:stdElevationMeters rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :TerritorialUnit ;
+                    rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#stdSlopeDegrees
+:stdSlopeDegrees rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :TerritorialUnit ;
+                 rdfs:range xsd:float .
+
+
+###  http://purl.org/net/sett/vocab#totalAreaInM2
+:totalAreaInM2 rdf:type owl:DatatypeProperty ;
+               rdfs:domain :TerritorialUnit ;
+               rdfs:range xsd:float .
+
+
 #################################################################
 #    Classes
 #################################################################
 
 ###  http://purl.org/net/sett/vocab#Attribute
 :Attribute rdf:type owl:Class ;
-           rdfs:comment """Trajectory components have Attributes that enhance their descriptions. 
-The value of an Attribute is flexible enough to represent various literal values regardless of the context.""" .
+           rdfs:comment """An Attribute provides additional descriptive information about a trajectory component.
+Attributes may hold a wide range of values, offering flexibility for representing various temporal or thematic aspects.""" ;
+           rdfs:label "Attribute" .
 
 
 ###  http://purl.org/net/sett/vocab#BEAST
 :BEAST rdf:type owl:Class ;
        rdfs:subClassOf :SegmentationMethod ,
-                       :TransitionPointDetectionMethod .
+                       :TransitionPointDetectionMethod ;
+       <http://purl.org/dc/terms/description> "The Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) is a statistical algorithm used for detecting breakpoints, trends, and seasonal variations in time series data. It applies a Bayesian framework to estimate the number and location of change points, making it well-suited for analyzing environmental and remote sensing datasets." ;
+       <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2019.04.034" ;
+       rdfs:comment "The Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) is a statistical algorithm used for detecting breakpoints, trends, and seasonal variations in time series data. It applies a Bayesian framework to estimate the number and location of change points, making it well-suited for analyzing environmental and remote sensing datasets." .
 
 
 ###  http://purl.org/net/sett/vocab#BFAST
 :BFAST rdf:type owl:Class ;
        rdfs:subClassOf :SegmentationMethod ,
-                       :TransitionPointDetectionMethod .
+                       :TransitionPointDetectionMethod ;
+       <http://purl.org/dc/terms/description> "The Breaks For Additive Season and Trend (BFAST) algorithm is a statistical method for detecting structural changes in time series data. It decomposes a time series into seasonal, trend, and remainder components and identifies breakpoints where abrupt changes occur. BFAST is widely used in environmental monitoring and remote sensing applications to analyze long-term changes in vegetation, climate, and land cover." ;
+       <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2009.08.014" ;
+       rdfs:comment "The Breaks For Additive Season and Trend (BFAST) algorithm is a statistical method for detecting structural changes in time series data. It decomposes a time series into seasonal, trend, and remainder components and identifies breakpoints where abrupt changes occur. BFAST is widely used in environmental monitoring and remote sensing applications to analyze long-term changes in vegetation, climate, and land cover." .
+
+
+###  http://purl.org/net/sett/vocab#BFASTLite
+:BFASTLite rdf:type owl:Class ;
+           rdfs:subClassOf :SegmentationMethod ,
+                           :TransitionPointDetectionMethod ;
+           <http://purl.org/dc/terms/description> "The BFAST Lite algorithm is a simplified version of the BFAST framework designed for efficient detection of breakpoints, trends, and seasonal variations in large-scale time series data. Unlike the full BFAST model, which iteratively decomposes the time series, BFAST Lite focuses on detecting change points in a single-pass approach, making it computationally faster and suitable for large datasets. It is particularly useful for processing satellite-based Earth observation data and environmental monitoring at scale." ;
+           <http://schema.org/citation> "https://doi.org/10.3390/rs13163308" ;
+           rdfs:comment "The BFAST Lite algorithm is a simplified version of the BFAST framework designed for efficient detection of breakpoints, trends, and seasonal variations in large-scale time series data. Unlike the full BFAST model, which iteratively decomposes the time series, BFAST Lite focuses on detecting change points in a single-pass approach, making it computationally faster and suitable for large datasets. It is particularly useful for processing satellite-based Earth observation data and environmental monitoring at scale." .
+
+
+###  http://purl.org/net/sett/vocab#BFASTMonitor
+:BFASTMonitor rdf:type owl:Class ;
+              rdfs:subClassOf :SegmentationMethod ,
+                              :TransitionPointDetectionMethod ;
+              <http://purl.org/dc/terms/description> "The BFAST Monitor (Breaks For Additive Season and Trend Monitor) is a statistical algorithm designed for near-real-time monitoring of breakpoints, trends, and seasonal variations in time series data. It extends the BFAST framework by continuously detecting structural changes in new observations while preserving the existing trend and seasonal components. This makes it particularly useful for analyzing environmental and remote sensing datasets, where ongoing monitoring of land cover or vegetation changes is required." ;
+              <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2012.02.022" ;
+              rdfs:comment "The BFAST Monitor (Breaks For Additive Season and Trend Monitor) is a statistical algorithm designed for near-real-time monitoring of breakpoints, trends, and seasonal variations in time series data. It extends the BFAST framework by continuously detecting structural changes in new observations while preserving the existing trend and seasonal components. This makes it particularly useful for analyzing environmental and remote sensing datasets, where ongoing monitoring of land cover or vegetation changes is required." .
+
+
+###  http://purl.org/net/sett/vocab#Binseg
+:Binseg rdf:type owl:Class ;
+        rdfs:subClassOf :SegmentationMethod ,
+                        :TransitionPointDetectionMethod ;
+        <http://purl.org/dc/terms/description> """Binary Segmentation (Binseg) is a recursive, top-down approach that detects change points in a sequential manner. This method is less computatio ally intensive but sacrifices some level of optimality in exchange for speed.
+The algorithm works by splitting the time series into two parts at each iteration and testing whether there is a significant change between these two segments.
+If a change point is detected, the algorithm continues to split the time series recursively. It repeats this process until no further changes are detected or a predefined stopping criterion is met.""" ;
+        <http://schema.org/citation> "https://doi.org/10.1017/S0266466600005831" ;
+        rdfs:comment """Binary Segmentation (Binseg) is a recursive, top-down approach that detects change points in a sequential manner. This method is less computatio ally intensive but sacrifices some level of optimality in exchange for speed.
+The algorithm works by splitting the time series into two parts at each iteration and testing whether there is a significant change between these two segments.
+If a change point is detected, the algorithm continues to split the time series recursively. It repeats this process until no further changes are detected or a predefined stopping criterion is met.""" .
 
 
 ###  http://purl.org/net/sett/vocab#BreakPoint
 :BreakPoint rdf:type owl:Class ;
             rdfs:subClassOf :TransitionPoint ;
-            rdfs:comment "A Breakpoint is a specific type of Transition Point (TP) defined as a moment in time when an abrupt change occurs in a time series. It is used to annotate an Event." .
+            rdfs:comment "A Break Point is a Transition Point that marks an abrupt and significant change in the data, such as a sudden increase or decrease." ;
+            rdfs:label "Break Point" .
 
 
-###  http://purl.org/net/sett/vocab#BreakpointMagnitude
-:BreakpointMagnitude rdf:type owl:Class ;
-                     rdfs:subClassOf :ExternalAttributes ;
-                     <http://purl.org/dc/terms/title> "Breakpoint Magnitude" ;
-                     rdfs:comment "A Breakpoint Magnitude is a specific type of External Attribute that quantifies the change at a Breakpoint. It is calculated as the distance between the Breakpoint and its subsequent point in time." ;
-                     rdfs:label "Breakpoint Magnitude" .
-
-
-###  http://purl.org/net/sett/vocab#BreakpointProbability
-:BreakpointProbability rdf:type owl:Class ;
-                       rdfs:subClassOf :ExternalAttributes ;
-                       <http://purl.org/dc/terms/title> "Breakpoint Probability" ;
-                       rdfs:comment "BreakpointProbability is a specific type of External Attribute that indicates the likelihood of a Breakpoint occurring based on statistical analysis." ;
-                       rdfs:label "Breakpoint Probability" .
+###  http://purl.org/net/sett/vocab#CCDC
+:CCDC rdf:type owl:Class ;
+      rdfs:subClassOf :TransitionPointDetectionMethod ;
+      <http://purl.org/dc/terms/description> "The Continuous Change Detection and Classification (CCDC) algorithm is a time series analysis method designed for detecting land surface changes using satellite imagery. It continuously monitors time series data by fitting harmonic regression models to capture seasonal variations and trend changes. When significant deviations from the expected model occur, CCDC identifies them as change events. This method is widely used in remote sensing applications for land cover monitoring, forest disturbance detection, and environmental change analysis." ;
+      <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2014.01.011" ;
+      rdfs:comment "The Continuous Change Detection and Classification (CCDC) algorithm is a time series analysis method designed for detecting land surface changes using satellite imagery. It continuously monitors time series data by fitting harmonic regression models to capture seasonal variations and trend changes. When significant deviations from the expected model occur, CCDC identifies them as change events. This method is widely used in remote sensing applications for land cover monitoring, forest disturbance detection, and environmental change analysis." .
 
 
 ###  http://purl.org/net/sett/vocab#Component
 :Component rdf:type owl:Class ;
-           rdfs:comment """Trajectories consist of Components, each defined by its position in the sequence, the algorithm used for its calculation, and a set of Attributes that enrich its description.
-In the SeTT ontology, there are three types of components: thematic, structured, and raw.""" .
+           rdfs:comment """A Component represents a part of a trajectory, defined by its position in the sequence and its descriptive attributes.
+The SeTT ontology defines three types of components: raw, structured, and thematic.""" ;
+           rdfs:label "Component" .
+
+
+###  http://purl.org/net/sett/vocab#Country
+:Country rdf:type owl:Class ;
+         rdfs:comment "A Country represents the national entity in which a Territorial Unit is located." ;
+         rdfs:label "Country" .
+
+
+###  http://purl.org/net/sett/vocab#DBEST
+:DBEST rdf:type owl:Class ;
+       rdfs:subClassOf :SegmentationMethod ,
+                       :TransitionPointDetectionMethod ;
+       <http://purl.org/dc/terms/description> "The DBEST (Detecting Breakpoints and Estimating Segments in Trend) algorithm is a statistical method designed for detecting breakpoints and estimating trend segments in time series data. It is particularly effective in analyzing environmental changes, such as vegetation dynamics, by decomposing time series into meaningful segments. DBEST employs a data-driven approach to identify trend shifts and estimate their magnitude, making it well-suited for applications in remote sensing and ecological monitoring." ;
+       <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2014.09.010" ;
+       rdfs:comment "The DBEST (Detecting Breakpoints and Estimating Segments in Trend) algorithm is a statistical method designed for detecting breakpoints and estimating trend segments in time series data. It is particularly effective in analyzing environmental changes, such as vegetation dynamics, by decomposing time series into meaningful segments. DBEST employs a data-driven approach to identify trend shifts and estimate their magnitude, making it well-suited for applications in remote sensing and ecological monitoring." .
 
 
 ###  http://purl.org/net/sett/vocab#Episode
@@ -370,26 +631,76 @@ In the SeTT ontology, there are three types of components: thematic, structured,
                            owl:onClass :ThematicTrajectory
                          ] ;
          owl:disjointWith :Event ;
-         rdfs:comment """An Episode is a component of the Thematic Trajectory, derived from the semantic annotation of its corresponding Segment within a Structured Trajectory. 
-Each Episode is defined by its position in the trajectory sequence and characterized by semantic annotations that provide context for interpreting the trajectory's behavior.
- A set of attributes further enriches its contextual information. 
-An Episode period culminates when an Event occurs, marking a discontinuity between Episodes.""" .
+         rdfs:comment """An Episode is derived from the semantic annotation of a Segment in the Structured Trajectory.
+It represents a continuous period characterized by a specific behavior or condition, as defined by semantic annotations and descriptive attributes.
+An Episode ends when an Event occurs, marking a discontinuity in the trajectory.""" ;
+         rdfs:label "Episode" .
+
+
+###  http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation
+:EpisodeBehaviorAnnotation rdf:type owl:Class ;
+                           rdfs:subClassOf :SemanticAnnotation ;
+                           rdfs:comment """Semantic annotation that qualifies the overall dynamic of an Episode by integrating its temporal extent (short-term, moderate-term, long-term), the magnitude and direction of change (slope), the thematic focus (e.g., vegetation, temperature, population), and its vertical position (value level). 
+This annotation provides an integrated, syntezed and enriched view of how an Indicator changes over the course of the Episode.""" ;
+                           rdfs:label "Episode Behavior Annotation" .
+
+
+###  http://purl.org/net/sett/vocab#EpisodeDurationAnnotation
+:EpisodeDurationAnnotation rdf:type owl:Class ;
+                           rdfs:subClassOf :SemanticAnnotation ;
+                           rdfs:comment "Semantic annotation that qualifies the temporal extent of an Episode, categorizing it as short-term, moderate-term, or long-term" ;
+                           rdfs:label "Episode Duration Annotation" .
 
 
 ###  http://purl.org/net/sett/vocab#EpisodeEndDate
 :EpisodeEndDate rdf:type owl:Class ;
                 rdfs:subClassOf :IntrinsicAttributes ;
                 <http://purl.org/dc/terms/title> "Episode End Date" ;
-                rdfs:comment "Episode End Date is a specific type of Intrinsic Attribute that indicates the date when an Episode concludes." ;
+                rdfs:comment "Episode End Date indicates the date on which an Episode concludes." ;
                 rdfs:label "Episode End Date" .
+
+
+###  http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation
+:EpisodeGradualMagnitudeAnnotation rdf:type owl:Class ;
+                                   rdfs:subClassOf :SemanticAnnotation ;
+                                   rdfs:comment "Semantic annotation that qualifies the overall intensity of change throughout an Episode, based on the slope and duration of its corresponding segment. This gradual magnitude of change is computed as the product of slope magnitude and duration." ;
+                                   rdfs:label "Episode Gradual Magnitude Annotation" .
+
+
+###  http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation
+:EpisodeSlopeAnnotation rdf:type owl:Class ;
+                        rdfs:subClassOf :SemanticAnnotation ;
+                        rdfs:comment "Semantic annotation for an Episode based on the slope characteristics of its corresponding segment, considering both the slope direction (increase, decrease, or stable) and its magnitude." ;
+                        rdfs:label "Episode Slope Annotation" .
 
 
 ###  http://purl.org/net/sett/vocab#EpisodeStartDate
 :EpisodeStartDate rdf:type owl:Class ;
                   rdfs:subClassOf :IntrinsicAttributes ;
                   <http://purl.org/dc/terms/title> "Episode Start Date" ;
-                  rdfs:comment "Episode Start Date is a specific type of Intrinsic Attribute that marks the date when an Episode begins." ;
+                  rdfs:comment "Episode Start Date indicates the date on which an Episode begins." ;
                   rdfs:label "Episode Start Date" .
+
+
+###  http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation
+:EpisodeStatisticalSignificanceAnnotation rdf:type owl:Class ;
+                                          rdfs:subClassOf :SemanticAnnotation ;
+                                          rdfs:comment "Semantic annotation that indicates the statistical confidence in the trend observed during the Episode." ;
+                                          rdfs:label "Episode Statistical Significance Annotation" .
+
+
+###  http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation
+:EpisodeThematicSlopeDirectionAnnotation rdf:type owl:Class ;
+                                         rdfs:subClassOf :SemanticAnnotation ;
+                                         rdfs:comment "Semantic annotation that provides a theme-specific interpretation of an Episode’s slope direction—for example, Greening for vegetation, Warming for temperature, or Population Growth for population." ;
+                                         rdfs:label "Episode Thematic Slope Annotation" .
+
+
+###  http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation
+:EpisodeValueLevelAnnotation rdf:type owl:Class ;
+                             rdfs:subClassOf :SemanticAnnotation ;
+                             rdfs:comment "Semantic annotation that qualifies the vertical position of an Episode’s start or end along the indicator’s value axis (i.e., the y-axis). It categorizes this position into levels such as very low, low, moderate, high, or very high." ;
+                             rdfs:label "Episode Value Level Annotation" .
 
 
 ###  http://purl.org/net/sett/vocab#Event
@@ -400,111 +711,153 @@ An Episode period culminates when an Event occurs, marking a discontinuity betwe
                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onClass :ThematicTrajectory
                        ] ;
-       rdfs:comment """An Event is a component of a Thematic Trajectory, derived from the semantic annotation of a Transition Point within a Structured Trajectory. 
-Each Event is defined by its position in the trajectory and comprises semantic annotations and attributes that provide context and enhance the interpretation of the Thematic Trajectory's behavior. 
-Unlike Episodes, Events have an instantaneous duration and signify the discontinuity between Episodes.""" .
+       rdfs:comment """An Event represents a meaningful change in the trajectory that occurs at a specific moment in time, causing a discontinuity between Episodes in the Thematic Trajectory.
+It is derived from the semantic annotation of a Transition Point and is described through annotations and attributes that characterize the nature and significance of the transition.""" ;
+       rdfs:label "Event" .
 
 
 ###  http://purl.org/net/sett/vocab#EventDate
 :EventDate rdf:type owl:Class ;
            rdfs:subClassOf :IntrinsicAttributes ;
            <http://purl.org/dc/terms/title> "Event Date" ;
-           rdfs:comment "Event Date is a specific type of Intrinsic Attribute that specifies the date when an Event occurred." ;
+           rdfs:comment "Event Date specifies the date on which an Event took place." ;
            rdfs:label "Event Date" .
 
 
-###  http://purl.org/net/sett/vocab#ExplanatoryFactor
-:ExplanatoryFactor rdf:type owl:Class ;
-                   rdfs:subClassOf :ExternalAttributes ;
-                   <http://purl.org/dc/terms/title> "Explanatory Factor" ;
-                   rdfs:comment """Explanatory Factors are a specific type of External Attribute that provides additional context regarding the occurrence of a Transition Point such as a Breakpoint. 
-Various resources, such as available URLs or bibliographic citations, can be used to enrich the Event.""" ;
-                   rdfs:label "Explanatory Factor" .
+###  http://purl.org/net/sett/vocab#EventExplanatoryFactor
+:EventExplanatoryFactor rdf:type owl:Class ;
+                        rdfs:subClassOf :ExternalAttributes ;
+                        <http://purl.org/dc/terms/title> "Event Explanatory Factor" ;
+                        rdfs:comment """An Event Explanatory Factor refers to a potential driver or context that explains a change observed at a Transition Point, such as a Breakpoint.
+It may consist of external sources like bibliographic references, URLs, or links to Linked Open Data repositories.""" ;
+                        rdfs:label "Event Explanatory Factor" .
+
+
+###  http://purl.org/net/sett/vocab#EventTransitionAnnotation
+:EventTransitionAnnotation rdf:type owl:Class ;
+                           rdfs:subClassOf :SemanticAnnotation ;
+                           rdfs:comment "Semantic annotation that qualifies both the direction and intensity of change at the Transition Point associated with an Event." ;
+                           rdfs:label "Event Transition Annotation" .
 
 
 ###  http://purl.org/net/sett/vocab#ExternalAttributes
 :ExternalAttributes rdf:type owl:Class ;
                     rdfs:subClassOf :Attribute ;
                     owl:disjointWith :IntrinsicAttributes ;
-                    rdfs:comment "An external attribute is an optional or supplementary characteristic that enhances the description of a component. These attributes may be added by expert users or derived from specific methods. For instance, the p-value is an external attribute derived from applying the linear regression method." .
+                    rdfs:comment """An External Attribute refers to contextual or auxiliary information that enhances the description of a trajectory component.
+These attributes are not intrinsic to the component itself but may be derived from external analyses, expert input, or supporting datasets.""" ;
+                    rdfs:label "External Attribute" .
+
+
+###  http://purl.org/net/sett/vocab#HMM
+:HMM rdf:type owl:Class ;
+     rdfs:subClassOf :TransitionPointDetectionMethod ;
+     <http://purl.org/dc/terms/description> """Hidden Markov Models (HMM) are a powerful statistical tool used to model time-series data, particularly when the data evolves through different underlying states that are not directly observable. These \"hidden\" states represent distinct environmental conditions or phases, and the system transitions between these states over time. For example, in environmental studies, the hidden states might represent different trends in data such as:
+• Stable Trend: No significant changes in the environmental variable (e.g., temper- ature, vegetation health).
+• Increasing Trend: A period of gradual increase in the environmental variable (e.g., warming temperatures, growing vegetation).
+• Decreasing Trend: A period of gradual decline in the environmental variable (e.g., cooling temperatures, deteriorating vegetation).""" ;
+     <http://schema.org/citation> "https://doi.org/10.48550/arXiv.1212.1778" ;
+     rdfs:comment """Hidden Markov Models (HMM) are a powerful statistical tool used to model time-series data, particularly when the data evolves through different underlying states that are not directly observable. These \"hidden\" states represent distinct environmental conditions or phases, and the system transitions between these states over time. For example, in environmental studies, the hidden states might represent different trends in data such as:
+• Stable Trend: No significant changes in the environmental variable (e.g., temper- ature, vegetation health).
+• Increasing Trend: A period of gradual increase in the environmental variable (e.g., warming temperatures, growing vegetation).
+• Decreasing Trend: A period of gradual decline in the environmental variable (e.g., cooling temperatures, deteriorating vegetation).""" .
 
 
 ###  http://purl.org/net/sett/vocab#Indicator
 :Indicator rdf:type owl:Class ;
-           rdfs:comment """An Indicator is defined as a quantitative measure that captures the status of a situation or its variations over time. In the context of a Raw trajectory, it represents the data being monitored. 
-The concept of an Indicator is sufficiently abstract to encompass various domains, including environmental and socio-economic.
-Indicators correspond to the Indicator dimension of the RDF Data Cube and can exist as standalone measures or be composed of other indicators. 
-Indicators can be further enriched with metadata such as bibliography citations, formula descriptions, and open-linked data resources.""" .
+           rdfs:comment "An Indicator is defined as a quantitative measure that captures the status of a situation or its variations over time." ;
+           rdfs:label "Indicator" .
 
 
 ###  http://purl.org/net/sett/vocab#InflexionPoint
 :InflexionPoint rdf:type owl:Class ;
-                rdfs:subClassOf :TransitionPoint .
+                rdfs:subClassOf :TransitionPoint ;
+                rdfs:comment "An Inflexion Point indicates a subtle change in the trajectory where the direction or curvature shifts gradually, rather than abruptly." ;
+                rdfs:label "Inflexion Point" .
 
 
 ###  http://purl.org/net/sett/vocab#InterruptionPoint
 :InterruptionPoint rdf:type owl:Class ;
-                   rdfs:subClassOf :TransitionPoint .
+                   rdfs:subClassOf :TransitionPoint ;
+                   rdfs:comment "An Interruption Point marks a temporary disruption in the trajectory, such as a short-term deviation that is not sustained." ;
+                   rdfs:label "Interruption Point" .
 
 
 ###  http://purl.org/net/sett/vocab#IntrinsicAttributes
 :IntrinsicAttributes rdf:type owl:Class ;
                      rdfs:subClassOf :Attribute ;
-                     rdfs:comment "An intrinsic attribute is inherent to the component's nature. For example, in a linear segment, attributes such as the start and end points, as well as the slope, are considered intrinsic because they are essential for defining the segment." .
+                     rdfs:comment "An Intrinsic Attribute describes essential characteristics of a trajectory component that are inherent to its structure or behavior." ;
+                     rdfs:label "Intrinsic Attribute" .
 
 
 ###  http://purl.org/net/sett/vocab#LinearRegression
 :LinearRegression rdf:type owl:Class ;
-                  rdfs:subClassOf :SegmentationMethod .
+                  rdfs:subClassOf :SegmentationMethod ;
+                  <http://purl.org/dc/terms/description> "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the data. It is commonly used for trend analysis, forecasting, and identifying patterns in datasets. In its simplest form, simple linear regression uses a straight line (y = mx + b) to represent the relationship between two variables, where m is the slope and b is the intercept. Linear regression is widely applied in various fields, including economics, environmental studies, and machine learning, to analyze trends and make predictions." ;
+                  <http://schema.org/citation> "David A. Freedman (2009). Statistical Models: Theory and Practice. Cambridge University Press. p. 26. A simple regression equation has on the right hand side an intercept and an explanatory variable with a slope coefficient. A multiple regression e right hand side, each with its own slope coefficient" ;
+                  rdfs:comment "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the data. It is commonly used for trend analysis, forecasting, and identifying patterns in datasets. In its simplest form, simple linear regression uses a straight line (y = mx + b) to represent the relationship between two variables, where m is the slope and b is the intercept. Linear regression is widely applied in various fields, including economics, environmental studies, and machine learning, to analyze trends and make predictions." .
 
 
 ###  http://purl.org/net/sett/vocab#LinearSegment
 :LinearSegment rdf:type owl:Class ;
-               rdfs:subClassOf :Segment .
-
-
-###  http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude
-:LinearTrendGradualMagnitude rdf:type owl:Class ;
-                             rdfs:subClassOf :ExternalAttributes ;
-                             <http://purl.org/dc/terms/title> "Linear Trend Gradual Magnitude" ;
-                             rdfs:comment "A Gradual Magnitude is a specific type of External Attribute that describes the magnitude of change within a Linear Trend. It is calculated by multiplying the Intrinsic attributes Slope magnitude and Segment duration." ;
-                             rdfs:label "Linear Trend Gradual Magnitude" .
-
-
-###  http://purl.org/net/sett/vocab#LinearTrendPValue
-:LinearTrendPValue rdf:type owl:Class ;
-                   rdfs:subClassOf :ExternalAttributes ;
-                   <http://purl.org/dc/terms/title> "Linear Trend  p-value" ;
-                   rdfs:comment "A p-value is a specific type of External Attribute that indicates the statistical significance of a Trend line." ;
-                   rdfs:label "Linear Trend p-value" .
+               rdfs:subClassOf :Segment ;
+               rdfs:comment "A Linear Segment is a type of Segment where the data follows a linear trend over time." ;
+               rdfs:label "Linear Segment" .
 
 
 ###  http://purl.org/net/sett/vocab#NonLinearSegment
 :NonLinearSegment rdf:type owl:Class ;
-                  rdfs:subClassOf :Segment .
+                  rdfs:subClassOf :Segment ;
+                  rdfs:comment "A Non Linear Segment is a type of Segment where the data shows a non-linear pattern over time, such as seasonal or cyclical behavior." ;
+                  rdfs:label "Non Linear Segment" .
+
+
+###  http://purl.org/net/sett/vocab#PELT
+:PELT rdf:type owl:Class ;
+      rdfs:subClassOf :TransitionPointDetectionMethod ;
+      <http://purl.org/dc/terms/description> "The PELT (Pruned Exact Linear Time Algorithm) algorithm is designed to identify the most optimal segmentation of time series data by minimizing a penalized cost function. The method is particularly effective in providing an accurate segmentation while ensuring efficient computational performance." ;
+      <http://schema.org/citation> "10.11648/j.ajtas.20150406.30" ;
+      rdfs:comment "The PELT (Pruned Exact Linear Time Algorithm) algorithm is designed to identify the most optimal segmentation of time series data by minimizing a penalized cost function. The method is particularly effective in providing an accurate segmentation while ensuring efficient computational performance." .
+
+
+###  http://purl.org/net/sett/vocab#PiecewiseRegression
+:PiecewiseRegression rdf:type owl:Class ;
+                     rdfs:subClassOf :SegmentationMethod ;
+                     <http://purl.org/dc/terms/description> "Piecewise Regression is a statistical technique used to model time series data by dividing it into multiple segments and fitting separate regression models to each segment. Unlike simple linear regression, which assumes a single trend across all observations, piecewise regression allows for structural changes, making it useful for detecting breakpoints and modeling non-linear trends in time series data. It is widely applied in environmental monitoring, remote sensing, and economic trend analysis." ;
+                     <http://schema.org/citation> "https://doi.org/10.1080/01621459.1970.10481147" ;
+                     rdfs:comment "Piecewise Regression is a statistical technique used to model time series data by dividing it into multiple segments and fitting separate regression models to each segment. Unlike simple linear regression, which assumes a single trend across all observations, piecewise regression allows for structural changes, making it useful for detecting breakpoints and modeling non-linear trends in time series data. It is widely applied in environmental monitoring, remote sensing, and economic trend analysis." .
 
 
 ###  http://purl.org/net/sett/vocab#RawComponent
 :RawComponent rdf:type owl:Class ;
               rdfs:subClassOf :Component ;
-              rdfs:comment "A Raw Component is a type of Component used to form a Raw trajectory." .
+              rdfs:comment "A Raw Component is a type of Component used to build a Raw Trajectory." ;
+              rdfs:label "Raw Component" .
 
 
 ###  http://purl.org/net/sett/vocab#RawTrajectory
 :RawTrajectory rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
+               rdfs:subClassOf :Trajectory ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasSlice ;
                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onClass :Slice
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :monitorsIndicator ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Indicator
                                ] ;
-               rdfs:comment """A raw trajectory, or simply a trajectory, of Territorial Units (TUs) refers to a sequence of chronologically ordered measurements, tracking the temporal changes of domain-specific indicators.
-To efficiently manage large volumes of data, the Indicator measurements are represented as Observations using the RDF Data Cube vocabulary, structured across three dimensions: Time, Space, and Indicator.
-Pre-calculated Slices are then employed to store these Observations, each fixed over a defined period.""" .
+               rdfs:comment """A Raw Trajectory consists of a time series that tracks changes in domain-specific indicators for a Territorial Unit (TU).
+The time series is integrated into the Linked Open Data (LOD) Cloud using the Slice component of the RDF Data Cube vocabulary, and is organized along Time, Space, and Indicator dimensions.""" ;
+               rdfs:label "Raw Trajectory" .
 
 
 ###  http://purl.org/net/sett/vocab#RegimeChangePoint
 :RegimeChangePoint rdf:type owl:Class ;
-                   rdfs:subClassOf :TransitionPoint .
+                   rdfs:subClassOf :TransitionPoint ;
+                   rdfs:comment "A Regime Change Point signals a transition between two distinct states or regimes in the data, characterized by long-term structural differences." ;
+                   rdfs:label "Regime Change Point" .
 
 
 ###  http://purl.org/net/sett/vocab#SeTT
@@ -519,14 +872,10 @@ Pre-calculated Slices are then employed to store these Observations, each fixed 
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onClass :TerritorialUnit
                       ] ;
-      rdfs:comment """The Semantic Trajectory of a Territorial Unit (SeTT) represents the collection of Thematic Trajectories associated with a Territorial Unit (TU). 
-It is sufficiently abstract to contain Thematic Trajectories regardless of their Thematic domain. 
-A Territorial Unit (TU) can be composed of one ore multiple SeTTs.""" .
-
-
-###  http://purl.org/net/sett/vocab#SeasonalSegment
-:SeasonalSegment rdf:type owl:Class ;
-                 rdfs:subClassOf :Segment .
+      rdfs:comment """A SeTT (Semantic Trajectory of a Territorial Unit) represents a collection of Thematic Trajectories describing the evolution of a Territorial Unit across one or more domains.
+It serves as an abstract structure capable of grouping Thematic Trajectories from different themes.
+A Territorial Unit may be associated with one or more SeTTs.""" ;
+      rdfs:label "SeTT" .
 
 
 ###  http://purl.org/net/sett/vocab#Segment
@@ -538,16 +887,17 @@ A Territorial Unit (TU) can be composed of one ore multiple SeTTs.""" .
                            owl:onClass :StructuredTrajectory
                          ] ;
          owl:disjointWith :TransitionPoint ;
-         rdfs:comment """A Segment is a component of a Structured Trajectory, calculated from its corresponding Slice within a Raw Trajectory. 
-Each Segment is characterized by its position in the trajectory, along with intrinsic and external attributes that provide detailed information about the Segment's properties and behavior of the data. 
-The Segment period culminates when a Transition Point occurs, marking a discontinuity between Segments.""" .
+         rdfs:comment """A Segment is a continuous part of a trajectory where the data follows a consistent pattern.
+It has attributes that enhance its description, such as init, end, and slope.
+A Segment may start or end at a Transition Point, depending on how the trajectory is structured.""" ;
+         rdfs:label "Segment" .
 
 
 ###  http://purl.org/net/sett/vocab#SegmentDuration
 :SegmentDuration rdf:type owl:Class ;
                  rdfs:subClassOf :IntrinsicAttributes ;
                  <http://purl.org/dc/terms/title> "Segment Duration" ;
-                 rdfs:comment "Segment Duration is a specific type of Intrinsic Attribute that indicates the length of time over which a Segment is observed." ;
+                 rdfs:comment "Segment Duration refers to the number of observations that make up a Segment, indicating how long the segment lasts in the time series." ;
                  rdfs:label "Segment Duration" .
 
 
@@ -555,7 +905,7 @@ The Segment period culminates when a Transition Point occurs, marking a disconti
 :SegmentEndX rdf:type owl:Class ;
              rdfs:subClassOf :IntrinsicAttributes ;
              <http://purl.org/dc/terms/title> "Segment End X" ;
-             rdfs:comment "SegmentEndX is a specific type of Intrinsic Attribute that specifies the x-coordinate at the conclusion of a Segment." ;
+             rdfs:comment "Segment End X specifies the x-coordinate, i.e., the time value, that marks the end of a segment." ;
              rdfs:label "Segment End X" .
 
 
@@ -563,15 +913,57 @@ The Segment period culminates when a Transition Point occurs, marking a disconti
 :SegmentEndY rdf:type owl:Class ;
              rdfs:subClassOf :IntrinsicAttributes ;
              <http://purl.org/dc/terms/title> "Segment End Y" ;
-             rdfs:comment "Segment End Y is a specific type of Intrinsic Attribute that specifies the y-coordinate at the conclusion of a Segment." ;
+             rdfs:comment "Segment End Y specifies the y-coordinate, i.e., the measured value, marking the end of a Segment." ;
              rdfs:label "Segment End Y" .
+
+
+###  http://purl.org/net/sett/vocab#SegmentGradualMagnitude
+:SegmentGradualMagnitude rdf:type owl:Class ;
+                         rdfs:subClassOf :ExternalAttributes ;
+                         <http://purl.org/dc/terms/title> "Segment Gradual Magnitude" ;
+                         rdfs:comment """Segment Gradual Magnitude describes the overall strength of change within a segment, such as a Linear Trend.
+It is computed by multiplying the slope magnitude by the segment duration.""" ;
+                         rdfs:label "Segment Gradual Magnitude" .
+
+
+###  http://purl.org/net/sett/vocab#SegmentPValue
+:SegmentPValue rdf:type owl:Class ;
+               rdfs:subClassOf :ExternalAttributes ;
+               <http://purl.org/dc/terms/title> "Segment p-value" ;
+               rdfs:comment """Segment p-value indicates the statistical significance of a segment’s trend, such as in a Linear Segment.
+It reflects the confidence level of the detected change.""" ;
+               rdfs:label "Segment p-value" .
+
+
+###  http://purl.org/net/sett/vocab#SegmentSlopeDirection
+:SegmentSlopeDirection rdf:type owl:Class ;
+                       rdfs:subClassOf :IntrinsicAttributes ;
+                       <http://purl.org/dc/terms/title> "Segment Slope Direction" ;
+                       rdfs:comment "Segment Slope Direction indicates whether the slope of a Trend Segment is increasing, decreasing, or flat." ;
+                       rdfs:label "Segment Slope Direction" .
+
+
+###  http://purl.org/net/sett/vocab#SegmentSlopeIntercept
+:SegmentSlopeIntercept rdf:type owl:Class ;
+                       rdfs:subClassOf :IntrinsicAttributes ;
+                       <http://purl.org/dc/terms/title> "Segment Slope Intercept" ;
+                       rdfs:comment "Segment Slope Intercept is the y-value at which a linear trend line intersects the y-axis, representing the expected value when x is zero." ;
+                       rdfs:label "Segment Slope Intercept" .
+
+
+###  http://purl.org/net/sett/vocab#SegmentSlopeMagnitude
+:SegmentSlopeMagnitude rdf:type owl:Class ;
+                       rdfs:subClassOf :IntrinsicAttributes ;
+                       <http://purl.org/dc/terms/title> "Segment Slope Magnitude" ;
+                       rdfs:comment "Segment Slope Magnitude represents the absolute value of the slope of a linear segment, indicating the strength of change regardless of direction." ;
+                       rdfs:label "Segment Slope Magnitude" .
 
 
 ###  http://purl.org/net/sett/vocab#SegmentStartX
 :SegmentStartX rdf:type owl:Class ;
                rdfs:subClassOf :IntrinsicAttributes ;
                <http://purl.org/dc/terms/title> "Segment Start X" ;
-               rdfs:comment "Segment Start X is a specific type of Intrinsic Attribute that indicates the x-coordinate at the beginning of a Segment." ;
+               rdfs:comment "Segment Start X specifies the x-coordinate, i.e., the time value, that marks the start of a segment." ;
                rdfs:label "Segment Start X" .
 
 
@@ -579,15 +971,27 @@ The Segment period culminates when a Transition Point occurs, marking a disconti
 :SegmentStartY rdf:type owl:Class ;
                rdfs:subClassOf :IntrinsicAttributes ;
                <http://purl.org/dc/terms/title> "Segment Start Y" ;
-               rdfs:comment "Segment Start Y is a specific type of Intrinsic Attribute that indicates the y-coordinate at the beginning of a Segment." ;
+               rdfs:comment "Segment Start Y specifies the y-coordinate, i.e., the measured value, marking the start of a Segment." ;
                rdfs:label "Segment Start Y" .
 
 
 ###  http://purl.org/net/sett/vocab#SegmentationMethod
 :SegmentationMethod rdf:type owl:Class ;
                     rdfs:subClassOf :StructurationMethod ;
-                    rdfs:comment """A computational process is used to organize a raw trajectory into distinct segments.
-Examples of segmentation methods are BFAST (Breaks for Additive Season and Trend), BEAST (Bayesian Ensemble Algorithm for Change-Point Detection and Time Series Decomposition), and Linear Regression.""" .
+                    rdfs:comment "A Segmentation Method is a technique used to divide a time series into meaningful segments, typically based on patterns such as trends or value stability. These methods help identify consistent intervals within the data where the behavior remains relatively uniform." ;
+                    rdfs:label "Segmentation Method" .
+
+
+###  http://purl.org/net/sett/vocab#SemanticAnnotation
+:SemanticAnnotation rdf:type owl:Class ;
+                    rdfs:comment "A Semantic Annotation enriches a Thematic component—such as an Episode or Event—by linking it to a meaningful concept, typically defined in a controlled vocabulary or ontology." ;
+                    rdfs:label "Semantic Annotation" .
+
+
+###  http://purl.org/net/sett/vocab#SemanticAnnotationCriteria
+:SemanticAnnotationCriteria rdf:type owl:Class ;
+                            rdfs:comment "Semantic annotation criteria define the formal conditions and/or thresholds used to determine how specific annotations are assigned and interpreted. They may also specify the method applied to derive the annotation. These parameter selections are applied consistently across all annotations related to the thematic components—Episodes and Events—of the Thematic Trajectories." ;
+                            rdfs:label "Semantic Annotation Criteria" .
 
 
 ###  http://purl.org/net/sett/vocab#Slice
@@ -597,53 +1001,56 @@ Examples of segmentation methods are BFAST (Breaks for Additive Season and Trend
                          owl:onProperty :isSliceOf ;
                          owl:allValuesFrom :RawTrajectory
                        ] ;
-       rdfs:comment """Pre-calculated Slices are components of the Raw trajectory which offers an efficient method for storing data, originally organized in RDF data cubes across the dimensions of Space, Time, and Indicator. 
-The detected Transition Points define each slice time period. 
-Importantly, Slices are used to calculate the Segment component within the Structured trajectory.""" .
+       rdfs:comment "A Slice represents a portion of raw data defined as a Slice in the RDF Data Cube vocabulary. It is used to compute Segments in the Structured Trajectory." ;
+       rdfs:label "Slice" .
 
 
-###  http://purl.org/net/sett/vocab#SlopeDirection
-:SlopeDirection rdf:type owl:Class ;
-                rdfs:subClassOf :IntrinsicAttributes ;
-                <http://purl.org/dc/terms/title> "Slope Direction" ;
-                rdfs:comment "Slope Direction is a specific type of Intrinsic Attribute that describes the direction of the slope within a Trend Segment, indicating whether it is increasing or decreasing." ;
-                rdfs:label "Slope Direction" .
+###  http://purl.org/net/sett/vocab#SliceEndObservation
+:SliceEndObservation rdf:type owl:Class ;
+                     rdfs:subClassOf :IntrinsicAttributes ;
+                     rdfs:comment "Slice End Observation identifies the final observation included in a Slice." ;
+                     rdfs:label "Slice End Observation" .
 
 
-###  http://purl.org/net/sett/vocab#SlopeIntercept
-:SlopeIntercept rdf:type owl:Class ;
-                rdfs:subClassOf :IntrinsicAttributes ;
-                <http://purl.org/dc/terms/title> "Slope Intercept" ;
-                rdfs:comment "Slope Intercept is a specific type of Intrinsic Attribute. In the context of a linear trend, the Slope Intercept is the y-value at which the trend line intersects the y-axis when the x-value is zero." ;
-                rdfs:label "Slope Intercept" .
+###  http://purl.org/net/sett/vocab#SliceStartObservation
+:SliceStartObservation rdf:type owl:Class ;
+                       rdfs:subClassOf :IntrinsicAttributes ;
+                       rdfs:comment "Slice Start Observation identifies the first observation included in a Slice." ;
+                       rdfs:label "Slice Start Observation" .
 
 
-###  http://purl.org/net/sett/vocab#SlopeMagnitude
-:SlopeMagnitude rdf:type owl:Class ;
-                rdfs:subClassOf :IntrinsicAttributes ;
-                <http://purl.org/dc/terms/title> "Slope Magnitude" ;
-                rdfs:comment "The slope magnitude is a specific type of intrinsic attribute that represents the absolute numerical value of the slope." ;
-                rdfs:label "Slope Magnitude" .
+###  http://purl.org/net/sett/vocab#SliceTotalObservations
+:SliceTotalObservations rdf:type owl:Class ;
+                        rdfs:subClassOf :IntrinsicAttributes ;
+                        rdfs:comment "Slice Total Observations indicates the number of observations contained in a Slice." ;
+                        rdfs:label "Slice Total Observations" .
 
 
 ###  http://purl.org/net/sett/vocab#StateSegment
 :StateSegment rdf:type owl:Class ;
-              rdfs:subClassOf :Segment .
+              rdfs:subClassOf :Segment ;
+              rdfs:comment """A State Segment is a type of Segment where the data remains relatively stable over time, with no significant trends or seasonal patterns.
+It typically represents a steady state or period of minimal change.""" ;
+              rdfs:label "State Segment" .
 
 
 ###  http://purl.org/net/sett/vocab#StructurationMethod
-:StructurationMethod rdf:type owl:Class .
+:StructurationMethod rdf:type owl:Class ;
+                     rdfs:comment "A Structuration Method is a technique used to give structure to a time series by identifying meaningful components, such as Segments and Transition Points." ;
+                     rdfs:label "Structuration Method" .
 
 
 ###  http://purl.org/net/sett/vocab#StructuredComponent
 :StructuredComponent rdf:type owl:Class ;
                      rdfs:subClassOf :Component ;
-                     rdfs:comment "A Structured Component is a type of Component used to form a Structured trajectory." .
+                     rdfs:comment "A Structured Component is a type of Component used to build a Structured Trajectory." ;
+                     rdfs:label "Structured Component" .
 
 
 ###  http://purl.org/net/sett/vocab#StructuredTrajectory
 :StructuredTrajectory rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      rdfs:subClassOf :Trajectory ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasSegment ;
                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                         owl:onClass :Segment
@@ -653,7 +1060,28 @@ Importantly, Slices are used to calculate the Segment component within the Struc
                                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                         owl:onClass :TransitionPoint
                                       ] ;
-                      rdfs:comment "A Structured trajectory results from organizing a Raw trajectory into a more structured format. It alternates between a chronologically ordered sequence of Segments and Transition Points, always concluding with a Segment. If no Transition Point is detected, the Structured Trajectory consists solely of a single Segment, indicating no transitional changes within the sequence." .
+                      rdfs:comment """A Structured Trajectory results from organizing a Raw trajectory into a more structured format.
+It alternates between a chronologically ordered sequence of Segments and Transition Points, always concluding with a Segment.
+If no Transition Point is detected, the Structured Trajectory consists solely of a single Segment, indicating no transitional changes within the sequence.""" ;
+                      rdfs:label "Structured Trajectory" .
+
+
+###  http://purl.org/net/sett/vocab#StudyArea
+:StudyArea rdf:type owl:Class ;
+           rdfs:comment "A Study Area defines the broader geographical context in which one or more Territorial Units are analyzed." ;
+           rdfs:label "Study Area" .
+
+
+###  http://purl.org/net/sett/vocab#TemporalGranularity
+:TemporalGranularity rdf:type owl:Class ;
+                     rdfs:comment "Indicates how often measured values occur in a Thematic trajectory. It describes the temporal resolution of the data, such as daily, monthly, or yearly intervals." ;
+                     rdfs:label "Temporal Granularity" .
+
+
+###  http://purl.org/net/sett/vocab#TemporalScale
+:TemporalScale rdf:type owl:Class ;
+               rdfs:comment "Defines the temporal coverage of a thematic trajectory by specifying the time of year it represents. Examples include Winter, Spring, Summer, Autumn or All Seasons." ;
+               rdfs:label "Temporal Scale" .
 
 
 ###  http://purl.org/net/sett/vocab#TerritorialUnit
@@ -663,21 +1091,24 @@ Importantly, Slices are used to calculate the Segment component within the Struc
                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onClass :SeTT
                                  ] ;
-                 rdfs:comment """A Territorial Unit (TU) denotes a geographic area at the lowest level of administrative division (e.g., municipalities, sub-districts, townships). 
-TUs are spatially fixed entities, although they may evolve over time due to environmental shifts (e.g., land use changes, climate effects) or socioeconomic factors (e.g., population dynamics). 
-To approach cases where TU boundaries are not permanently fixed, we exploit the Territorial Statistical Nomenclature (TSN) ontology, specifically the tsn:UnitVersion class, which describes a unique representation of a Territorial Unit that remains stable for a defined period. 
-TUs are composed of one or more SeTT.""" .
+                 rdfs:comment """A Territorial Unit (TU) represents a geographically defined area, typically aligned with the lowest level of administrative division (e.g., municipalities, sub-districts, or townships).
+Although spatially fixed, a TU may undergo changes over time due to environmental or socioeconomic dynamics.
+To manage temporal variations in boundary definitions, the ontology reuses the tsn:UnitVersion class from the TSN ontology, which captures stable representations of a Territorial Unit during specific periods.
+Each TU is associated with one or more Semantic Trajectories of Territorial Transformation (SeTTs).""" ;
+                 rdfs:label "Territorial Unit" .
 
 
 ###  http://purl.org/net/sett/vocab#ThematicComponent
 :ThematicComponent rdf:type owl:Class ;
                    rdfs:subClassOf :Component ;
-                   rdfs:comment "A Thematic Component is a type of Component used to form a Thematic trajectory." .
+                   rdfs:comment "A Thematic Component is a type of Component used to build a Thematic Trajectory." ;
+                   rdfs:label "Thematic Component" .
 
 
 ###  http://purl.org/net/sett/vocab#ThematicTrajectory
 :ThematicTrajectory rdf:type owl:Class ;
-                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    rdfs:subClassOf :Trajectory ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasEpisode ;
                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onClass :Episode
@@ -692,14 +1123,22 @@ TUs are composed of one or more SeTT.""" .
                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onClass :SeTT
                                     ] ;
-                    rdfs:comment """A Thematic Trajectory is a semantically enriched representation of a Territorial Unit's (TU) trajectory, associated with a specific theme. It is derived from the annotation of a Structured Trajectory and alternates between a chronologically ordered sequence of Episodes and Events, always concluding with an Episode. 
-A Thematic Trajectory consists solely of a single Episode if no Event is present.""" .
+                    rdfs:comment """A Thematic Trajectory is a semantically enriched representation of a Territorial Unit's (TU) trajectory, associated with a specific theme.
+It is derived from the annotation of a Structured Trajectory and alternates between a chronologically ordered sequence of Episodes and Events, always concluding with an Episode.
+A Thematic Trajectory consists solely of a single Episode if no Event is present.""" ;
+                    rdfs:label "Thematic Trajectory" .
 
 
 ###  http://purl.org/net/sett/vocab#Theme
 :Theme rdf:type owl:Class ;
-       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-       rdfs:comment "A Theme characterizes the subject of a Thematic trajectory, providing a descriptive label for the whole trajectory." .
+       rdfs:comment "A Theme characterizes the subject of a Thematic trajectory, providing a descriptive label for the whole trajectory." ;
+       rdfs:label "Theme" .
+
+
+###  http://purl.org/net/sett/vocab#Trajectory
+:Trajectory rdf:type owl:Class ;
+            rdfs:comment "A Trajectory represents the synthesized temporal evolution of a Territorial Unit (TU) based on observed data. It serves as an abstract concept that underlies the Raw, Structured, and Thematic trajectories, providing a unified view of change over time." ;
+            rdfs:label "Trajectory" .
 
 
 ###  http://purl.org/net/sett/vocab#TransitionPoint
@@ -710,24 +1149,41 @@ A Thematic Trajectory consists solely of a single Episode if no Event is present
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onClass :StructuredTrajectory
                                  ] ;
-                 rdfs:comment """A Transition Point (TP) is a component of a Structure trajectory. 
-Each TP is characterized by its position in the trajectory, as well as, intrinsic and external attributes that provide detailed information about its nature. 
-Unlike Trends, TPs have an instantaneous duration, indicating that the change occurs at a precise moment. 
-A TP marks the discontinuity between Segments.""" .
+                 rdfs:comment """A Transition Point represents a change in the trajectory that causes a discontinuity between Segments or Slices.
+It occurs at a specific moment in time and is described using attributes that characterize the nature of the transition.""" ;
+                 rdfs:label "Transition Point" .
 
 
 ###  http://purl.org/net/sett/vocab#TransitionPointDetectionMethod
 :TransitionPointDetectionMethod rdf:type owl:Class ;
                                 rdfs:subClassOf :StructurationMethod ;
-                                rdfs:comment """A computational process is used to detect Transition Points from a Raw trajectory.
-Examples of Transition Points detection methods are BFAST (Breaks for Additive Season and Trend), BEAST (Bayesian Ensemble Algorithm for Change-Point Detection and Time Series Decomposition), and CCDC (Continuous Change Detection and Classification),""" .
+                                rdfs:comment """A Transition Point Detection Method is a technique used to detect changes in a time series by identifying Transition Points, such as Break Points or Inflexion Points.
+These methods analyze patterns in the data to determine when significant shifts occur.""" ;
+                                rdfs:label "Transition Point Detection Method" .
+
+
+###  http://purl.org/net/sett/vocab#TransitionPointMagnitude
+:TransitionPointMagnitude rdf:type owl:Class ;
+                          rdfs:subClassOf :ExternalAttributes ;
+                          <http://purl.org/dc/terms/title> "Transition Point Magnitude" ;
+                          rdfs:comment """Transition Point Magnitude quantifies the intensity of change at a Transition Point, such as a Breakpoint.
+It is computed as the difference between the value at the point and the value immediately before or after it, depending on how the segment is defined.""" ;
+                          rdfs:label "Transition Point Magnitude" .
+
+
+###  http://purl.org/net/sett/vocab#TransitionPointProbability
+:TransitionPointProbability rdf:type owl:Class ;
+                            rdfs:subClassOf :ExternalAttributes ;
+                            <http://purl.org/dc/terms/title> "Transition Point Probability" ;
+                            rdfs:comment "Transition Point Probability expresses the likelihood that a Transition Point has occurred, based on statistical analysis." ;
+                            rdfs:label "Transition Point Probability" .
 
 
 ###  http://purl.org/net/sett/vocab#TransitionPointX
 :TransitionPointX rdf:type owl:Class ;
                   rdfs:subClassOf :IntrinsicAttributes ;
                   <http://purl.org/dc/terms/title> "Transition Point X" ;
-                  rdfs:comment "Transition Point X is a specific type of Intrinsic Attribute that denotes the x-coordinate of a Transition Point within the trajectory." ;
+                  rdfs:comment "Transition Point X denotes the x-coordinate, i.e., time value, where a Transition Point occurs in the trajectory." ;
                   rdfs:label "Transition Point X" .
 
 
@@ -735,7 +1191,7 @@ Examples of Transition Points detection methods are BFAST (Breaks for Additive S
 :TransitionPointY rdf:type owl:Class ;
                   rdfs:subClassOf :IntrinsicAttributes ;
                   <http://purl.org/dc/terms/title> "Transition Point Y" ;
-                  rdfs:comment "Transition Point Y is a specific type of Intrinsic Attribute that denotes the y-coordinate of a Transition Point within the trajectory" ;
+                  rdfs:comment "Transition Point Y denotes the y-coordinate, i.e., the measured value, at which a Transition Point occurs in the trajectory." ;
                   rdfs:label "Transition Point Y" .
 
 
@@ -746,14 +1202,18 @@ Examples of Transition Points detection methods are BFAST (Breaks for Additive S
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Attribute
                 :Component
+                :Country
                 :Indicator
-                :RawTrajectory
                 :SeTT
+                :SemanticAnnotation
+                :SemanticAnnotationCriteria
                 :StructurationMethod
-                :StructuredTrajectory
+                :StudyArea
+                :TemporalGranularity
+                :TemporalScale
                 :TerritorialUnit
-                :ThematicTrajectory
                 :Theme
+                :Trajectory
               )
 ] .
 
@@ -768,9 +1228,52 @@ Examples of Transition Points detection methods are BFAST (Breaks for Additive S
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :EpisodeBehaviorAnnotation
+                :EpisodeDurationAnnotation
+                :EpisodeGradualMagnitudeAnnotation
+                :EpisodeSlopeAnnotation
+                :EpisodeStatisticalSignificanceAnnotation
+                :EpisodeThematicSlopeDirectionAnnotation
+                :EpisodeValueLevelAnnotation
+                :EventTransitionAnnotation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :EpisodeEndDate
+                :EpisodeStartDate
+                :EventDate
+                :SegmentDuration
+                :SegmentEndX
+                :SegmentEndY
+                :SegmentSlopeDirection
+                :SegmentSlopeIntercept
+                :SegmentSlopeMagnitude
+                :SegmentStartX
+                :SegmentStartY
+                :SliceEndObservation
+                :SliceStartObservation
+                :SliceTotalObservations
+                :TransitionPointX
+                :TransitionPointY
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :EventExplanatoryFactor
+                :SegmentGradualMagnitude
+                :SegmentPValue
+                :TransitionPointMagnitude
+                :TransitionPointProbability
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :LinearSegment
                 :NonLinearSegment
-                :SeasonalSegment
                 :StateSegment
               )
 ] .
@@ -780,6 +1283,14 @@ Examples of Transition Points detection methods are BFAST (Breaks for Additive S
   owl:members ( :RawComponent
                 :StructuredComponent
                 :ThematicComponent
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :RawTrajectory
+                :StructuredTrajectory
+                :ThematicTrajectory
               )
 ] .
 

@@ -1,10 +1,9 @@
 <http://purl.org/net/sett/vocab#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://purl.org/net/sett/vocab#> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/net/sett/vocab#1.0> .
-<http://purl.org/net/sett/vocab#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
-<http://purl.org/net/sett/vocab#> <http://purl.org/dc/elements/1.1/abstract> "The negative impact of human activities on our planet has increased the interest of stakeholders-from policymakers to citizens-in monitoring and understanding local changes, including both environmental and socio-economic factors. However, these data are often complex and challenging for non-experts to interpret. We introduce the SeTT (Semantic Trajectory of a Territorial Unit) ontology to describe the semantic trajectories of Territorial Units (TUs), making this information accessible to both expert and non-expert users."@en .
-<http://purl.org/net/sett/vocab#> <http://purl.org/dc/elements/1.1/description> "SeTT is a multi-layer ontology specifically designed to describe the semantic trajectories of Territorial Units (TUs). It models three types of trajectories: raw, structured, and semantic. Together, these trajectories create a comprehensive framework for capturing, organizing, and analyzing the evolution of TUs across various thematic domains, thereby improving users' ability to interpret and understand complex data."@en .
+<http://purl.org/net/sett/vocab#> <http://purl.org/dc/elements/1.1/abstract> "The negative impact of human activities on our planet has increased the interest of stakeholders—from policymakers to citizens—in monitoring and understanding local environmental changes. However, these data are often complex and difficult for non-experts to interpret. To address this, we introduce the SeTT (Semantic Trajectory of a Territorial Unit) ontology, which describes the environmental evolution of Territorial Units (e.g., municipalities) through different perspectives—Raw, Structured, and Thematic—making this information more synthesized, accessible, and understandable for both expert and non-expert users."@en .
+<http://purl.org/net/sett/vocab#> <http://purl.org/dc/elements/1.1/description> "SeTT is a multi-layered ontology specifically designed to describe the semantic trajectories of Territorial Units (TUs). It models three types of trajectories: Raw, Structured, and Semantic. Together, these trajectories create a comprehensive framework for capturing, organizing, and analyzing the evolution of TUs across various thematic domains, thereby improving users' ability to interpret and understand complex data."@en .
 <http://purl.org/net/sett/vocab#> <http://purl.org/dc/elements/1.1/title> "The SeTT ontology"@en .
-<http://purl.org/net/sett/vocab#> <http://purl.org/dc/terms/created> "October 2024"@en .
+<http://purl.org/net/sett/vocab#> <http://purl.org/dc/terms/created> "July 2025"@en .
 <http://purl.org/net/sett/vocab#> <http://purl.org/dc/terms/creator> "(1) Daniela Fernanda Milon-Flores"@en .
 <http://purl.org/net/sett/vocab#> <http://purl.org/dc/terms/creator> "(2) Camille Bernard"@en .
 <http://purl.org/net/sett/vocab#> <http://purl.org/dc/terms/creator> "(3) Jérôme Gensel"@en .
@@ -36,8 +35,14 @@
 # http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://schema.org/citation
 <http://schema.org/citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -67,6 +72,18 @@
 <http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#StructuredTrajectory> .
 <http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
 # 
+# http://purl.org/net/sett/vocab#country
+<http://purl.org/net/sett/vocab#country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#country> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isCountryOf> .
+<http://purl.org/net/sett/vocab#country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#country> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Country> .
+# 
+# http://purl.org/net/sett/vocab#definesCriteriaFor
+<http://purl.org/net/sett/vocab#definesCriteriaFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#definesCriteriaFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isDefinedByCriteria> .
+<http://purl.org/net/sett/vocab#definesCriteriaFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#SemanticAnnotationCriteria> .
+<http://purl.org/net/sett/vocab#definesCriteriaFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+# 
 # http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom
 <http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#segmentAnnotatesEpisode> .
@@ -79,11 +96,21 @@
 <http://purl.org/net/sett/vocab#eventIsAnnotatedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Event> .
 <http://purl.org/net/sett/vocab#eventIsAnnotatedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#TransitionPoint> .
 # 
+# http://purl.org/net/sett/vocab#givesDataTo
+<http://purl.org/net/sett/vocab#givesDataTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#givesDataTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#takesDataFrom> .
+# 
 # http://purl.org/net/sett/vocab#hasAttribute
 <http://purl.org/net/sett/vocab#hasAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/net/sett/vocab#hasAttribute> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isAttributeOf> .
 <http://purl.org/net/sett/vocab#hasAttribute> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Component> .
 <http://purl.org/net/sett/vocab#hasAttribute> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Attribute> .
+# 
+# http://purl.org/net/sett/vocab#hasBroaderTheme
+<http://purl.org/net/sett/vocab#hasBroaderTheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#hasBroaderTheme> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isBroaderThemeOf> .
+<http://purl.org/net/sett/vocab#hasBroaderTheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#SeTT> .
+<http://purl.org/net/sett/vocab#hasBroaderTheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Theme> .
 # 
 # http://purl.org/net/sett/vocab#hasEpisode
 <http://purl.org/net/sett/vocab#hasEpisode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -96,18 +123,18 @@
 <http://purl.org/net/sett/vocab#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
 <http://purl.org/net/sett/vocab#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Event> .
 # 
+# http://purl.org/net/sett/vocab#hasExplanatoryFactor
+<http://purl.org/net/sett/vocab#hasExplanatoryFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#hasExplanatoryFactor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isExplanatoryFactorOf> .
+<http://purl.org/net/sett/vocab#hasExplanatoryFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Event> .
+<http://purl.org/net/sett/vocab#hasExplanatoryFactor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#EventExplanatoryFactor> .
+# 
 # http://purl.org/net/sett/vocab#hasExternalAttribute
 <http://purl.org/net/sett/vocab#hasExternalAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/net/sett/vocab#hasExternalAttribute> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/net/sett/vocab#hasAttribute> .
 <http://purl.org/net/sett/vocab#hasExternalAttribute> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isExternalAttributeOf> .
 <http://purl.org/net/sett/vocab#hasExternalAttribute> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Component> .
 <http://purl.org/net/sett/vocab#hasExternalAttribute> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#ExternalAttributes> .
-# 
-# http://purl.org/net/sett/vocab#hasFocusOn
-<http://purl.org/net/sett/vocab#hasFocusOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/net/sett/vocab#hasFocusOn> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isFocusOf> .
-<http://purl.org/net/sett/vocab#hasFocusOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#SeTT> .
-<http://purl.org/net/sett/vocab#hasFocusOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Theme> .
 # 
 # http://purl.org/net/sett/vocab#hasIntrinsicAttribute
 <http://purl.org/net/sett/vocab#hasIntrinsicAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -132,7 +159,13 @@
 <http://purl.org/net/sett/vocab#hasSemanticAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/net/sett/vocab#hasSemanticAnnotation> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isSemanticAnnotationOf> .
 <http://purl.org/net/sett/vocab#hasSemanticAnnotation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#ThematicComponent> .
-<http://purl.org/net/sett/vocab#hasSemanticAnnotation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/net/sett/vocab#hasSemanticAnnotation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+# 
+# http://purl.org/net/sett/vocab#hasSemanticAnnotationCriteria
+<http://purl.org/net/sett/vocab#hasSemanticAnnotationCriteria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#hasSemanticAnnotationCriteria> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isSemanticAnnotationCriteriaOf> .
+<http://purl.org/net/sett/vocab#hasSemanticAnnotationCriteria> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
+<http://purl.org/net/sett/vocab#hasSemanticAnnotationCriteria> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#SemanticAnnotationCriteria> .
 # 
 # http://purl.org/net/sett/vocab#hasSlice
 <http://purl.org/net/sett/vocab#hasSlice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -140,10 +173,17 @@
 <http://purl.org/net/sett/vocab#hasSlice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#RawTrajectory> .
 <http://purl.org/net/sett/vocab#hasSlice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Slice> .
 # 
-# http://purl.org/net/sett/vocab#hasSubIndicator
-<http://purl.org/net/sett/vocab#hasSubIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/net/sett/vocab#hasSubIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Indicator> .
-<http://purl.org/net/sett/vocab#hasSubIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Indicator> .
+# http://purl.org/net/sett/vocab#hasTemporalGranularity
+<http://purl.org/net/sett/vocab#hasTemporalGranularity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#hasTemporalGranularity> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isTemporalGranularityOf> .
+<http://purl.org/net/sett/vocab#hasTemporalGranularity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
+<http://purl.org/net/sett/vocab#hasTemporalGranularity> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#TemporalGranularity> .
+# 
+# http://purl.org/net/sett/vocab#hasTemporalScale
+<http://purl.org/net/sett/vocab#hasTemporalScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#hasTemporalScale> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#isTemporalScaleOf> .
+<http://purl.org/net/sett/vocab#hasTemporalScale> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
+<http://purl.org/net/sett/vocab#hasTemporalScale> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#TemporalScale> .
 # 
 # http://purl.org/net/sett/vocab#hasThematicTrajectory
 <http://purl.org/net/sett/vocab#hasThematicTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -170,15 +210,28 @@
 # http://purl.org/net/sett/vocab#isAttributeOf
 <http://purl.org/net/sett/vocab#isAttributeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# http://purl.org/net/sett/vocab#isAttributeOfSemanticAnnotation
+<http://purl.org/net/sett/vocab#isAttributeOfSemanticAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#isAttributeOfSemanticAnnotation> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute> .
+# 
+# http://purl.org/net/sett/vocab#isBroaderThemeOf
+<http://purl.org/net/sett/vocab#isBroaderThemeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/net/sett/vocab#isCountryOf
+<http://purl.org/net/sett/vocab#isCountryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/net/sett/vocab#isDefinedByCriteria
+<http://purl.org/net/sett/vocab#isDefinedByCriteria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # http://purl.org/net/sett/vocab#isEpisodeOf
 <http://purl.org/net/sett/vocab#isEpisodeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/net/sett/vocab#isExplanatoryFactorOf
+<http://purl.org/net/sett/vocab#isExplanatoryFactorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://purl.org/net/sett/vocab#isExternalAttributeOf
 <http://purl.org/net/sett/vocab#isExternalAttributeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/net/sett/vocab#isExternalAttributeOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/net/sett/vocab#isAttributeOf> .
-# 
-# http://purl.org/net/sett/vocab#isFocusOf
-<http://purl.org/net/sett/vocab#isFocusOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://purl.org/net/sett/vocab#isIntrinsicAttributeOf
 <http://purl.org/net/sett/vocab#isIntrinsicAttributeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -190,11 +243,24 @@
 # http://purl.org/net/sett/vocab#isSegmentOf
 <http://purl.org/net/sett/vocab#isSegmentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# http://purl.org/net/sett/vocab#isSemanticAnnotationCriteriaOf
+<http://purl.org/net/sett/vocab#isSemanticAnnotationCriteriaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # http://purl.org/net/sett/vocab#isSemanticAnnotationOf
 <http://purl.org/net/sett/vocab#isSemanticAnnotationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://purl.org/net/sett/vocab#isSliceOf
 <http://purl.org/net/sett/vocab#isSliceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/net/sett/vocab#isStudyAreaOf
+<http://purl.org/net/sett/vocab#isStudyAreaOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#isStudyAreaOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#studyArea> .
+# 
+# http://purl.org/net/sett/vocab#isTemporalGranularityOf
+<http://purl.org/net/sett/vocab#isTemporalGranularityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/net/sett/vocab#isTemporalScaleOf
+<http://purl.org/net/sett/vocab#isTemporalScaleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://purl.org/net/sett/vocab#isThematicTrajectoryOf
 <http://purl.org/net/sett/vocab#isThematicTrajectoryOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -213,30 +279,39 @@
 # 
 # http://purl.org/net/sett/vocab#monitorsIndicator
 <http://purl.org/net/sett/vocab#monitorsIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/net/sett/vocab#monitorsIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/net/sett/vocab#monitorsIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#RawTrajectory> .
 <http://purl.org/net/sett/vocab#monitorsIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Indicator> .
 # 
 # http://purl.org/net/sett/vocab#segmentAnnotatesEpisode
 <http://purl.org/net/sett/vocab#segmentAnnotatesEpisode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
-# http://purl.org/net/sett/vocab#segmentIsCalculadedFrom
-<http://purl.org/net/sett/vocab#segmentIsCalculadedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/net/sett/vocab#segmentIsCalculadedFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#sliceUsedToCalculateSegment> .
-<http://purl.org/net/sett/vocab#segmentIsCalculadedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Segment> .
-<http://purl.org/net/sett/vocab#segmentIsCalculadedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Slice> .
+# http://purl.org/net/sett/vocab#segmentIsDerivatedFrom
+<http://purl.org/net/sett/vocab#segmentIsDerivatedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#segmentIsDerivatedFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#sliceUsedToDerivateSegment> .
+<http://purl.org/net/sett/vocab#segmentIsDerivatedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Segment> .
+<http://purl.org/net/sett/vocab#segmentIsDerivatedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Slice> .
 # 
 # http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute
 <http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
 <http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Attribute> .
 # 
 # http://purl.org/net/sett/vocab#sliceDelimitedBy
 <http://purl.org/net/sett/vocab#sliceDelimitedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/net/sett/vocab#sliceDelimitedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/sett/vocab#transitionPointDelimitSlice> .
 # 
-# http://purl.org/net/sett/vocab#sliceUsedToCalculateSegment
-<http://purl.org/net/sett/vocab#sliceUsedToCalculateSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# http://purl.org/net/sett/vocab#sliceUsedToDerivateSegment
+<http://purl.org/net/sett/vocab#sliceUsedToDerivateSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/net/sett/vocab#studyArea
+<http://purl.org/net/sett/vocab#studyArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#studyArea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#studyArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#StudyArea> .
+# 
+# http://purl.org/net/sett/vocab#takesDataFrom
+<http://purl.org/net/sett/vocab#takesDataFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/sett/vocab#takesDataFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Indicator> .
+<http://purl.org/net/sett/vocab#takesDataFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/sett/vocab#Indicator> .
 # 
 # http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent
 <http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -255,16 +330,117 @@
 # #################################################################
 # 
 # 
+# http://purl.org/net/sett/vocab#areaInHAnLake
+<http://purl.org/net/sett/vocab#areaInHAnLake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#areaInHAnLake> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#areaInHAnLake> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#areaInM2
+<http://purl.org/net/sett/vocab#areaInM2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#areaInM2> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#areaInM2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#hasAnnotationCriteriaDescription
+<http://purl.org/net/sett/vocab#hasAnnotationCriteriaDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#hasAnnotationCriteriaDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#SemanticAnnotationCriteria> .
+<http://purl.org/net/sett/vocab#hasAnnotationCriteriaDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/net/sett/vocab#hasAnnotationCriteriaDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides a description of the semantic annotations- For instance, the thresholds used to classify certain values (e.g., slight, medium, strong) based on a given attribute." .
+# 
 # http://purl.org/net/sett/vocab#hasAttributeValue
 <http://purl.org/net/sett/vocab#hasAttributeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/net/sett/vocab#hasAttributeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Attribute> .
 <http://purl.org/net/sett/vocab#hasAttributeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://purl.org/net/sett/vocab#hasIndicatorDescription
+<http://purl.org/net/sett/vocab#hasIndicatorDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#hasIndicatorDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Indicator> .
+<http://purl.org/net/sett/vocab#hasIndicatorDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/net/sett/vocab#hasIndicatorFormula
+<http://purl.org/net/sett/vocab#hasIndicatorFormula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#hasIndicatorFormula> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Indicator> .
+<http://purl.org/net/sett/vocab#hasIndicatorFormula> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
 # http://purl.org/net/sett/vocab#hasSequenceOrder
 <http://purl.org/net/sett/vocab#hasSequenceOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/net/sett/vocab#hasSequenceOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/net/sett/vocab#hasSequenceOrder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#Component> .
 <http://purl.org/net/sett/vocab#hasSequenceOrder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://purl.org/net/sett/vocab#hasStructurationMethodDescription
+<http://purl.org/net/sett/vocab#hasStructurationMethodDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#hasStructurationMethodDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#StructurationMethod> .
+<http://purl.org/net/sett/vocab#hasStructurationMethodDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/net/sett/vocab#hasTotalEpisodes
+<http://purl.org/net/sett/vocab#hasTotalEpisodes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#hasTotalEpisodes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
+<http://purl.org/net/sett/vocab#hasTotalEpisodes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://purl.org/net/sett/vocab#hasTotalEvents
+<http://purl.org/net/sett/vocab#hasTotalEvents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#hasTotalEvents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
+<http://purl.org/net/sett/vocab#hasTotalEvents> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://purl.org/net/sett/vocab#hasTotalSegments
+<http://purl.org/net/sett/vocab#hasTotalSegments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#hasTotalSegments> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#StructuredTrajectory> .
+<http://purl.org/net/sett/vocab#hasTotalSegments> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://purl.org/net/sett/vocab#hasTotalSlices
+<http://purl.org/net/sett/vocab#hasTotalSlices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#hasTotalSlices> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#RawTrajectory> .
+<http://purl.org/net/sett/vocab#hasTotalSlices> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://purl.org/net/sett/vocab#hasTotalTransitionPoints
+<http://purl.org/net/sett/vocab#hasTotalTransitionPoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#hasTotalTransitionPoints> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#StructuredTrajectory> .
+<http://purl.org/net/sett/vocab#hasTotalTransitionPoints> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://purl.org/net/sett/vocab#maxElevationMeters
+<http://purl.org/net/sett/vocab#maxElevationMeters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#maxElevationMeters> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#maxElevationMeters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#maxSlopeDegrees
+<http://purl.org/net/sett/vocab#maxSlopeDegrees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#maxSlopeDegrees> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#maxSlopeDegrees> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#meanElevationMeters
+<http://purl.org/net/sett/vocab#meanElevationMeters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#meanElevationMeters> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#meanElevationMeters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#meanSlopeDegrees
+<http://purl.org/net/sett/vocab#meanSlopeDegrees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#meanSlopeDegrees> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#meanSlopeDegrees> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#minElevationMeters
+<http://purl.org/net/sett/vocab#minElevationMeters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#minElevationMeters> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#minElevationMeters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#minSlopeDegrees
+<http://purl.org/net/sett/vocab#minSlopeDegrees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#minSlopeDegrees> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#minSlopeDegrees> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#stdElevationMeters
+<http://purl.org/net/sett/vocab#stdElevationMeters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#stdElevationMeters> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#stdElevationMeters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#stdSlopeDegrees
+<http://purl.org/net/sett/vocab#stdSlopeDegrees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#stdSlopeDegrees> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#stdSlopeDegrees> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://purl.org/net/sett/vocab#totalAreaInM2
+<http://purl.org/net/sett/vocab#totalAreaInM2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/sett/vocab#totalAreaInM2> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+<http://purl.org/net/sett/vocab#totalAreaInM2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 # 
 # 
 # 
@@ -277,40 +453,79 @@
 # 
 # http://purl.org/net/sett/vocab#Attribute
 <http://purl.org/net/sett/vocab#Attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#Attribute> <http://www.w3.org/2000/01/rdf-schema#comment> "Trajectory components have Attributes that enhance their descriptions. \nThe value of an Attribute is flexible enough to represent various literal values regardless of the context." .
+<http://purl.org/net/sett/vocab#Attribute> <http://www.w3.org/2000/01/rdf-schema#comment> "An Attribute provides additional descriptive information about a trajectory component.\nAttributes may hold a wide range of values, offering flexibility for representing various temporal or thematic aspects." .
+<http://purl.org/net/sett/vocab#Attribute> <http://www.w3.org/2000/01/rdf-schema#label> "Attribute" .
 # 
 # http://purl.org/net/sett/vocab#BEAST
 <http://purl.org/net/sett/vocab#BEAST> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#BEAST> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SegmentationMethod> .
 <http://purl.org/net/sett/vocab#BEAST> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
+<http://purl.org/net/sett/vocab#BEAST> <http://purl.org/dc/terms/description> "The Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) is a statistical algorithm used for detecting breakpoints, trends, and seasonal variations in time series data. It applies a Bayesian framework to estimate the number and location of change points, making it well-suited for analyzing environmental and remote sensing datasets." .
+<http://purl.org/net/sett/vocab#BEAST> <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2019.04.034" .
+<http://purl.org/net/sett/vocab#BEAST> <http://www.w3.org/2000/01/rdf-schema#comment> "The Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) is a statistical algorithm used for detecting breakpoints, trends, and seasonal variations in time series data. It applies a Bayesian framework to estimate the number and location of change points, making it well-suited for analyzing environmental and remote sensing datasets." .
 # 
 # http://purl.org/net/sett/vocab#BFAST
 <http://purl.org/net/sett/vocab#BFAST> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#BFAST> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SegmentationMethod> .
 <http://purl.org/net/sett/vocab#BFAST> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
+<http://purl.org/net/sett/vocab#BFAST> <http://purl.org/dc/terms/description> "The Breaks For Additive Season and Trend (BFAST) algorithm is a statistical method for detecting structural changes in time series data. It decomposes a time series into seasonal, trend, and remainder components and identifies breakpoints where abrupt changes occur. BFAST is widely used in environmental monitoring and remote sensing applications to analyze long-term changes in vegetation, climate, and land cover." .
+<http://purl.org/net/sett/vocab#BFAST> <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2009.08.014" .
+<http://purl.org/net/sett/vocab#BFAST> <http://www.w3.org/2000/01/rdf-schema#comment> "The Breaks For Additive Season and Trend (BFAST) algorithm is a statistical method for detecting structural changes in time series data. It decomposes a time series into seasonal, trend, and remainder components and identifies breakpoints where abrupt changes occur. BFAST is widely used in environmental monitoring and remote sensing applications to analyze long-term changes in vegetation, climate, and land cover." .
+# 
+# http://purl.org/net/sett/vocab#BFASTLite
+<http://purl.org/net/sett/vocab#BFASTLite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#BFASTLite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SegmentationMethod> .
+<http://purl.org/net/sett/vocab#BFASTLite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
+<http://purl.org/net/sett/vocab#BFASTLite> <http://purl.org/dc/terms/description> "The BFAST Lite algorithm is a simplified version of the BFAST framework designed for efficient detection of breakpoints, trends, and seasonal variations in large-scale time series data. Unlike the full BFAST model, which iteratively decomposes the time series, BFAST Lite focuses on detecting change points in a single-pass approach, making it computationally faster and suitable for large datasets. It is particularly useful for processing satellite-based Earth observation data and environmental monitoring at scale." .
+<http://purl.org/net/sett/vocab#BFASTLite> <http://schema.org/citation> "https://doi.org/10.3390/rs13163308" .
+<http://purl.org/net/sett/vocab#BFASTLite> <http://www.w3.org/2000/01/rdf-schema#comment> "The BFAST Lite algorithm is a simplified version of the BFAST framework designed for efficient detection of breakpoints, trends, and seasonal variations in large-scale time series data. Unlike the full BFAST model, which iteratively decomposes the time series, BFAST Lite focuses on detecting change points in a single-pass approach, making it computationally faster and suitable for large datasets. It is particularly useful for processing satellite-based Earth observation data and environmental monitoring at scale." .
+# 
+# http://purl.org/net/sett/vocab#BFASTMonitor
+<http://purl.org/net/sett/vocab#BFASTMonitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#BFASTMonitor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SegmentationMethod> .
+<http://purl.org/net/sett/vocab#BFASTMonitor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
+<http://purl.org/net/sett/vocab#BFASTMonitor> <http://purl.org/dc/terms/description> "The BFAST Monitor (Breaks For Additive Season and Trend Monitor) is a statistical algorithm designed for near-real-time monitoring of breakpoints, trends, and seasonal variations in time series data. It extends the BFAST framework by continuously detecting structural changes in new observations while preserving the existing trend and seasonal components. This makes it particularly useful for analyzing environmental and remote sensing datasets, where ongoing monitoring of land cover or vegetation changes is required." .
+<http://purl.org/net/sett/vocab#BFASTMonitor> <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2012.02.022" .
+<http://purl.org/net/sett/vocab#BFASTMonitor> <http://www.w3.org/2000/01/rdf-schema#comment> "The BFAST Monitor (Breaks For Additive Season and Trend Monitor) is a statistical algorithm designed for near-real-time monitoring of breakpoints, trends, and seasonal variations in time series data. It extends the BFAST framework by continuously detecting structural changes in new observations while preserving the existing trend and seasonal components. This makes it particularly useful for analyzing environmental and remote sensing datasets, where ongoing monitoring of land cover or vegetation changes is required." .
+# 
+# http://purl.org/net/sett/vocab#Binseg
+<http://purl.org/net/sett/vocab#Binseg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#Binseg> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SegmentationMethod> .
+<http://purl.org/net/sett/vocab#Binseg> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
+<http://purl.org/net/sett/vocab#Binseg> <http://purl.org/dc/terms/description> "Binary Segmentation (Binseg) is a recursive, top-down approach that detects change points in a sequential manner. This method is less computatio ally intensive but sacrifices some level of optimality in exchange for speed.\nThe algorithm works by splitting the time series into two parts at each iteration and testing whether there is a significant change between these two segments.\nIf a change point is detected, the algorithm continues to split the time series recursively. It repeats this process until no further changes are detected or a predefined stopping criterion is met." .
+<http://purl.org/net/sett/vocab#Binseg> <http://schema.org/citation> "https://doi.org/10.1017/S0266466600005831" .
+<http://purl.org/net/sett/vocab#Binseg> <http://www.w3.org/2000/01/rdf-schema#comment> "Binary Segmentation (Binseg) is a recursive, top-down approach that detects change points in a sequential manner. This method is less computatio ally intensive but sacrifices some level of optimality in exchange for speed.\nThe algorithm works by splitting the time series into two parts at each iteration and testing whether there is a significant change between these two segments.\nIf a change point is detected, the algorithm continues to split the time series recursively. It repeats this process until no further changes are detected or a predefined stopping criterion is met." .
 # 
 # http://purl.org/net/sett/vocab#BreakPoint
 <http://purl.org/net/sett/vocab#BreakPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#BreakPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPoint> .
-<http://purl.org/net/sett/vocab#BreakPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Breakpoint is a specific type of Transition Point (TP) defined as a moment in time when an abrupt change occurs in a time series. It is used to annotate an Event." .
+<http://purl.org/net/sett/vocab#BreakPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Break Point is a Transition Point that marks an abrupt and significant change in the data, such as a sudden increase or decrease." .
+<http://purl.org/net/sett/vocab#BreakPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Break Point" .
 # 
-# http://purl.org/net/sett/vocab#BreakpointMagnitude
-<http://purl.org/net/sett/vocab#BreakpointMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#BreakpointMagnitude> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
-<http://purl.org/net/sett/vocab#BreakpointMagnitude> <http://purl.org/dc/terms/title> "Breakpoint Magnitude" .
-<http://purl.org/net/sett/vocab#BreakpointMagnitude> <http://www.w3.org/2000/01/rdf-schema#comment> "A Breakpoint Magnitude is a specific type of External Attribute that quantifies the change at a Breakpoint. It is calculated as the distance between the Breakpoint and its subsequent point in time." .
-<http://purl.org/net/sett/vocab#BreakpointMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "Breakpoint Magnitude" .
-# 
-# http://purl.org/net/sett/vocab#BreakpointProbability
-<http://purl.org/net/sett/vocab#BreakpointProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#BreakpointProbability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
-<http://purl.org/net/sett/vocab#BreakpointProbability> <http://purl.org/dc/terms/title> "Breakpoint Probability" .
-<http://purl.org/net/sett/vocab#BreakpointProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "BreakpointProbability is a specific type of External Attribute that indicates the likelihood of a Breakpoint occurring based on statistical analysis." .
-<http://purl.org/net/sett/vocab#BreakpointProbability> <http://www.w3.org/2000/01/rdf-schema#label> "Breakpoint Probability" .
+# http://purl.org/net/sett/vocab#CCDC
+<http://purl.org/net/sett/vocab#CCDC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#CCDC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
+<http://purl.org/net/sett/vocab#CCDC> <http://purl.org/dc/terms/description> "The Continuous Change Detection and Classification (CCDC) algorithm is a time series analysis method designed for detecting land surface changes using satellite imagery. It continuously monitors time series data by fitting harmonic regression models to capture seasonal variations and trend changes. When significant deviations from the expected model occur, CCDC identifies them as change events. This method is widely used in remote sensing applications for land cover monitoring, forest disturbance detection, and environmental change analysis." .
+<http://purl.org/net/sett/vocab#CCDC> <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2014.01.011" .
+<http://purl.org/net/sett/vocab#CCDC> <http://www.w3.org/2000/01/rdf-schema#comment> "The Continuous Change Detection and Classification (CCDC) algorithm is a time series analysis method designed for detecting land surface changes using satellite imagery. It continuously monitors time series data by fitting harmonic regression models to capture seasonal variations and trend changes. When significant deviations from the expected model occur, CCDC identifies them as change events. This method is widely used in remote sensing applications for land cover monitoring, forest disturbance detection, and environmental change analysis." .
 # 
 # http://purl.org/net/sett/vocab#Component
 <http://purl.org/net/sett/vocab#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#Component> <http://www.w3.org/2000/01/rdf-schema#comment> "Trajectories consist of Components, each defined by its position in the sequence, the algorithm used for its calculation, and a set of Attributes that enrich its description.\nIn the SeTT ontology, there are three types of components: thematic, structured, and raw." .
+<http://purl.org/net/sett/vocab#Component> <http://www.w3.org/2000/01/rdf-schema#comment> "A Component represents a part of a trajectory, defined by its position in the sequence and its descriptive attributes.\nThe SeTT ontology defines three types of components: raw, structured, and thematic." .
+<http://purl.org/net/sett/vocab#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component" .
+# 
+# http://purl.org/net/sett/vocab#Country
+<http://purl.org/net/sett/vocab#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "A Country represents the national entity in which a Territorial Unit is located." .
+<http://purl.org/net/sett/vocab#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+# 
+# http://purl.org/net/sett/vocab#DBEST
+<http://purl.org/net/sett/vocab#DBEST> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#DBEST> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SegmentationMethod> .
+<http://purl.org/net/sett/vocab#DBEST> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
+<http://purl.org/net/sett/vocab#DBEST> <http://purl.org/dc/terms/description> "The DBEST (Detecting Breakpoints and Estimating Segments in Trend) algorithm is a statistical method designed for detecting breakpoints and estimating trend segments in time series data. It is particularly effective in analyzing environmental changes, such as vegetation dynamics, by decomposing time series into meaningful segments. DBEST employs a data-driven approach to identify trend shifts and estimate their magnitude, making it well-suited for applications in remote sensing and ecological monitoring." .
+<http://purl.org/net/sett/vocab#DBEST> <http://schema.org/citation> "https://doi.org/10.1016/j.rse.2014.09.010" .
+<http://purl.org/net/sett/vocab#DBEST> <http://www.w3.org/2000/01/rdf-schema#comment> "The DBEST (Detecting Breakpoints and Estimating Segments in Trend) algorithm is a statistical method designed for detecting breakpoints and estimating trend segments in time series data. It is particularly effective in analyzing environmental changes, such as vegetation dynamics, by decomposing time series into meaningful segments. DBEST employs a data-driven approach to identify trend shifts and estimate their magnitude, making it well-suited for applications in remote sensing and ecological monitoring." .
 # 
 # http://purl.org/net/sett/vocab#Episode
 <http://purl.org/net/sett/vocab#Episode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -321,21 +536,64 @@ _:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isEpisodeOf> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/net/sett/vocab#Episode> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/net/sett/vocab#Event> .
-<http://purl.org/net/sett/vocab#Episode> <http://www.w3.org/2000/01/rdf-schema#comment> "An Episode is a component of the Thematic Trajectory, derived from the semantic annotation of its corresponding Segment within a Structured Trajectory. \nEach Episode is defined by its position in the trajectory sequence and characterized by semantic annotations that provide context for interpreting the trajectory's behavior.\n A set of attributes further enriches its contextual information. \nAn Episode period culminates when an Event occurs, marking a discontinuity between Episodes." .
+<http://purl.org/net/sett/vocab#Episode> <http://www.w3.org/2000/01/rdf-schema#comment> "An Episode is derived from the semantic annotation of a Segment in the Structured Trajectory.\nIt represents a continuous period characterized by a specific behavior or condition, as defined by semantic annotations and descriptive attributes.\nAn Episode ends when an Event occurs, marking a discontinuity in the trajectory." .
+<http://purl.org/net/sett/vocab#Episode> <http://www.w3.org/2000/01/rdf-schema#label> "Episode" .
+# 
+# http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation
+<http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+<http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic annotation that qualifies the overall dynamic of an Episode by integrating its temporal extent (short-term, moderate-term, long-term), the magnitude and direction of change (slope), the thematic focus (e.g., vegetation, temperature, population), and its vertical position (value level). \nThis annotation provides an integrated, syntezed and enriched view of how an Indicator changes over the course of the Episode." .
+<http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "Episode Behavior Annotation" .
+# 
+# http://purl.org/net/sett/vocab#EpisodeDurationAnnotation
+<http://purl.org/net/sett/vocab#EpisodeDurationAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#EpisodeDurationAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+<http://purl.org/net/sett/vocab#EpisodeDurationAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic annotation that qualifies the temporal extent of an Episode, categorizing it as short-term, moderate-term, or long-term" .
+<http://purl.org/net/sett/vocab#EpisodeDurationAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "Episode Duration Annotation" .
 # 
 # http://purl.org/net/sett/vocab#EpisodeEndDate
 <http://purl.org/net/sett/vocab#EpisodeEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#EpisodeEndDate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#EpisodeEndDate> <http://purl.org/dc/terms/title> "Episode End Date" .
-<http://purl.org/net/sett/vocab#EpisodeEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Episode End Date is a specific type of Intrinsic Attribute that indicates the date when an Episode concludes." .
+<http://purl.org/net/sett/vocab#EpisodeEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Episode End Date indicates the date on which an Episode concludes." .
 <http://purl.org/net/sett/vocab#EpisodeEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "Episode End Date" .
+# 
+# http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation
+<http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+<http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic annotation that qualifies the overall intensity of change throughout an Episode, based on the slope and duration of its corresponding segment. This gradual magnitude of change is computed as the product of slope magnitude and duration." .
+<http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "Episode Gradual Magnitude Annotation" .
+# 
+# http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation
+<http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+<http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic annotation for an Episode based on the slope characteristics of its corresponding segment, considering both the slope direction (increase, decrease, or stable) and its magnitude." .
+<http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "Episode Slope Annotation" .
 # 
 # http://purl.org/net/sett/vocab#EpisodeStartDate
 <http://purl.org/net/sett/vocab#EpisodeStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#EpisodeStartDate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#EpisodeStartDate> <http://purl.org/dc/terms/title> "Episode Start Date" .
-<http://purl.org/net/sett/vocab#EpisodeStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Episode Start Date is a specific type of Intrinsic Attribute that marks the date when an Episode begins." .
+<http://purl.org/net/sett/vocab#EpisodeStartDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Episode Start Date indicates the date on which an Episode begins." .
 <http://purl.org/net/sett/vocab#EpisodeStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "Episode Start Date" .
+# 
+# http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation
+<http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+<http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic annotation that indicates the statistical confidence in the trend observed during the Episode." .
+<http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "Episode Statistical Significance Annotation" .
+# 
+# http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation
+<http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+<http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic annotation that provides a theme-specific interpretation of an Episode’s slope direction—for example, Greening for vegetation, Warming for temperature, or Population Growth for population." .
+<http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "Episode Thematic Slope Annotation" .
+# 
+# http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation
+<http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+<http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic annotation that qualifies the vertical position of an Episode’s start or end along the indicator’s value axis (i.e., the y-axis). It categorizes this position into levels such as very low, low, moderate, high, or very high." .
+<http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "Episode Value Level Annotation" .
 # 
 # http://purl.org/net/sett/vocab#Event
 <http://purl.org/net/sett/vocab#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -345,279 +603,406 @@ _:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab
 _:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#IsEventOf> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/net/sett/vocab#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An Event is a component of a Thematic Trajectory, derived from the semantic annotation of a Transition Point within a Structured Trajectory. \nEach Event is defined by its position in the trajectory and comprises semantic annotations and attributes that provide context and enhance the interpretation of the Thematic Trajectory's behavior. \nUnlike Episodes, Events have an instantaneous duration and signify the discontinuity between Episodes." .
+<http://purl.org/net/sett/vocab#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An Event represents a meaningful change in the trajectory that occurs at a specific moment in time, causing a discontinuity between Episodes in the Thematic Trajectory.\nIt is derived from the semantic annotation of a Transition Point and is described through annotations and attributes that characterize the nature and significance of the transition." .
+<http://purl.org/net/sett/vocab#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
 # 
 # http://purl.org/net/sett/vocab#EventDate
 <http://purl.org/net/sett/vocab#EventDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#EventDate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#EventDate> <http://purl.org/dc/terms/title> "Event Date" .
-<http://purl.org/net/sett/vocab#EventDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Event Date is a specific type of Intrinsic Attribute that specifies the date when an Event occurred." .
+<http://purl.org/net/sett/vocab#EventDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Event Date specifies the date on which an Event took place." .
 <http://purl.org/net/sett/vocab#EventDate> <http://www.w3.org/2000/01/rdf-schema#label> "Event Date" .
 # 
-# http://purl.org/net/sett/vocab#ExplanatoryFactor
-<http://purl.org/net/sett/vocab#ExplanatoryFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#ExplanatoryFactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
-<http://purl.org/net/sett/vocab#ExplanatoryFactor> <http://purl.org/dc/terms/title> "Explanatory Factor" .
-<http://purl.org/net/sett/vocab#ExplanatoryFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Explanatory Factors are a specific type of External Attribute that provides additional context regarding the occurrence of a Transition Point such as a Breakpoint. \nVarious resources, such as available URLs or bibliographic citations, can be used to enrich the Event." .
-<http://purl.org/net/sett/vocab#ExplanatoryFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Explanatory Factor" .
+# http://purl.org/net/sett/vocab#EventExplanatoryFactor
+<http://purl.org/net/sett/vocab#EventExplanatoryFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#EventExplanatoryFactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
+<http://purl.org/net/sett/vocab#EventExplanatoryFactor> <http://purl.org/dc/terms/title> "Event Explanatory Factor" .
+<http://purl.org/net/sett/vocab#EventExplanatoryFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "An Event Explanatory Factor refers to a potential driver or context that explains a change observed at a Transition Point, such as a Breakpoint.\nIt may consist of external sources like bibliographic references, URLs, or links to Linked Open Data repositories." .
+<http://purl.org/net/sett/vocab#EventExplanatoryFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Event Explanatory Factor" .
+# 
+# http://purl.org/net/sett/vocab#EventTransitionAnnotation
+<http://purl.org/net/sett/vocab#EventTransitionAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#EventTransitionAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
+<http://purl.org/net/sett/vocab#EventTransitionAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic annotation that qualifies both the direction and intensity of change at the Transition Point associated with an Event." .
+<http://purl.org/net/sett/vocab#EventTransitionAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "Event Transition Annotation" .
 # 
 # http://purl.org/net/sett/vocab#ExternalAttributes
 <http://purl.org/net/sett/vocab#ExternalAttributes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#ExternalAttributes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Attribute> .
 <http://purl.org/net/sett/vocab#ExternalAttributes> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
-<http://purl.org/net/sett/vocab#ExternalAttributes> <http://www.w3.org/2000/01/rdf-schema#comment> "An external attribute is an optional or supplementary characteristic that enhances the description of a component. These attributes may be added by expert users or derived from specific methods. For instance, the p-value is an external attribute derived from applying the linear regression method." .
+<http://purl.org/net/sett/vocab#ExternalAttributes> <http://www.w3.org/2000/01/rdf-schema#comment> "An External Attribute refers to contextual or auxiliary information that enhances the description of a trajectory component.\nThese attributes are not intrinsic to the component itself but may be derived from external analyses, expert input, or supporting datasets." .
+<http://purl.org/net/sett/vocab#ExternalAttributes> <http://www.w3.org/2000/01/rdf-schema#label> "External Attribute" .
+# 
+# http://purl.org/net/sett/vocab#HMM
+<http://purl.org/net/sett/vocab#HMM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#HMM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
+<http://purl.org/net/sett/vocab#HMM> <http://purl.org/dc/terms/description> "Hidden Markov Models (HMM) are a powerful statistical tool used to model time-series data, particularly when the data evolves through different underlying states that are not directly observable. These \"hidden\" states represent distinct environmental conditions or phases, and the system transitions between these states over time. For example, in environmental studies, the hidden states might represent different trends in data such as:\n• Stable Trend: No significant changes in the environmental variable (e.g., temper- ature, vegetation health).\n• Increasing Trend: A period of gradual increase in the environmental variable (e.g., warming temperatures, growing vegetation).\n• Decreasing Trend: A period of gradual decline in the environmental variable (e.g., cooling temperatures, deteriorating vegetation)." .
+<http://purl.org/net/sett/vocab#HMM> <http://schema.org/citation> "https://doi.org/10.48550/arXiv.1212.1778" .
+<http://purl.org/net/sett/vocab#HMM> <http://www.w3.org/2000/01/rdf-schema#comment> "Hidden Markov Models (HMM) are a powerful statistical tool used to model time-series data, particularly when the data evolves through different underlying states that are not directly observable. These \"hidden\" states represent distinct environmental conditions or phases, and the system transitions between these states over time. For example, in environmental studies, the hidden states might represent different trends in data such as:\n• Stable Trend: No significant changes in the environmental variable (e.g., temper- ature, vegetation health).\n• Increasing Trend: A period of gradual increase in the environmental variable (e.g., warming temperatures, growing vegetation).\n• Decreasing Trend: A period of gradual decline in the environmental variable (e.g., cooling temperatures, deteriorating vegetation)." .
 # 
 # http://purl.org/net/sett/vocab#Indicator
 <http://purl.org/net/sett/vocab#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#Indicator> <http://www.w3.org/2000/01/rdf-schema#comment> "An Indicator is defined as a quantitative measure that captures the status of a situation or its variations over time. In the context of a Raw trajectory, it represents the data being monitored. \nThe concept of an Indicator is sufficiently abstract to encompass various domains, including environmental and socio-economic.\nIndicators correspond to the Indicator dimension of the RDF Data Cube and can exist as standalone measures or be composed of other indicators. \nIndicators can be further enriched with metadata such as bibliography citations, formula descriptions, and open-linked data resources." .
+<http://purl.org/net/sett/vocab#Indicator> <http://www.w3.org/2000/01/rdf-schema#comment> "An Indicator is defined as a quantitative measure that captures the status of a situation or its variations over time." .
+<http://purl.org/net/sett/vocab#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator" .
 # 
 # http://purl.org/net/sett/vocab#InflexionPoint
 <http://purl.org/net/sett/vocab#InflexionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#InflexionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPoint> .
+<http://purl.org/net/sett/vocab#InflexionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "An Inflexion Point indicates a subtle change in the trajectory where the direction or curvature shifts gradually, rather than abruptly." .
+<http://purl.org/net/sett/vocab#InflexionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Inflexion Point" .
 # 
 # http://purl.org/net/sett/vocab#InterruptionPoint
 <http://purl.org/net/sett/vocab#InterruptionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#InterruptionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPoint> .
+<http://purl.org/net/sett/vocab#InterruptionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "An Interruption Point marks a temporary disruption in the trajectory, such as a short-term deviation that is not sustained." .
+<http://purl.org/net/sett/vocab#InterruptionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Interruption Point" .
 # 
 # http://purl.org/net/sett/vocab#IntrinsicAttributes
 <http://purl.org/net/sett/vocab#IntrinsicAttributes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#IntrinsicAttributes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Attribute> .
-<http://purl.org/net/sett/vocab#IntrinsicAttributes> <http://www.w3.org/2000/01/rdf-schema#comment> "An intrinsic attribute is inherent to the component's nature. For example, in a linear segment, attributes such as the start and end points, as well as the slope, are considered intrinsic because they are essential for defining the segment." .
+<http://purl.org/net/sett/vocab#IntrinsicAttributes> <http://www.w3.org/2000/01/rdf-schema#comment> "An Intrinsic Attribute describes essential characteristics of a trajectory component that are inherent to its structure or behavior." .
+<http://purl.org/net/sett/vocab#IntrinsicAttributes> <http://www.w3.org/2000/01/rdf-schema#label> "Intrinsic Attribute" .
 # 
 # http://purl.org/net/sett/vocab#LinearRegression
 <http://purl.org/net/sett/vocab#LinearRegression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#LinearRegression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SegmentationMethod> .
+<http://purl.org/net/sett/vocab#LinearRegression> <http://purl.org/dc/terms/description> "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the data. It is commonly used for trend analysis, forecasting, and identifying patterns in datasets. In its simplest form, simple linear regression uses a straight line (y = mx + b) to represent the relationship between two variables, where m is the slope and b is the intercept. Linear regression is widely applied in various fields, including economics, environmental studies, and machine learning, to analyze trends and make predictions." .
+<http://purl.org/net/sett/vocab#LinearRegression> <http://schema.org/citation> "David A. Freedman (2009). Statistical Models: Theory and Practice. Cambridge University Press. p. 26. A simple regression equation has on the right hand side an intercept and an explanatory variable with a slope coefficient. A multiple regression e right hand side, each with its own slope coefficient" .
+<http://purl.org/net/sett/vocab#LinearRegression> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the data. It is commonly used for trend analysis, forecasting, and identifying patterns in datasets. In its simplest form, simple linear regression uses a straight line (y = mx + b) to represent the relationship between two variables, where m is the slope and b is the intercept. Linear regression is widely applied in various fields, including economics, environmental studies, and machine learning, to analyze trends and make predictions." .
 # 
 # http://purl.org/net/sett/vocab#LinearSegment
 <http://purl.org/net/sett/vocab#LinearSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#LinearSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Segment> .
-# 
-# http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude
-<http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
-<http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude> <http://purl.org/dc/terms/title> "Linear Trend Gradual Magnitude" .
-<http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude> <http://www.w3.org/2000/01/rdf-schema#comment> "A Gradual Magnitude is a specific type of External Attribute that describes the magnitude of change within a Linear Trend. It is calculated by multiplying the Intrinsic attributes Slope magnitude and Segment duration." .
-<http://purl.org/net/sett/vocab#LinearTrendGradualMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "Linear Trend Gradual Magnitude" .
-# 
-# http://purl.org/net/sett/vocab#LinearTrendPValue
-<http://purl.org/net/sett/vocab#LinearTrendPValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#LinearTrendPValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
-<http://purl.org/net/sett/vocab#LinearTrendPValue> <http://purl.org/dc/terms/title> "Linear Trend  p-value" .
-<http://purl.org/net/sett/vocab#LinearTrendPValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A p-value is a specific type of External Attribute that indicates the statistical significance of a Trend line." .
-<http://purl.org/net/sett/vocab#LinearTrendPValue> <http://www.w3.org/2000/01/rdf-schema#label> "Linear Trend p-value" .
+<http://purl.org/net/sett/vocab#LinearSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "A Linear Segment is a type of Segment where the data follows a linear trend over time." .
+<http://purl.org/net/sett/vocab#LinearSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Linear Segment" .
 # 
 # http://purl.org/net/sett/vocab#NonLinearSegment
 <http://purl.org/net/sett/vocab#NonLinearSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#NonLinearSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Segment> .
+<http://purl.org/net/sett/vocab#NonLinearSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "A Non Linear Segment is a type of Segment where the data shows a non-linear pattern over time, such as seasonal or cyclical behavior." .
+<http://purl.org/net/sett/vocab#NonLinearSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Non Linear Segment" .
+# 
+# http://purl.org/net/sett/vocab#PELT
+<http://purl.org/net/sett/vocab#PELT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#PELT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> .
+<http://purl.org/net/sett/vocab#PELT> <http://purl.org/dc/terms/description> "The PELT (Pruned Exact Linear Time Algorithm) algorithm is designed to identify the most optimal segmentation of time series data by minimizing a penalized cost function. The method is particularly effective in providing an accurate segmentation while ensuring efficient computational performance." .
+<http://purl.org/net/sett/vocab#PELT> <http://schema.org/citation> "10.11648/j.ajtas.20150406.30" .
+<http://purl.org/net/sett/vocab#PELT> <http://www.w3.org/2000/01/rdf-schema#comment> "The PELT (Pruned Exact Linear Time Algorithm) algorithm is designed to identify the most optimal segmentation of time series data by minimizing a penalized cost function. The method is particularly effective in providing an accurate segmentation while ensuring efficient computational performance." .
+# 
+# http://purl.org/net/sett/vocab#PiecewiseRegression
+<http://purl.org/net/sett/vocab#PiecewiseRegression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#PiecewiseRegression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#SegmentationMethod> .
+<http://purl.org/net/sett/vocab#PiecewiseRegression> <http://purl.org/dc/terms/description> "Piecewise Regression is a statistical technique used to model time series data by dividing it into multiple segments and fitting separate regression models to each segment. Unlike simple linear regression, which assumes a single trend across all observations, piecewise regression allows for structural changes, making it useful for detecting breakpoints and modeling non-linear trends in time series data. It is widely applied in environmental monitoring, remote sensing, and economic trend analysis." .
+<http://purl.org/net/sett/vocab#PiecewiseRegression> <http://schema.org/citation> "https://doi.org/10.1080/01621459.1970.10481147" .
+<http://purl.org/net/sett/vocab#PiecewiseRegression> <http://www.w3.org/2000/01/rdf-schema#comment> "Piecewise Regression is a statistical technique used to model time series data by dividing it into multiple segments and fitting separate regression models to each segment. Unlike simple linear regression, which assumes a single trend across all observations, piecewise regression allows for structural changes, making it useful for detecting breakpoints and modeling non-linear trends in time series data. It is widely applied in environmental monitoring, remote sensing, and economic trend analysis." .
 # 
 # http://purl.org/net/sett/vocab#RawComponent
 <http://purl.org/net/sett/vocab#RawComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#RawComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Component> .
-<http://purl.org/net/sett/vocab#RawComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A Raw Component is a type of Component used to form a Raw trajectory." .
+<http://purl.org/net/sett/vocab#RawComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A Raw Component is a type of Component used to build a Raw Trajectory." .
+<http://purl.org/net/sett/vocab#RawComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Raw Component" .
 # 
 # http://purl.org/net/sett/vocab#RawTrajectory
 <http://purl.org/net/sett/vocab#RawTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#RawTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Trajectory> .
 <http://purl.org/net/sett/vocab#RawTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
 _:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#Slice> .
 _:genid3 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasSlice> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/net/sett/vocab#RawTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "A raw trajectory, or simply a trajectory, of Territorial Units (TUs) refers to a sequence of chronologically ordered measurements, tracking the temporal changes of domain-specific indicators.\nTo efficiently manage large volumes of data, the Indicator measurements are represented as Observations using the RDF Data Cube vocabulary, structured across three dimensions: Time, Space, and Indicator.\nPre-calculated Slices are then employed to store these Observations, each fixed over a defined period." .
+<http://purl.org/net/sett/vocab#RawTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#Indicator> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#monitorsIndicator> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#RawTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "A Raw Trajectory consists of a time series that tracks changes in domain-specific indicators for a Territorial Unit (TU).\nThe time series is integrated into the Linked Open Data (LOD) Cloud using the Slice component of the RDF Data Cube vocabulary, and is organized along Time, Space, and Indicator dimensions." .
+<http://purl.org/net/sett/vocab#RawTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "Raw Trajectory" .
 # 
 # http://purl.org/net/sett/vocab#RegimeChangePoint
 <http://purl.org/net/sett/vocab#RegimeChangePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#RegimeChangePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#TransitionPoint> .
+<http://purl.org/net/sett/vocab#RegimeChangePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Regime Change Point signals a transition between two distinct states or regimes in the data, characterized by long-term structural differences." .
+<http://purl.org/net/sett/vocab#RegimeChangePoint> <http://www.w3.org/2000/01/rdf-schema#label> "Regime Change Point" .
 # 
 # http://purl.org/net/sett/vocab#SeTT
 <http://purl.org/net/sett/vocab#SeTT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#SeTT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
-_:genid4 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasThematicTrajectory> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/net/sett/vocab#SeTT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#TerritorialUnit> .
-_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isSeTTOf> .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
+_:genid5 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasThematicTrajectory> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/net/sett/vocab#SeTT> <http://www.w3.org/2000/01/rdf-schema#comment> "The Semantic Trajectory of a Territorial Unit (SeTT) represents the collection of Thematic Trajectories associated with a Territorial Unit (TU). \nIt is sufficiently abstract to contain Thematic Trajectories regardless of their Thematic domain. \nA Territorial Unit (TU) can be composed of one ore multiple SeTTs." .
-# 
-# http://purl.org/net/sett/vocab#SeasonalSegment
-<http://purl.org/net/sett/vocab#SeasonalSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#SeasonalSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Segment> .
+<http://purl.org/net/sett/vocab#SeTT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isSeTTOf> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#SeTT> <http://www.w3.org/2000/01/rdf-schema#comment> "A SeTT (Semantic Trajectory of a Territorial Unit) represents a collection of Thematic Trajectories describing the evolution of a Territorial Unit across one or more domains.\nIt serves as an abstract structure capable of grouping Thematic Trajectories from different themes.\nA Territorial Unit may be associated with one or more SeTTs." .
+<http://purl.org/net/sett/vocab#SeTT> <http://www.w3.org/2000/01/rdf-schema#label> "SeTT" .
 # 
 # http://purl.org/net/sett/vocab#Segment
 <http://purl.org/net/sett/vocab#Segment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#StructuredComponent> .
-<http://purl.org/net/sett/vocab#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#StructuredTrajectory> .
-_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isSegmentOf> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#StructuredTrajectory> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isSegmentOf> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/net/sett/vocab#Segment> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/net/sett/vocab#TransitionPoint> .
-<http://purl.org/net/sett/vocab#Segment> <http://www.w3.org/2000/01/rdf-schema#comment> "A Segment is a component of a Structured Trajectory, calculated from its corresponding Slice within a Raw Trajectory. \nEach Segment is characterized by its position in the trajectory, along with intrinsic and external attributes that provide detailed information about the Segment's properties and behavior of the data. \nThe Segment period culminates when a Transition Point occurs, marking a discontinuity between Segments." .
+<http://purl.org/net/sett/vocab#Segment> <http://www.w3.org/2000/01/rdf-schema#comment> "A Segment is a continuous part of a trajectory where the data follows a consistent pattern.\nIt has attributes that enhance its description, such as init, end, and slope.\nA Segment may start or end at a Transition Point, depending on how the trajectory is structured." .
+<http://purl.org/net/sett/vocab#Segment> <http://www.w3.org/2000/01/rdf-schema#label> "Segment" .
 # 
 # http://purl.org/net/sett/vocab#SegmentDuration
 <http://purl.org/net/sett/vocab#SegmentDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#SegmentDuration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#SegmentDuration> <http://purl.org/dc/terms/title> "Segment Duration" .
-<http://purl.org/net/sett/vocab#SegmentDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Duration is a specific type of Intrinsic Attribute that indicates the length of time over which a Segment is observed." .
+<http://purl.org/net/sett/vocab#SegmentDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Duration refers to the number of observations that make up a Segment, indicating how long the segment lasts in the time series." .
 <http://purl.org/net/sett/vocab#SegmentDuration> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Duration" .
 # 
 # http://purl.org/net/sett/vocab#SegmentEndX
 <http://purl.org/net/sett/vocab#SegmentEndX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#SegmentEndX> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#SegmentEndX> <http://purl.org/dc/terms/title> "Segment End X" .
-<http://purl.org/net/sett/vocab#SegmentEndX> <http://www.w3.org/2000/01/rdf-schema#comment> "SegmentEndX is a specific type of Intrinsic Attribute that specifies the x-coordinate at the conclusion of a Segment." .
+<http://purl.org/net/sett/vocab#SegmentEndX> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment End X specifies the x-coordinate, i.e., the time value, that marks the end of a segment." .
 <http://purl.org/net/sett/vocab#SegmentEndX> <http://www.w3.org/2000/01/rdf-schema#label> "Segment End X" .
 # 
 # http://purl.org/net/sett/vocab#SegmentEndY
 <http://purl.org/net/sett/vocab#SegmentEndY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#SegmentEndY> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#SegmentEndY> <http://purl.org/dc/terms/title> "Segment End Y" .
-<http://purl.org/net/sett/vocab#SegmentEndY> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment End Y is a specific type of Intrinsic Attribute that specifies the y-coordinate at the conclusion of a Segment." .
+<http://purl.org/net/sett/vocab#SegmentEndY> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment End Y specifies the y-coordinate, i.e., the measured value, marking the end of a Segment." .
 <http://purl.org/net/sett/vocab#SegmentEndY> <http://www.w3.org/2000/01/rdf-schema#label> "Segment End Y" .
+# 
+# http://purl.org/net/sett/vocab#SegmentGradualMagnitude
+<http://purl.org/net/sett/vocab#SegmentGradualMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SegmentGradualMagnitude> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
+<http://purl.org/net/sett/vocab#SegmentGradualMagnitude> <http://purl.org/dc/terms/title> "Segment Gradual Magnitude" .
+<http://purl.org/net/sett/vocab#SegmentGradualMagnitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Gradual Magnitude describes the overall strength of change within a segment, such as a Linear Trend.\nIt is computed by multiplying the slope magnitude by the segment duration." .
+<http://purl.org/net/sett/vocab#SegmentGradualMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Gradual Magnitude" .
+# 
+# http://purl.org/net/sett/vocab#SegmentPValue
+<http://purl.org/net/sett/vocab#SegmentPValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SegmentPValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
+<http://purl.org/net/sett/vocab#SegmentPValue> <http://purl.org/dc/terms/title> "Segment p-value" .
+<http://purl.org/net/sett/vocab#SegmentPValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment p-value indicates the statistical significance of a segment’s trend, such as in a Linear Segment.\nIt reflects the confidence level of the detected change." .
+<http://purl.org/net/sett/vocab#SegmentPValue> <http://www.w3.org/2000/01/rdf-schema#label> "Segment p-value" .
+# 
+# http://purl.org/net/sett/vocab#SegmentSlopeDirection
+<http://purl.org/net/sett/vocab#SegmentSlopeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SegmentSlopeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
+<http://purl.org/net/sett/vocab#SegmentSlopeDirection> <http://purl.org/dc/terms/title> "Segment Slope Direction" .
+<http://purl.org/net/sett/vocab#SegmentSlopeDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Slope Direction indicates whether the slope of a Trend Segment is increasing, decreasing, or flat." .
+<http://purl.org/net/sett/vocab#SegmentSlopeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Slope Direction" .
+# 
+# http://purl.org/net/sett/vocab#SegmentSlopeIntercept
+<http://purl.org/net/sett/vocab#SegmentSlopeIntercept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SegmentSlopeIntercept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
+<http://purl.org/net/sett/vocab#SegmentSlopeIntercept> <http://purl.org/dc/terms/title> "Segment Slope Intercept" .
+<http://purl.org/net/sett/vocab#SegmentSlopeIntercept> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Slope Intercept is the y-value at which a linear trend line intersects the y-axis, representing the expected value when x is zero." .
+<http://purl.org/net/sett/vocab#SegmentSlopeIntercept> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Slope Intercept" .
+# 
+# http://purl.org/net/sett/vocab#SegmentSlopeMagnitude
+<http://purl.org/net/sett/vocab#SegmentSlopeMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SegmentSlopeMagnitude> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
+<http://purl.org/net/sett/vocab#SegmentSlopeMagnitude> <http://purl.org/dc/terms/title> "Segment Slope Magnitude" .
+<http://purl.org/net/sett/vocab#SegmentSlopeMagnitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Slope Magnitude represents the absolute value of the slope of a linear segment, indicating the strength of change regardless of direction." .
+<http://purl.org/net/sett/vocab#SegmentSlopeMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Slope Magnitude" .
 # 
 # http://purl.org/net/sett/vocab#SegmentStartX
 <http://purl.org/net/sett/vocab#SegmentStartX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#SegmentStartX> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#SegmentStartX> <http://purl.org/dc/terms/title> "Segment Start X" .
-<http://purl.org/net/sett/vocab#SegmentStartX> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Start X is a specific type of Intrinsic Attribute that indicates the x-coordinate at the beginning of a Segment." .
+<http://purl.org/net/sett/vocab#SegmentStartX> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Start X specifies the x-coordinate, i.e., the time value, that marks the start of a segment." .
 <http://purl.org/net/sett/vocab#SegmentStartX> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Start X" .
 # 
 # http://purl.org/net/sett/vocab#SegmentStartY
 <http://purl.org/net/sett/vocab#SegmentStartY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#SegmentStartY> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#SegmentStartY> <http://purl.org/dc/terms/title> "Segment Start Y" .
-<http://purl.org/net/sett/vocab#SegmentStartY> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Start Y is a specific type of Intrinsic Attribute that indicates the y-coordinate at the beginning of a Segment." .
+<http://purl.org/net/sett/vocab#SegmentStartY> <http://www.w3.org/2000/01/rdf-schema#comment> "Segment Start Y specifies the y-coordinate, i.e., the measured value, marking the start of a Segment." .
 <http://purl.org/net/sett/vocab#SegmentStartY> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Start Y" .
 # 
 # http://purl.org/net/sett/vocab#SegmentationMethod
 <http://purl.org/net/sett/vocab#SegmentationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#SegmentationMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#StructurationMethod> .
-<http://purl.org/net/sett/vocab#SegmentationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "A computational process is used to organize a raw trajectory into distinct segments.\nExamples of segmentation methods are BFAST (Breaks for Additive Season and Trend), BEAST (Bayesian Ensemble Algorithm for Change-Point Detection and Time Series Decomposition), and Linear Regression." .
+<http://purl.org/net/sett/vocab#SegmentationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "A Segmentation Method is a technique used to divide a time series into meaningful segments, typically based on patterns such as trends or value stability. These methods help identify consistent intervals within the data where the behavior remains relatively uniform." .
+<http://purl.org/net/sett/vocab#SegmentationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Segmentation Method" .
+# 
+# http://purl.org/net/sett/vocab#SemanticAnnotation
+<http://purl.org/net/sett/vocab#SemanticAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SemanticAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Semantic Annotation enriches a Thematic component—such as an Episode or Event—by linking it to a meaningful concept, typically defined in a controlled vocabulary or ontology." .
+<http://purl.org/net/sett/vocab#SemanticAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Annotation" .
+# 
+# http://purl.org/net/sett/vocab#SemanticAnnotationCriteria
+<http://purl.org/net/sett/vocab#SemanticAnnotationCriteria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SemanticAnnotationCriteria> <http://www.w3.org/2000/01/rdf-schema#comment> "Semantic annotation criteria define the formal conditions and/or thresholds used to determine how specific annotations are assigned and interpreted. They may also specify the method applied to derive the annotation. These parameter selections are applied consistently across all annotations related to the thematic components—Episodes and Events—of the Thematic Trajectories." .
+<http://purl.org/net/sett/vocab#SemanticAnnotationCriteria> <http://www.w3.org/2000/01/rdf-schema#label> "Semantic Annotation Criteria" .
 # 
 # http://purl.org/net/sett/vocab#Slice
 <http://purl.org/net/sett/vocab#Slice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#Slice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#RawComponent> .
-<http://purl.org/net/sett/vocab#Slice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/net/sett/vocab#RawTrajectory> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isSliceOf> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/net/sett/vocab#Slice> <http://www.w3.org/2000/01/rdf-schema#comment> "Pre-calculated Slices are components of the Raw trajectory which offers an efficient method for storing data, originally organized in RDF data cubes across the dimensions of Space, Time, and Indicator. \nThe detected Transition Points define each slice time period. \nImportantly, Slices are used to calculate the Segment component within the Structured trajectory." .
+<http://purl.org/net/sett/vocab#Slice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/net/sett/vocab#RawTrajectory> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isSliceOf> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#Slice> <http://www.w3.org/2000/01/rdf-schema#comment> "A Slice represents a portion of raw data defined as a Slice in the RDF Data Cube vocabulary. It is used to compute Segments in the Structured Trajectory." .
+<http://purl.org/net/sett/vocab#Slice> <http://www.w3.org/2000/01/rdf-schema#label> "Slice" .
 # 
-# http://purl.org/net/sett/vocab#SlopeDirection
-<http://purl.org/net/sett/vocab#SlopeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#SlopeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
-<http://purl.org/net/sett/vocab#SlopeDirection> <http://purl.org/dc/terms/title> "Slope Direction" .
-<http://purl.org/net/sett/vocab#SlopeDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "Slope Direction is a specific type of Intrinsic Attribute that describes the direction of the slope within a Trend Segment, indicating whether it is increasing or decreasing." .
-<http://purl.org/net/sett/vocab#SlopeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Slope Direction" .
+# http://purl.org/net/sett/vocab#SliceEndObservation
+<http://purl.org/net/sett/vocab#SliceEndObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SliceEndObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
+<http://purl.org/net/sett/vocab#SliceEndObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Slice End Observation identifies the final observation included in a Slice." .
+<http://purl.org/net/sett/vocab#SliceEndObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Slice End Observation" .
 # 
-# http://purl.org/net/sett/vocab#SlopeIntercept
-<http://purl.org/net/sett/vocab#SlopeIntercept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#SlopeIntercept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
-<http://purl.org/net/sett/vocab#SlopeIntercept> <http://purl.org/dc/terms/title> "Slope Intercept" .
-<http://purl.org/net/sett/vocab#SlopeIntercept> <http://www.w3.org/2000/01/rdf-schema#comment> "Slope Intercept is a specific type of Intrinsic Attribute. In the context of a linear trend, the Slope Intercept is the y-value at which the trend line intersects the y-axis when the x-value is zero." .
-<http://purl.org/net/sett/vocab#SlopeIntercept> <http://www.w3.org/2000/01/rdf-schema#label> "Slope Intercept" .
+# http://purl.org/net/sett/vocab#SliceStartObservation
+<http://purl.org/net/sett/vocab#SliceStartObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SliceStartObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
+<http://purl.org/net/sett/vocab#SliceStartObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Slice Start Observation identifies the first observation included in a Slice." .
+<http://purl.org/net/sett/vocab#SliceStartObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Slice Start Observation" .
 # 
-# http://purl.org/net/sett/vocab#SlopeMagnitude
-<http://purl.org/net/sett/vocab#SlopeMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#SlopeMagnitude> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
-<http://purl.org/net/sett/vocab#SlopeMagnitude> <http://purl.org/dc/terms/title> "Slope Magnitude" .
-<http://purl.org/net/sett/vocab#SlopeMagnitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The slope magnitude is a specific type of intrinsic attribute that represents the absolute numerical value of the slope." .
-<http://purl.org/net/sett/vocab#SlopeMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "Slope Magnitude" .
+# http://purl.org/net/sett/vocab#SliceTotalObservations
+<http://purl.org/net/sett/vocab#SliceTotalObservations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#SliceTotalObservations> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
+<http://purl.org/net/sett/vocab#SliceTotalObservations> <http://www.w3.org/2000/01/rdf-schema#comment> "Slice Total Observations indicates the number of observations contained in a Slice." .
+<http://purl.org/net/sett/vocab#SliceTotalObservations> <http://www.w3.org/2000/01/rdf-schema#label> "Slice Total Observations" .
 # 
 # http://purl.org/net/sett/vocab#StateSegment
 <http://purl.org/net/sett/vocab#StateSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#StateSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Segment> .
+<http://purl.org/net/sett/vocab#StateSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "A State Segment is a type of Segment where the data remains relatively stable over time, with no significant trends or seasonal patterns.\nIt typically represents a steady state or period of minimal change." .
+<http://purl.org/net/sett/vocab#StateSegment> <http://www.w3.org/2000/01/rdf-schema#label> "State Segment" .
 # 
 # http://purl.org/net/sett/vocab#StructurationMethod
 <http://purl.org/net/sett/vocab#StructurationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#StructurationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "A Structuration Method is a technique used to give structure to a time series by identifying meaningful components, such as Segments and Transition Points." .
+<http://purl.org/net/sett/vocab#StructurationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Structuration Method" .
 # 
 # http://purl.org/net/sett/vocab#StructuredComponent
 <http://purl.org/net/sett/vocab#StructuredComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#StructuredComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Component> .
-<http://purl.org/net/sett/vocab#StructuredComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A Structured Component is a type of Component used to form a Structured trajectory." .
+<http://purl.org/net/sett/vocab#StructuredComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A Structured Component is a type of Component used to build a Structured Trajectory." .
+<http://purl.org/net/sett/vocab#StructuredComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Structured Component" .
 # 
 # http://purl.org/net/sett/vocab#StructuredTrajectory
 <http://purl.org/net/sett/vocab#StructuredTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#StructuredTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#Segment> .
-_:genid8 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasSegment> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#StructuredTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Trajectory> .
 <http://purl.org/net/sett/vocab#StructuredTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#TransitionPoint> .
-_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasTransitionPoint> .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#Segment> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasSegment> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/net/sett/vocab#StructuredTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "A Structured trajectory results from organizing a Raw trajectory into a more structured format. It alternates between a chronologically ordered sequence of Segments and Transition Points, always concluding with a Segment. If no Transition Point is detected, the Structured Trajectory consists solely of a single Segment, indicating no transitional changes within the sequence." .
+<http://purl.org/net/sett/vocab#StructuredTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#TransitionPoint> .
+_:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasTransitionPoint> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#StructuredTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "A Structured Trajectory results from organizing a Raw trajectory into a more structured format.\nIt alternates between a chronologically ordered sequence of Segments and Transition Points, always concluding with a Segment.\nIf no Transition Point is detected, the Structured Trajectory consists solely of a single Segment, indicating no transitional changes within the sequence." .
+<http://purl.org/net/sett/vocab#StructuredTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "Structured Trajectory" .
+# 
+# http://purl.org/net/sett/vocab#StudyArea
+<http://purl.org/net/sett/vocab#StudyArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#StudyArea> <http://www.w3.org/2000/01/rdf-schema#comment> "A Study Area defines the broader geographical context in which one or more Territorial Units are analyzed." .
+<http://purl.org/net/sett/vocab#StudyArea> <http://www.w3.org/2000/01/rdf-schema#label> "Study Area" .
+# 
+# http://purl.org/net/sett/vocab#TemporalGranularity
+<http://purl.org/net/sett/vocab#TemporalGranularity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#TemporalGranularity> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates how often measured values occur in a Thematic trajectory. It describes the temporal resolution of the data, such as daily, monthly, or yearly intervals." .
+<http://purl.org/net/sett/vocab#TemporalGranularity> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Granularity" .
+# 
+# http://purl.org/net/sett/vocab#TemporalScale
+<http://purl.org/net/sett/vocab#TemporalScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#TemporalScale> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the temporal coverage of a thematic trajectory by specifying the time of year it represents. Examples include Winter, Spring, Summer, Autumn or All Seasons." .
+<http://purl.org/net/sett/vocab#TemporalScale> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Scale" .
 # 
 # http://purl.org/net/sett/vocab#TerritorialUnit
 <http://purl.org/net/sett/vocab#TerritorialUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#TerritorialUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#SeTT> .
-_:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasSeTT> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/net/sett/vocab#TerritorialUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A Territorial Unit (TU) denotes a geographic area at the lowest level of administrative division (e.g., municipalities, sub-districts, townships). \nTUs are spatially fixed entities, although they may evolve over time due to environmental shifts (e.g., land use changes, climate effects) or socioeconomic factors (e.g., population dynamics). \nTo approach cases where TU boundaries are not permanently fixed, we exploit the Territorial Statistical Nomenclature (TSN) ontology, specifically the tsn:UnitVersion class, which describes a unique representation of a Territorial Unit that remains stable for a defined period. \nTUs are composed of one or more SeTT." .
+<http://purl.org/net/sett/vocab#TerritorialUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#SeTT> .
+_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasSeTT> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#TerritorialUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A Territorial Unit (TU) represents a geographically defined area, typically aligned with the lowest level of administrative division (e.g., municipalities, sub-districts, or townships).\nAlthough spatially fixed, a TU may undergo changes over time due to environmental or socioeconomic dynamics.\nTo manage temporal variations in boundary definitions, the ontology reuses the tsn:UnitVersion class from the TSN ontology, which captures stable representations of a Territorial Unit during specific periods.\nEach TU is associated with one or more Semantic Trajectories of Territorial Transformation (SeTTs)." .
+<http://purl.org/net/sett/vocab#TerritorialUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Territorial Unit" .
 # 
 # http://purl.org/net/sett/vocab#ThematicComponent
 <http://purl.org/net/sett/vocab#ThematicComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#ThematicComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Component> .
-<http://purl.org/net/sett/vocab#ThematicComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A Thematic Component is a type of Component used to form a Thematic trajectory." .
+<http://purl.org/net/sett/vocab#ThematicComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A Thematic Component is a type of Component used to build a Thematic Trajectory." .
+<http://purl.org/net/sett/vocab#ThematicComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Thematic Component" .
 # 
 # http://purl.org/net/sett/vocab#ThematicTrajectory
 <http://purl.org/net/sett/vocab#ThematicTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#ThematicTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#Episode> .
-_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasEpisode> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#ThematicTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#Trajectory> .
 <http://purl.org/net/sett/vocab#ThematicTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#Event> .
-_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasEvent> .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#Episode> .
+_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasEpisode> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/net/sett/vocab#ThematicTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#SeTT> .
-_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isThematicTrajectoryOf> .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#Event> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#hasEvent> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/net/sett/vocab#ThematicTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "A Thematic Trajectory is a semantically enriched representation of a Territorial Unit's (TU) trajectory, associated with a specific theme. It is derived from the annotation of a Structured Trajectory and alternates between a chronologically ordered sequence of Episodes and Events, always concluding with an Episode. \nA Thematic Trajectory consists solely of a single Episode if no Event is present." .
+<http://purl.org/net/sett/vocab#ThematicTrajectory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#SeTT> .
+_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isThematicTrajectoryOf> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#ThematicTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "A Thematic Trajectory is a semantically enriched representation of a Territorial Unit's (TU) trajectory, associated with a specific theme.\nIt is derived from the annotation of a Structured Trajectory and alternates between a chronologically ordered sequence of Episodes and Events, always concluding with an Episode.\nA Thematic Trajectory consists solely of a single Episode if no Event is present." .
+<http://purl.org/net/sett/vocab#ThematicTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "Thematic Trajectory" .
 # 
 # http://purl.org/net/sett/vocab#Theme
 <http://purl.org/net/sett/vocab#Theme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/net/sett/vocab#Theme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/net/sett/vocab#Theme> <http://www.w3.org/2000/01/rdf-schema#comment> "A Theme characterizes the subject of a Thematic trajectory, providing a descriptive label for the whole trajectory." .
+<http://purl.org/net/sett/vocab#Theme> <http://www.w3.org/2000/01/rdf-schema#label> "Theme" .
+# 
+# http://purl.org/net/sett/vocab#Trajectory
+<http://purl.org/net/sett/vocab#Trajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#Trajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "A Trajectory represents the synthesized temporal evolution of a Territorial Unit (TU) based on observed data. It serves as an abstract concept that underlies the Raw, Structured, and Thematic trajectories, providing a unified view of change over time." .
+<http://purl.org/net/sett/vocab#Trajectory> <http://www.w3.org/2000/01/rdf-schema#label> "Trajectory" .
 # 
 # http://purl.org/net/sett/vocab#TransitionPoint
 <http://purl.org/net/sett/vocab#TransitionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#TransitionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#StructuredComponent> .
-<http://purl.org/net/sett/vocab#TransitionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#StructuredTrajectory> .
-_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isTransitionPointOf> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/net/sett/vocab#TransitionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Transition Point (TP) is a component of a Structure trajectory. \nEach TP is characterized by its position in the trajectory, as well as, intrinsic and external attributes that provide detailed information about its nature. \nUnlike Trends, TPs have an instantaneous duration, indicating that the change occurs at a precise moment. \nA TP marks the discontinuity between Segments." .
+<http://purl.org/net/sett/vocab#TransitionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/net/sett/vocab#StructuredTrajectory> .
+_:genid15 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/net/sett/vocab#isTransitionPointOf> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/net/sett/vocab#TransitionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Transition Point represents a change in the trajectory that causes a discontinuity between Segments or Slices.\nIt occurs at a specific moment in time and is described using attributes that characterize the nature of the transition." .
+<http://purl.org/net/sett/vocab#TransitionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Point" .
 # 
 # http://purl.org/net/sett/vocab#TransitionPointDetectionMethod
 <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#StructurationMethod> .
-<http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "A computational process is used to detect Transition Points from a Raw trajectory.\nExamples of Transition Points detection methods are BFAST (Breaks for Additive Season and Trend), BEAST (Bayesian Ensemble Algorithm for Change-Point Detection and Time Series Decomposition), and CCDC (Continuous Change Detection and Classification)," .
+<http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "A Transition Point Detection Method is a technique used to detect changes in a time series by identifying Transition Points, such as Break Points or Inflexion Points.\nThese methods analyze patterns in the data to determine when significant shifts occur." .
+<http://purl.org/net/sett/vocab#TransitionPointDetectionMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Point Detection Method" .
+# 
+# http://purl.org/net/sett/vocab#TransitionPointMagnitude
+<http://purl.org/net/sett/vocab#TransitionPointMagnitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#TransitionPointMagnitude> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
+<http://purl.org/net/sett/vocab#TransitionPointMagnitude> <http://purl.org/dc/terms/title> "Transition Point Magnitude" .
+<http://purl.org/net/sett/vocab#TransitionPointMagnitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Transition Point Magnitude quantifies the intensity of change at a Transition Point, such as a Breakpoint.\nIt is computed as the difference between the value at the point and the value immediately before or after it, depending on how the segment is defined." .
+<http://purl.org/net/sett/vocab#TransitionPointMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Point Magnitude" .
+# 
+# http://purl.org/net/sett/vocab#TransitionPointProbability
+<http://purl.org/net/sett/vocab#TransitionPointProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/sett/vocab#TransitionPointProbability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#ExternalAttributes> .
+<http://purl.org/net/sett/vocab#TransitionPointProbability> <http://purl.org/dc/terms/title> "Transition Point Probability" .
+<http://purl.org/net/sett/vocab#TransitionPointProbability> <http://www.w3.org/2000/01/rdf-schema#comment> "Transition Point Probability expresses the likelihood that a Transition Point has occurred, based on statistical analysis." .
+<http://purl.org/net/sett/vocab#TransitionPointProbability> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Point Probability" .
 # 
 # http://purl.org/net/sett/vocab#TransitionPointX
 <http://purl.org/net/sett/vocab#TransitionPointX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#TransitionPointX> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#TransitionPointX> <http://purl.org/dc/terms/title> "Transition Point X" .
-<http://purl.org/net/sett/vocab#TransitionPointX> <http://www.w3.org/2000/01/rdf-schema#comment> "Transition Point X is a specific type of Intrinsic Attribute that denotes the x-coordinate of a Transition Point within the trajectory." .
+<http://purl.org/net/sett/vocab#TransitionPointX> <http://www.w3.org/2000/01/rdf-schema#comment> "Transition Point X denotes the x-coordinate, i.e., time value, where a Transition Point occurs in the trajectory." .
 <http://purl.org/net/sett/vocab#TransitionPointX> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Point X" .
 # 
 # http://purl.org/net/sett/vocab#TransitionPointY
 <http://purl.org/net/sett/vocab#TransitionPointY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/net/sett/vocab#TransitionPointY> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/sett/vocab#IntrinsicAttributes> .
 <http://purl.org/net/sett/vocab#TransitionPointY> <http://purl.org/dc/terms/title> "Transition Point Y" .
-<http://purl.org/net/sett/vocab#TransitionPointY> <http://www.w3.org/2000/01/rdf-schema#comment> "Transition Point Y is a specific type of Intrinsic Attribute that denotes the y-coordinate of a Transition Point within the trajectory" .
+<http://purl.org/net/sett/vocab#TransitionPointY> <http://www.w3.org/2000/01/rdf-schema#comment> "Transition Point Y denotes the y-coordinate, i.e., the measured value, at which a Transition Point occurs in the trajectory." .
 <http://purl.org/net/sett/vocab#TransitionPointY> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Point Y" .
 # 
 # 
@@ -629,8 +1014,13 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid15 <http://www.w3.org/2002/07/owl#members> _:genid25 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid16 <http://www.w3.org/2002/07/owl#members> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
@@ -639,42 +1029,34 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Theme> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Trajectory> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#TerritorialUnit> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Theme> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#StructuredTrajectory> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#TerritorialUnit> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#StructurationMethod> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#TemporalScale> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SeTT> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#TemporalGranularity> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#RawTrajectory> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#StudyArea> .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Indicator> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#StructurationMethod> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Component> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SemanticAnnotationCriteria> .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Attribute> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SemanticAnnotation> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-# 
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid26 <http://www.w3.org/2002/07/owl#members> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#RegimeChangePoint> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SeTT> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Indicator> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#InterruptionPoint> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Country> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#InflexionPoint> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Component> .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#BreakPoint> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#Attribute> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
@@ -683,25 +1065,145 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#StateSegment> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#RegimeChangePoint> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SeasonalSegment> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#InterruptionPoint> .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#NonLinearSegment> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#InflexionPoint> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#LinearSegment> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#BreakPoint> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid36 <http://www.w3.org/2002/07/owl#members> _:genid39 .
+_:genid36 <http://www.w3.org/2002/07/owl#members> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#ThematicComponent> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EventTransitionAnnotation> .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#StructuredComponent> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#RawComponent> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation> .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EpisodeDurationAnnotation> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid45 <http://www.w3.org/2002/07/owl#members> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#TransitionPointY> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#TransitionPointX> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SliceTotalObservations> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SliceStartObservation> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SliceEndObservation> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentStartY> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentStartX> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentSlopeMagnitude> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentSlopeIntercept> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentSlopeDirection> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentEndY> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentEndX> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentDuration> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EventDate> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EpisodeStartDate> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EpisodeEndDate> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid62 <http://www.w3.org/2002/07/owl#members> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#TransitionPointProbability> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#TransitionPointMagnitude> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentPValue> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#SegmentGradualMagnitude> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#EventExplanatoryFactor> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid68 <http://www.w3.org/2002/07/owl#members> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#StateSegment> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#NonLinearSegment> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#LinearSegment> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid72 <http://www.w3.org/2002/07/owl#members> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#ThematicComponent> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#StructuredComponent> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#RawComponent> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid76 <http://www.w3.org/2002/07/owl#members> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#ThematicTrajectory> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#StructuredTrajectory> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/net/sett/vocab#RawTrajectory> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
