@@ -59,6 +59,36 @@ $(function(){
         return this.clone().find(sel||">*").remove().end();
  }; 
    </script> 
+
+<!-- START: Content negotiation simulation -->
+  <script>
+  // Content negotiation simulation using ?format=...
+  const params = new URLSearchParams(window.location.search);
+  const format = params.get("format");
+
+  switch(format) {
+    case "ttl":
+      window.location.href = "ontology.ttl";
+      break;
+    case "rdf":
+      window.location.href = "ontology.rdf";
+      break;
+    case "jsonld":
+      window.location.href = "ontology.jsonld";
+      break;
+    case "nt":
+      window.location.href = "ontology.nt";
+      break;
+    case "owl":
+      window.location.href = "ontology.owl";
+      break;
+    default:
+      // Humans see HTML page
+      break;
+  }
+</script>
+
+<!-- END -->
   </head> 
 
 <body>
