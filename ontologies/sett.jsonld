@@ -2,10 +2,10 @@
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isEpisodeOf"
+    "@id" : "http://purl.org/sett/vocab#isEpisodeOf"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -19,10 +19,10 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#TransitionPoint"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasTransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#hasTransitionPoint"
   } ]
 }, {
   "@id" : "_:genid11",
@@ -32,10 +32,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SeTT"
+    "@id" : "http://purl.org/sett/vocab#SeTT"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasSeTT"
+    "@id" : "http://purl.org/sett/vocab#hasSeTT"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -45,10 +45,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Episode"
+    "@id" : "http://purl.org/sett/vocab#Episode"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasEpisode"
+    "@id" : "http://purl.org/sett/vocab#hasEpisode"
   } ]
 }, {
   "@id" : "_:genid13",
@@ -58,10 +58,10 @@
     "@value" : "0"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Event"
+    "@id" : "http://purl.org/sett/vocab#Event"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasEvent"
+    "@id" : "http://purl.org/sett/vocab#hasEvent"
   } ]
 }, {
   "@id" : "_:genid14",
@@ -71,19 +71,19 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SeTT"
+    "@id" : "http://purl.org/sett/vocab#SeTT"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isThematicTrajectoryOf"
+    "@id" : "http://purl.org/sett/vocab#isThematicTrajectoryOf"
   } ]
 }, {
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory"
+    "@id" : "http://purl.org/sett/vocab#StructuredTrajectory"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isTransitionPointOf"
+    "@id" : "http://purl.org/sett/vocab#isTransitionPointOf"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -94,43 +94,43 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/net/sett/vocab#Attribute"
+      "@id" : "http://purl.org/sett/vocab#Attribute"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#Component"
+      "@id" : "http://purl.org/sett/vocab#Component"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#Country"
+      "@id" : "http://purl.org/sett/vocab#Country"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#Indicator"
+      "@id" : "http://purl.org/sett/vocab#Indicator"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SeTT"
+      "@id" : "http://purl.org/sett/vocab#SeTT"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+      "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotationCriteria"
+      "@id" : "http://purl.org/sett/vocab#SemanticAnnotationCriteria"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#StructurationMethod"
+      "@id" : "http://purl.org/sett/vocab#StructurationMethod"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#StudyArea"
+      "@id" : "http://purl.org/sett/vocab#StudyArea"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#TemporalGranularity"
+      "@id" : "http://purl.org/sett/vocab#TemporalGranularity"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#TemporalScale"
+      "@id" : "http://purl.org/sett/vocab#TemporalScale"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+      "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#Theme"
+      "@id" : "http://purl.org/sett/vocab#Theme"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#Trajectory"
+      "@id" : "http://purl.org/sett/vocab#Trajectory"
     } ]
   } ]
 }, {
   "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IsEventOf"
+    "@id" : "http://purl.org/sett/vocab#IsEventOf"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -144,23 +144,23 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Slice"
+    "@id" : "http://purl.org/sett/vocab#Slice"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasSlice"
+    "@id" : "http://purl.org/sett/vocab#hasSlice"
   } ]
 }, {
   "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/net/sett/vocab#BreakPoint"
+      "@id" : "http://purl.org/sett/vocab#BreakPoint"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#InflexionPoint"
+      "@id" : "http://purl.org/sett/vocab#InflexionPoint"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#InterruptionPoint"
+      "@id" : "http://purl.org/sett/vocab#InterruptionPoint"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#RegimeChangePoint"
+      "@id" : "http://purl.org/sett/vocab#RegimeChangePoint"
     } ]
   } ]
 }, {
@@ -168,31 +168,31 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation"
+      "@id" : "http://purl.org/sett/vocab#EpisodeBehaviorAnnotation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#EpisodeDurationAnnotation"
+      "@id" : "http://purl.org/sett/vocab#EpisodeDurationAnnotation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation"
+      "@id" : "http://purl.org/sett/vocab#EpisodeGradualMagnitudeAnnotation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation"
+      "@id" : "http://purl.org/sett/vocab#EpisodeSlopeAnnotation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation"
+      "@id" : "http://purl.org/sett/vocab#EpisodeStatisticalSignificanceAnnotation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation"
+      "@id" : "http://purl.org/sett/vocab#EpisodeThematicSlopeDirectionAnnotation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation"
+      "@id" : "http://purl.org/sett/vocab#EpisodeValueLevelAnnotation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#EventTransitionAnnotation"
+      "@id" : "http://purl.org/sett/vocab#EventTransitionAnnotation"
     } ]
   } ]
 }, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Indicator"
+    "@id" : "http://purl.org/sett/vocab#Indicator"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#monitorsIndicator"
+    "@id" : "http://purl.org/sett/vocab#monitorsIndicator"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -203,37 +203,37 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/net/sett/vocab#EpisodeEndDate"
+      "@id" : "http://purl.org/sett/vocab#EpisodeEndDate"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#EpisodeStartDate"
+      "@id" : "http://purl.org/sett/vocab#EpisodeStartDate"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#EventDate"
+      "@id" : "http://purl.org/sett/vocab#EventDate"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentDuration"
+      "@id" : "http://purl.org/sett/vocab#SegmentDuration"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentEndX"
+      "@id" : "http://purl.org/sett/vocab#SegmentEndX"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentEndY"
+      "@id" : "http://purl.org/sett/vocab#SegmentEndY"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentSlopeDirection"
+      "@id" : "http://purl.org/sett/vocab#SegmentSlopeDirection"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentSlopeIntercept"
+      "@id" : "http://purl.org/sett/vocab#SegmentSlopeIntercept"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentSlopeMagnitude"
+      "@id" : "http://purl.org/sett/vocab#SegmentSlopeMagnitude"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentStartX"
+      "@id" : "http://purl.org/sett/vocab#SegmentStartX"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentStartY"
+      "@id" : "http://purl.org/sett/vocab#SegmentStartY"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SliceEndObservation"
+      "@id" : "http://purl.org/sett/vocab#SliceEndObservation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SliceStartObservation"
+      "@id" : "http://purl.org/sett/vocab#SliceStartObservation"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SliceTotalObservations"
+      "@id" : "http://purl.org/sett/vocab#SliceTotalObservations"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#TransitionPointX"
+      "@id" : "http://purl.org/sett/vocab#TransitionPointX"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#TransitionPointY"
+      "@id" : "http://purl.org/sett/vocab#TransitionPointY"
     } ]
   } ]
 }, {
@@ -244,19 +244,19 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#hasThematicTrajectory"
   } ]
 }, {
   "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isSeTTOf"
+    "@id" : "http://purl.org/sett/vocab#isSeTTOf"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -267,15 +267,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/net/sett/vocab#EventExplanatoryFactor"
+      "@id" : "http://purl.org/sett/vocab#EventExplanatoryFactor"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentGradualMagnitude"
+      "@id" : "http://purl.org/sett/vocab#SegmentGradualMagnitude"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#SegmentPValue"
+      "@id" : "http://purl.org/sett/vocab#SegmentPValue"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#TransitionPointMagnitude"
+      "@id" : "http://purl.org/sett/vocab#TransitionPointMagnitude"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#TransitionPointProbability"
+      "@id" : "http://purl.org/sett/vocab#TransitionPointProbability"
     } ]
   } ]
 }, {
@@ -283,21 +283,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/net/sett/vocab#LinearSegment"
+      "@id" : "http://purl.org/sett/vocab#LinearSegment"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#NonLinearSegment"
+      "@id" : "http://purl.org/sett/vocab#NonLinearSegment"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#StateSegment"
+      "@id" : "http://purl.org/sett/vocab#StateSegment"
     } ]
   } ]
 }, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory"
+    "@id" : "http://purl.org/sett/vocab#StructuredTrajectory"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isSegmentOf"
+    "@id" : "http://purl.org/sett/vocab#isSegmentOf"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -308,11 +308,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/net/sett/vocab#RawComponent"
+      "@id" : "http://purl.org/sett/vocab#RawComponent"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#StructuredComponent"
+      "@id" : "http://purl.org/sett/vocab#StructuredComponent"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#ThematicComponent"
+      "@id" : "http://purl.org/sett/vocab#ThematicComponent"
     } ]
   } ]
 }, {
@@ -320,21 +320,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/net/sett/vocab#RawTrajectory"
+      "@id" : "http://purl.org/sett/vocab#RawTrajectory"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory"
+      "@id" : "http://purl.org/sett/vocab#StructuredTrajectory"
     }, {
-      "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+      "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
     } ]
   } ]
 }, {
   "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#RawTrajectory"
+    "@id" : "http://purl.org/sett/vocab#RawTrajectory"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isSliceOf"
+    "@id" : "http://purl.org/sett/vocab#isSliceOf"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -344,10 +344,10 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Segment"
+    "@id" : "http://purl.org/sett/vocab#Segment"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasSegment"
+    "@id" : "http://purl.org/sett/vocab#hasSegment"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/abstract",
@@ -374,7 +374,7 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#",
+  "@id" : "http://purl.org/sett/vocab#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/abstract" : [ {
     "@language" : "en",
@@ -413,14 +413,14 @@
     "@value" : "Cite this vocabulary as Milon-Flores, D.; Bernard, C.; Gensel, J. and Giuliani, G. The SeTT ontology 1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#1.0"
+    "@id" : "http://purl.org/sett/vocab#1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
     "@value" : "1.0"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Attribute",
+  "@id" : "http://purl.org/sett/vocab#Attribute",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Attribute provides additional descriptive information about a trajectory component.\nAttributes may hold a wide range of values, offering flexibility for representing various temporal or thematic aspects."
@@ -429,7 +429,7 @@
     "@value" : "Attribute"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#BEAST",
+  "@id" : "http://purl.org/sett/vocab#BEAST",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "The Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) is a statistical algorithm used for detecting breakpoints, trends, and seasonal variations in time series data. It applies a Bayesian framework to estimate the number and location of change points, making it well-suited for analyzing environmental and remote sensing datasets."
@@ -441,12 +441,12 @@
     "@value" : "The Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) is a statistical algorithm used for detecting breakpoints, trends, and seasonal variations in time series data. It applies a Bayesian framework to estimate the number and location of change points, making it well-suited for analyzing environmental and remote sensing datasets."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod"
+    "@id" : "http://purl.org/sett/vocab#SegmentationMethod"
   }, {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#BFAST",
+  "@id" : "http://purl.org/sett/vocab#BFAST",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "The Breaks For Additive Season and Trend (BFAST) algorithm is a statistical method for detecting structural changes in time series data. It decomposes a time series into seasonal, trend, and remainder components and identifies breakpoints where abrupt changes occur. BFAST is widely used in environmental monitoring and remote sensing applications to analyze long-term changes in vegetation, climate, and land cover."
@@ -458,12 +458,12 @@
     "@value" : "The Breaks For Additive Season and Trend (BFAST) algorithm is a statistical method for detecting structural changes in time series data. It decomposes a time series into seasonal, trend, and remainder components and identifies breakpoints where abrupt changes occur. BFAST is widely used in environmental monitoring and remote sensing applications to analyze long-term changes in vegetation, climate, and land cover."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod"
+    "@id" : "http://purl.org/sett/vocab#SegmentationMethod"
   }, {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#BFASTLite",
+  "@id" : "http://purl.org/sett/vocab#BFASTLite",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "The BFAST Lite algorithm is a simplified version of the BFAST framework designed for efficient detection of breakpoints, trends, and seasonal variations in large-scale time series data. Unlike the full BFAST model, which iteratively decomposes the time series, BFAST Lite focuses on detecting change points in a single-pass approach, making it computationally faster and suitable for large datasets. It is particularly useful for processing satellite-based Earth observation data and environmental monitoring at scale."
@@ -475,12 +475,12 @@
     "@value" : "The BFAST Lite algorithm is a simplified version of the BFAST framework designed for efficient detection of breakpoints, trends, and seasonal variations in large-scale time series data. Unlike the full BFAST model, which iteratively decomposes the time series, BFAST Lite focuses on detecting change points in a single-pass approach, making it computationally faster and suitable for large datasets. It is particularly useful for processing satellite-based Earth observation data and environmental monitoring at scale."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod"
+    "@id" : "http://purl.org/sett/vocab#SegmentationMethod"
   }, {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#BFASTMonitor",
+  "@id" : "http://purl.org/sett/vocab#BFASTMonitor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "The BFAST Monitor (Breaks For Additive Season and Trend Monitor) is a statistical algorithm designed for near-real-time monitoring of breakpoints, trends, and seasonal variations in time series data. It extends the BFAST framework by continuously detecting structural changes in new observations while preserving the existing trend and seasonal components. This makes it particularly useful for analyzing environmental and remote sensing datasets, where ongoing monitoring of land cover or vegetation changes is required."
@@ -492,12 +492,12 @@
     "@value" : "The BFAST Monitor (Breaks For Additive Season and Trend Monitor) is a statistical algorithm designed for near-real-time monitoring of breakpoints, trends, and seasonal variations in time series data. It extends the BFAST framework by continuously detecting structural changes in new observations while preserving the existing trend and seasonal components. This makes it particularly useful for analyzing environmental and remote sensing datasets, where ongoing monitoring of land cover or vegetation changes is required."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod"
+    "@id" : "http://purl.org/sett/vocab#SegmentationMethod"
   }, {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Binseg",
+  "@id" : "http://purl.org/sett/vocab#Binseg",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "Binary Segmentation (Binseg) is a recursive, top-down approach that detects change points in a sequential manner. This method is less computatio ally intensive but sacrifices some level of optimality in exchange for speed.\nThe algorithm works by splitting the time series into two parts at each iteration and testing whether there is a significant change between these two segments.\nIf a change point is detected, the algorithm continues to split the time series recursively. It repeats this process until no further changes are detected or a predefined stopping criterion is met."
@@ -509,12 +509,12 @@
     "@value" : "Binary Segmentation (Binseg) is a recursive, top-down approach that detects change points in a sequential manner. This method is less computatio ally intensive but sacrifices some level of optimality in exchange for speed.\nThe algorithm works by splitting the time series into two parts at each iteration and testing whether there is a significant change between these two segments.\nIf a change point is detected, the algorithm continues to split the time series recursively. It repeats this process until no further changes are detected or a predefined stopping criterion is met."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod"
+    "@id" : "http://purl.org/sett/vocab#SegmentationMethod"
   }, {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#BreakPoint",
+  "@id" : "http://purl.org/sett/vocab#BreakPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Break Point is a Transition Point that marks an abrupt and significant change in the data, such as a sudden increase or decrease."
@@ -523,10 +523,10 @@
     "@value" : "Break Point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#TransitionPoint"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#CCDC",
+  "@id" : "http://purl.org/sett/vocab#CCDC",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "The Continuous Change Detection and Classification (CCDC) algorithm is a time series analysis method designed for detecting land surface changes using satellite imagery. It continuously monitors time series data by fitting harmonic regression models to capture seasonal variations and trend changes. When significant deviations from the expected model occur, CCDC identifies them as change events. This method is widely used in remote sensing applications for land cover monitoring, forest disturbance detection, and environmental change analysis."
@@ -538,10 +538,10 @@
     "@value" : "The Continuous Change Detection and Classification (CCDC) algorithm is a time series analysis method designed for detecting land surface changes using satellite imagery. It continuously monitors time series data by fitting harmonic regression models to capture seasonal variations and trend changes. When significant deviations from the expected model occur, CCDC identifies them as change events. This method is widely used in remote sensing applications for land cover monitoring, forest disturbance detection, and environmental change analysis."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Component",
+  "@id" : "http://purl.org/sett/vocab#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Component represents a part of a trajectory, defined by its position in the sequence and its descriptive attributes.\nThe SeTT ontology defines three types of components: raw, structured, and thematic."
@@ -550,7 +550,7 @@
     "@value" : "Component"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Country",
+  "@id" : "http://purl.org/sett/vocab#Country",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Country represents the national entity in which a Territorial Unit is located."
@@ -559,7 +559,7 @@
     "@value" : "Country"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#DBEST",
+  "@id" : "http://purl.org/sett/vocab#DBEST",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "The DBEST (Detecting Breakpoints and Estimating Segments in Trend) algorithm is a statistical method designed for detecting breakpoints and estimating trend segments in time series data. It is particularly effective in analyzing environmental changes, such as vegetation dynamics, by decomposing time series into meaningful segments. DBEST employs a data-driven approach to identify trend shifts and estimate their magnitude, making it well-suited for applications in remote sensing and ecological monitoring."
@@ -571,12 +571,12 @@
     "@value" : "The DBEST (Detecting Breakpoints and Estimating Segments in Trend) algorithm is a statistical method designed for detecting breakpoints and estimating trend segments in time series data. It is particularly effective in analyzing environmental changes, such as vegetation dynamics, by decomposing time series into meaningful segments. DBEST employs a data-driven approach to identify trend shifts and estimate their magnitude, making it well-suited for applications in remote sensing and ecological monitoring."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod"
+    "@id" : "http://purl.org/sett/vocab#SegmentationMethod"
   }, {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Episode",
+  "@id" : "http://purl.org/sett/vocab#Episode",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Episode is derived from the semantic annotation of a Segment in the Structured Trajectory.\nIt represents a continuous period characterized by a specific behavior or condition, as defined by semantic annotations and descriptive attributes.\nAn Episode ends when an Event occurs, marking a discontinuity in the trajectory."
@@ -585,15 +585,15 @@
     "@value" : "Episode"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicComponent"
+    "@id" : "http://purl.org/sett/vocab#ThematicComponent"
   }, {
     "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Event"
+    "@id" : "http://purl.org/sett/vocab#Event"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation",
+  "@id" : "http://purl.org/sett/vocab#EpisodeBehaviorAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic annotation that qualifies the overall dynamic of an Episode by integrating its temporal extent (short-term, moderate-term, long-term), the magnitude and direction of change (slope), the thematic focus (e.g., vegetation, temperature, population), and its vertical position (value level). \nThis annotation provides an integrated, syntezed and enriched view of how an Indicator changes over the course of the Episode."
@@ -602,10 +602,10 @@
     "@value" : "Episode Behavior Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EpisodeDurationAnnotation",
+  "@id" : "http://purl.org/sett/vocab#EpisodeDurationAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic annotation that qualifies the temporal extent of an Episode, categorizing it as short-term, moderate-term, or long-term"
@@ -614,10 +614,10 @@
     "@value" : "Episode Duration Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EpisodeEndDate",
+  "@id" : "http://purl.org/sett/vocab#EpisodeEndDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Episode End Date"
@@ -629,10 +629,10 @@
     "@value" : "Episode End Date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation",
+  "@id" : "http://purl.org/sett/vocab#EpisodeGradualMagnitudeAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic annotation that qualifies the overall intensity of change throughout an Episode, based on the slope and duration of its corresponding segment. This gradual magnitude of change is computed as the product of slope magnitude and duration."
@@ -641,10 +641,10 @@
     "@value" : "Episode Gradual Magnitude Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation",
+  "@id" : "http://purl.org/sett/vocab#EpisodeSlopeAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic annotation for an Episode based on the slope characteristics of its corresponding segment, considering both the slope direction (increase, decrease, or stable) and its magnitude."
@@ -653,10 +653,10 @@
     "@value" : "Episode Slope Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EpisodeStartDate",
+  "@id" : "http://purl.org/sett/vocab#EpisodeStartDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Episode Start Date"
@@ -668,10 +668,10 @@
     "@value" : "Episode Start Date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation",
+  "@id" : "http://purl.org/sett/vocab#EpisodeStatisticalSignificanceAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic annotation that indicates the statistical confidence in the trend observed during the Episode."
@@ -680,10 +680,10 @@
     "@value" : "Episode Statistical Significance Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation",
+  "@id" : "http://purl.org/sett/vocab#EpisodeThematicSlopeDirectionAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic annotation that provides a theme-specific interpretation of an Episode’s slope direction—for example, Greening for vegetation, Warming for temperature, or Population Growth for population."
@@ -692,10 +692,10 @@
     "@value" : "Episode Thematic Slope Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation",
+  "@id" : "http://purl.org/sett/vocab#EpisodeValueLevelAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic annotation that qualifies the vertical position of an Episode’s start or end along the indicator’s value axis (i.e., the y-axis). It categorizes this position into levels such as very low, low, moderate, high, or very high."
@@ -704,10 +704,10 @@
     "@value" : "Episode Value Level Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Event",
+  "@id" : "http://purl.org/sett/vocab#Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Event represents a meaningful change in the trajectory that occurs at a specific moment in time, causing a discontinuity between Episodes in the Thematic Trajectory.\nIt is derived from the semantic annotation of a Transition Point and is described through annotations and attributes that characterize the nature and significance of the transition."
@@ -716,12 +716,12 @@
     "@value" : "Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicComponent"
+    "@id" : "http://purl.org/sett/vocab#ThematicComponent"
   }, {
     "@id" : "_:genid2"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EventDate",
+  "@id" : "http://purl.org/sett/vocab#EventDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Event Date"
@@ -733,10 +733,10 @@
     "@value" : "Event Date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EventExplanatoryFactor",
+  "@id" : "http://purl.org/sett/vocab#EventExplanatoryFactor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Event Explanatory Factor"
@@ -748,10 +748,10 @@
     "@value" : "Event Explanatory Factor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ExternalAttributes"
+    "@id" : "http://purl.org/sett/vocab#ExternalAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#EventTransitionAnnotation",
+  "@id" : "http://purl.org/sett/vocab#EventTransitionAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic annotation that qualifies both the direction and intensity of change at the Transition Point associated with an Event."
@@ -760,10 +760,10 @@
     "@value" : "Event Transition Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#ExternalAttributes",
+  "@id" : "http://purl.org/sett/vocab#ExternalAttributes",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An External Attribute refers to contextual or auxiliary information that enhances the description of a trajectory component.\nThese attributes are not intrinsic to the component itself but may be derived from external analyses, expert input, or supporting datasets."
@@ -772,13 +772,13 @@
     "@value" : "External Attribute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Attribute"
+    "@id" : "http://purl.org/sett/vocab#Attribute"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#HMM",
+  "@id" : "http://purl.org/sett/vocab#HMM",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "Hidden Markov Models (HMM) are a powerful statistical tool used to model time-series data, particularly when the data evolves through different underlying states that are not directly observable. These \"hidden\" states represent distinct environmental conditions or phases, and the system transitions between these states over time. For example, in environmental studies, the hidden states might represent different trends in data such as:\n• Stable Trend: No significant changes in the environmental variable (e.g., temper- ature, vegetation health).\n• Increasing Trend: A period of gradual increase in the environmental variable (e.g., warming temperatures, growing vegetation).\n• Decreasing Trend: A period of gradual decline in the environmental variable (e.g., cooling temperatures, deteriorating vegetation)."
@@ -790,10 +790,10 @@
     "@value" : "Hidden Markov Models (HMM) are a powerful statistical tool used to model time-series data, particularly when the data evolves through different underlying states that are not directly observable. These \"hidden\" states represent distinct environmental conditions or phases, and the system transitions between these states over time. For example, in environmental studies, the hidden states might represent different trends in data such as:\n• Stable Trend: No significant changes in the environmental variable (e.g., temper- ature, vegetation health).\n• Increasing Trend: A period of gradual increase in the environmental variable (e.g., warming temperatures, growing vegetation).\n• Decreasing Trend: A period of gradual decline in the environmental variable (e.g., cooling temperatures, deteriorating vegetation)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Indicator",
+  "@id" : "http://purl.org/sett/vocab#Indicator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Indicator is defined as a quantitative measure that captures the status of a situation or its variations over time."
@@ -802,7 +802,7 @@
     "@value" : "Indicator"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#InflexionPoint",
+  "@id" : "http://purl.org/sett/vocab#InflexionPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Inflexion Point indicates a subtle change in the trajectory where the direction or curvature shifts gradually, rather than abruptly."
@@ -811,10 +811,10 @@
     "@value" : "Inflexion Point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#TransitionPoint"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#InterruptionPoint",
+  "@id" : "http://purl.org/sett/vocab#InterruptionPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Interruption Point marks a temporary disruption in the trajectory, such as a short-term deviation that is not sustained."
@@ -823,10 +823,10 @@
     "@value" : "Interruption Point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#TransitionPoint"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes",
+  "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An Intrinsic Attribute describes essential characteristics of a trajectory component that are inherent to its structure or behavior."
@@ -835,16 +835,16 @@
     "@value" : "Intrinsic Attribute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Attribute"
+    "@id" : "http://purl.org/sett/vocab#Attribute"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#IsEventOf",
+  "@id" : "http://purl.org/sett/vocab#IsEventOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasEvent"
+    "@id" : "http://purl.org/sett/vocab#hasEvent"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#LinearRegression",
+  "@id" : "http://purl.org/sett/vocab#LinearRegression",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the data. It is commonly used for trend analysis, forecasting, and identifying patterns in datasets. In its simplest form, simple linear regression uses a straight line (y = mx + b) to represent the relationship between two variables, where m is the slope and b is the intercept. Linear regression is widely applied in various fields, including economics, environmental studies, and machine learning, to analyze trends and make predictions."
@@ -856,10 +856,10 @@
     "@value" : "Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the data. It is commonly used for trend analysis, forecasting, and identifying patterns in datasets. In its simplest form, simple linear regression uses a straight line (y = mx + b) to represent the relationship between two variables, where m is the slope and b is the intercept. Linear regression is widely applied in various fields, including economics, environmental studies, and machine learning, to analyze trends and make predictions."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod"
+    "@id" : "http://purl.org/sett/vocab#SegmentationMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#LinearSegment",
+  "@id" : "http://purl.org/sett/vocab#LinearSegment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Linear Segment is a type of Segment where the data follows a linear trend over time."
@@ -868,10 +868,10 @@
     "@value" : "Linear Segment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Segment"
+    "@id" : "http://purl.org/sett/vocab#Segment"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#NonLinearSegment",
+  "@id" : "http://purl.org/sett/vocab#NonLinearSegment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Non Linear Segment is a type of Segment where the data shows a non-linear pattern over time, such as seasonal or cyclical behavior."
@@ -880,10 +880,10 @@
     "@value" : "Non Linear Segment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Segment"
+    "@id" : "http://purl.org/sett/vocab#Segment"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#PELT",
+  "@id" : "http://purl.org/sett/vocab#PELT",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "The PELT (Pruned Exact Linear Time Algorithm) algorithm is designed to identify the most optimal segmentation of time series data by minimizing a penalized cost function. The method is particularly effective in providing an accurate segmentation while ensuring efficient computational performance."
@@ -895,10 +895,10 @@
     "@value" : "The PELT (Pruned Exact Linear Time Algorithm) algorithm is designed to identify the most optimal segmentation of time series data by minimizing a penalized cost function. The method is particularly effective in providing an accurate segmentation while ensuring efficient computational performance."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#PiecewiseRegression",
+  "@id" : "http://purl.org/sett/vocab#PiecewiseRegression",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/description" : [ {
     "@value" : "Piecewise Regression is a statistical technique used to model time series data by dividing it into multiple segments and fitting separate regression models to each segment. Unlike simple linear regression, which assumes a single trend across all observations, piecewise regression allows for structural changes, making it useful for detecting breakpoints and modeling non-linear trends in time series data. It is widely applied in environmental monitoring, remote sensing, and economic trend analysis."
@@ -910,10 +910,10 @@
     "@value" : "Piecewise Regression is a statistical technique used to model time series data by dividing it into multiple segments and fitting separate regression models to each segment. Unlike simple linear regression, which assumes a single trend across all observations, piecewise regression allows for structural changes, making it useful for detecting breakpoints and modeling non-linear trends in time series data. It is widely applied in environmental monitoring, remote sensing, and economic trend analysis."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod"
+    "@id" : "http://purl.org/sett/vocab#SegmentationMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#RawComponent",
+  "@id" : "http://purl.org/sett/vocab#RawComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Raw Component is a type of Component used to build a Raw Trajectory."
@@ -922,10 +922,10 @@
     "@value" : "Raw Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Component"
+    "@id" : "http://purl.org/sett/vocab#Component"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#RawTrajectory",
+  "@id" : "http://purl.org/sett/vocab#RawTrajectory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Raw Trajectory consists of a time series that tracks changes in domain-specific indicators for a Territorial Unit (TU).\nThe time series is integrated into the Linked Open Data (LOD) Cloud using the Slice component of the RDF Data Cube vocabulary, and is organized along Time, Space, and Indicator dimensions."
@@ -934,14 +934,14 @@
     "@value" : "Raw Trajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Trajectory"
+    "@id" : "http://purl.org/sett/vocab#Trajectory"
   }, {
     "@id" : "_:genid3"
   }, {
     "@id" : "_:genid4"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#RegimeChangePoint",
+  "@id" : "http://purl.org/sett/vocab#RegimeChangePoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Regime Change Point signals a transition between two distinct states or regimes in the data, characterized by long-term structural differences."
@@ -950,10 +950,10 @@
     "@value" : "Regime Change Point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#TransitionPoint"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SeTT",
+  "@id" : "http://purl.org/sett/vocab#SeTT",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A SeTT (Semantic Trajectory of a Territorial Unit) represents a collection of Thematic Trajectories describing the evolution of a Territorial Unit across one or more domains.\nIt serves as an abstract structure capable of grouping Thematic Trajectories from different themes.\nA Territorial Unit may be associated with one or more SeTTs."
@@ -967,7 +967,7 @@
     "@id" : "_:genid6"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Segment",
+  "@id" : "http://purl.org/sett/vocab#Segment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Segment is a continuous part of a trajectory where the data follows a consistent pattern.\nIt has attributes that enhance its description, such as init, end, and slope.\nA Segment may start or end at a Transition Point, depending on how the trajectory is structured."
@@ -976,15 +976,15 @@
     "@value" : "Segment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredComponent"
+    "@id" : "http://purl.org/sett/vocab#StructuredComponent"
   }, {
     "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#TransitionPoint"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentDuration",
+  "@id" : "http://purl.org/sett/vocab#SegmentDuration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment Duration"
@@ -996,10 +996,10 @@
     "@value" : "Segment Duration"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentEndX",
+  "@id" : "http://purl.org/sett/vocab#SegmentEndX",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment End X"
@@ -1011,10 +1011,10 @@
     "@value" : "Segment End X"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentEndY",
+  "@id" : "http://purl.org/sett/vocab#SegmentEndY",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment End Y"
@@ -1026,10 +1026,10 @@
     "@value" : "Segment End Y"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentGradualMagnitude",
+  "@id" : "http://purl.org/sett/vocab#SegmentGradualMagnitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment Gradual Magnitude"
@@ -1041,10 +1041,10 @@
     "@value" : "Segment Gradual Magnitude"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ExternalAttributes"
+    "@id" : "http://purl.org/sett/vocab#ExternalAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentPValue",
+  "@id" : "http://purl.org/sett/vocab#SegmentPValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment p-value"
@@ -1056,10 +1056,10 @@
     "@value" : "Segment p-value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ExternalAttributes"
+    "@id" : "http://purl.org/sett/vocab#ExternalAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentSlopeDirection",
+  "@id" : "http://purl.org/sett/vocab#SegmentSlopeDirection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment Slope Direction"
@@ -1071,10 +1071,10 @@
     "@value" : "Segment Slope Direction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentSlopeIntercept",
+  "@id" : "http://purl.org/sett/vocab#SegmentSlopeIntercept",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment Slope Intercept"
@@ -1086,10 +1086,10 @@
     "@value" : "Segment Slope Intercept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentSlopeMagnitude",
+  "@id" : "http://purl.org/sett/vocab#SegmentSlopeMagnitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment Slope Magnitude"
@@ -1101,10 +1101,10 @@
     "@value" : "Segment Slope Magnitude"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentStartX",
+  "@id" : "http://purl.org/sett/vocab#SegmentStartX",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment Start X"
@@ -1116,10 +1116,10 @@
     "@value" : "Segment Start X"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentStartY",
+  "@id" : "http://purl.org/sett/vocab#SegmentStartY",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Segment Start Y"
@@ -1131,10 +1131,10 @@
     "@value" : "Segment Start Y"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod",
+  "@id" : "http://purl.org/sett/vocab#SegmentationMethod",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Segmentation Method is a technique used to divide a time series into meaningful segments, typically based on patterns such as trends or value stability. These methods help identify consistent intervals within the data where the behavior remains relatively uniform."
@@ -1143,10 +1143,10 @@
     "@value" : "Segmentation Method"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructurationMethod"
+    "@id" : "http://purl.org/sett/vocab#StructurationMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation",
+  "@id" : "http://purl.org/sett/vocab#SemanticAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Semantic Annotation enriches a Thematic component—such as an Episode or Event—by linking it to a meaningful concept, typically defined in a controlled vocabulary or ontology."
@@ -1155,7 +1155,7 @@
     "@value" : "Semantic Annotation"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotationCriteria",
+  "@id" : "http://purl.org/sett/vocab#SemanticAnnotationCriteria",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Semantic annotation criteria define the formal conditions and/or thresholds used to determine how specific annotations are assigned and interpreted. They may also specify the method applied to derive the annotation. These parameter selections are applied consistently across all annotations related to the thematic components—Episodes and Events—of the Thematic Trajectories."
@@ -1164,7 +1164,7 @@
     "@value" : "Semantic Annotation Criteria"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Slice",
+  "@id" : "http://purl.org/sett/vocab#Slice",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Slice represents a portion of raw data defined as a Slice in the RDF Data Cube vocabulary. It is used to compute Segments in the Structured Trajectory."
@@ -1173,12 +1173,12 @@
     "@value" : "Slice"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#RawComponent"
+    "@id" : "http://purl.org/sett/vocab#RawComponent"
   }, {
     "@id" : "_:genid8"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SliceEndObservation",
+  "@id" : "http://purl.org/sett/vocab#SliceEndObservation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Slice End Observation identifies the final observation included in a Slice."
@@ -1187,10 +1187,10 @@
     "@value" : "Slice End Observation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SliceStartObservation",
+  "@id" : "http://purl.org/sett/vocab#SliceStartObservation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Slice Start Observation identifies the first observation included in a Slice."
@@ -1199,10 +1199,10 @@
     "@value" : "Slice Start Observation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#SliceTotalObservations",
+  "@id" : "http://purl.org/sett/vocab#SliceTotalObservations",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Slice Total Observations indicates the number of observations contained in a Slice."
@@ -1211,10 +1211,10 @@
     "@value" : "Slice Total Observations"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#StateSegment",
+  "@id" : "http://purl.org/sett/vocab#StateSegment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A State Segment is a type of Segment where the data remains relatively stable over time, with no significant trends or seasonal patterns.\nIt typically represents a steady state or period of minimal change."
@@ -1223,10 +1223,10 @@
     "@value" : "State Segment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Segment"
+    "@id" : "http://purl.org/sett/vocab#Segment"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#StructurationMethod",
+  "@id" : "http://purl.org/sett/vocab#StructurationMethod",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Structuration Method is a technique used to give structure to a time series by identifying meaningful components, such as Segments and Transition Points."
@@ -1235,7 +1235,7 @@
     "@value" : "Structuration Method"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#StructuredComponent",
+  "@id" : "http://purl.org/sett/vocab#StructuredComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Structured Component is a type of Component used to build a Structured Trajectory."
@@ -1244,10 +1244,10 @@
     "@value" : "Structured Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Component"
+    "@id" : "http://purl.org/sett/vocab#Component"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory",
+  "@id" : "http://purl.org/sett/vocab#StructuredTrajectory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Structured Trajectory results from organizing a Raw trajectory into a more structured format.\nIt alternates between a chronologically ordered sequence of Segments and Transition Points, always concluding with a Segment.\nIf no Transition Point is detected, the Structured Trajectory consists solely of a single Segment, indicating no transitional changes within the sequence."
@@ -1256,14 +1256,14 @@
     "@value" : "Structured Trajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Trajectory"
+    "@id" : "http://purl.org/sett/vocab#Trajectory"
   }, {
     "@id" : "_:genid9"
   }, {
     "@id" : "_:genid10"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#StudyArea",
+  "@id" : "http://purl.org/sett/vocab#StudyArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Study Area defines the broader geographical context in which one or more Territorial Units are analyzed."
@@ -1272,7 +1272,7 @@
     "@value" : "Study Area"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#TemporalGranularity",
+  "@id" : "http://purl.org/sett/vocab#TemporalGranularity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Indicates how often measured values occur in a Thematic trajectory. It describes the temporal resolution of the data, such as daily, monthly, or yearly intervals."
@@ -1281,7 +1281,7 @@
     "@value" : "Temporal Granularity"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#TemporalScale",
+  "@id" : "http://purl.org/sett/vocab#TemporalScale",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Defines the temporal coverage of a thematic trajectory by specifying the time of year it represents. Examples include Winter, Spring, Summer, Autumn or All Seasons."
@@ -1290,7 +1290,7 @@
     "@value" : "Temporal Scale"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit",
+  "@id" : "http://purl.org/sett/vocab#TerritorialUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Territorial Unit (TU) represents a geographically defined area, typically aligned with the lowest level of administrative division (e.g., municipalities, sub-districts, or townships).\nAlthough spatially fixed, a TU may undergo changes over time due to environmental or socioeconomic dynamics.\nTo manage temporal variations in boundary definitions, the ontology reuses the tsn:UnitVersion class from the TSN ontology, which captures stable representations of a Territorial Unit during specific periods.\nEach TU is associated with one or more Semantic Trajectories of Territorial Transformation (SeTTs)."
@@ -1302,7 +1302,7 @@
     "@id" : "_:genid11"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#ThematicComponent",
+  "@id" : "http://purl.org/sett/vocab#ThematicComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Thematic Component is a type of Component used to build a Thematic Trajectory."
@@ -1311,10 +1311,10 @@
     "@value" : "Thematic Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Component"
+    "@id" : "http://purl.org/sett/vocab#Component"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory",
+  "@id" : "http://purl.org/sett/vocab#ThematicTrajectory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Thematic Trajectory is a semantically enriched representation of a Territorial Unit's (TU) trajectory, associated with a specific theme.\nIt is derived from the annotation of a Structured Trajectory and alternates between a chronologically ordered sequence of Episodes and Events, always concluding with an Episode.\nA Thematic Trajectory consists solely of a single Episode if no Event is present."
@@ -1323,7 +1323,7 @@
     "@value" : "Thematic Trajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Trajectory"
+    "@id" : "http://purl.org/sett/vocab#Trajectory"
   }, {
     "@id" : "_:genid12"
   }, {
@@ -1332,7 +1332,7 @@
     "@id" : "_:genid14"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Theme",
+  "@id" : "http://purl.org/sett/vocab#Theme",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Theme characterizes the subject of a Thematic trajectory, providing a descriptive label for the whole trajectory."
@@ -1341,7 +1341,7 @@
     "@value" : "Theme"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#Trajectory",
+  "@id" : "http://purl.org/sett/vocab#Trajectory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Trajectory represents the synthesized temporal evolution of a Territorial Unit (TU) based on observed data. It serves as an abstract concept that underlies the Raw, Structured, and Thematic trajectories, providing a unified view of change over time."
@@ -1350,7 +1350,7 @@
     "@value" : "Trajectory"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#TransitionPoint",
+  "@id" : "http://purl.org/sett/vocab#TransitionPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Transition Point represents a change in the trajectory that causes a discontinuity between Segments or Slices.\nIt occurs at a specific moment in time and is described using attributes that characterize the nature of the transition."
@@ -1359,12 +1359,12 @@
     "@value" : "Transition Point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredComponent"
+    "@id" : "http://purl.org/sett/vocab#StructuredComponent"
   }, {
     "@id" : "_:genid15"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod",
+  "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Transition Point Detection Method is a technique used to detect changes in a time series by identifying Transition Points, such as Break Points or Inflexion Points.\nThese methods analyze patterns in the data to determine when significant shifts occur."
@@ -1373,10 +1373,10 @@
     "@value" : "Transition Point Detection Method"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructurationMethod"
+    "@id" : "http://purl.org/sett/vocab#StructurationMethod"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#TransitionPointMagnitude",
+  "@id" : "http://purl.org/sett/vocab#TransitionPointMagnitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Transition Point Magnitude"
@@ -1388,10 +1388,10 @@
     "@value" : "Transition Point Magnitude"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ExternalAttributes"
+    "@id" : "http://purl.org/sett/vocab#ExternalAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#TransitionPointProbability",
+  "@id" : "http://purl.org/sett/vocab#TransitionPointProbability",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Transition Point Probability"
@@ -1403,10 +1403,10 @@
     "@value" : "Transition Point Probability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ExternalAttributes"
+    "@id" : "http://purl.org/sett/vocab#ExternalAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#TransitionPointX",
+  "@id" : "http://purl.org/sett/vocab#TransitionPointX",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Transition Point X"
@@ -1418,10 +1418,10 @@
     "@value" : "Transition Point X"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#TransitionPointY",
+  "@id" : "http://purl.org/sett/vocab#TransitionPointY",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Transition Point Y"
@@ -1433,649 +1433,649 @@
     "@value" : "Transition Point Y"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#areaInHAnLake",
+  "@id" : "http://purl.org/sett/vocab#areaInHAnLake",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#areaInM2",
+  "@id" : "http://purl.org/sett/vocab#areaInM2",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#calculatedUsingSegmentMethod",
+  "@id" : "http://purl.org/sett/vocab#calculatedUsingSegmentMethod",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory"
+    "@id" : "http://purl.org/sett/vocab#StructuredTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SegmentationMethod"
+    "@id" : "http://purl.org/sett/vocab#SegmentationMethod"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isUsedAsSegmentMethodFor"
+    "@id" : "http://purl.org/sett/vocab#isUsedAsSegmentMethodFor"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod",
+  "@id" : "http://purl.org/sett/vocab#calculatedUsingTransitionPointMethod",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory"
+    "@id" : "http://purl.org/sett/vocab#StructuredTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"
+    "@id" : "http://purl.org/sett/vocab#TransitionPointDetectionMethod"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isUsedAsTransitionPointMethodFor"
+    "@id" : "http://purl.org/sett/vocab#isUsedAsTransitionPointMethodFor"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#country",
+  "@id" : "http://purl.org/sett/vocab#country",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Country"
+    "@id" : "http://purl.org/sett/vocab#Country"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isCountryOf"
+    "@id" : "http://purl.org/sett/vocab#isCountryOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#definesCriteriaFor",
+  "@id" : "http://purl.org/sett/vocab#definesCriteriaFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotationCriteria"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotationCriteria"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isDefinedByCriteria"
+    "@id" : "http://purl.org/sett/vocab#isDefinedByCriteria"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom",
+  "@id" : "http://purl.org/sett/vocab#episodeIsAnnotatedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Episode"
+    "@id" : "http://purl.org/sett/vocab#Episode"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Segment"
+    "@id" : "http://purl.org/sett/vocab#Segment"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#segmentAnnotatesEpisode"
+    "@id" : "http://purl.org/sett/vocab#segmentAnnotatesEpisode"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#eventIsAnnotatedFrom",
+  "@id" : "http://purl.org/sett/vocab#eventIsAnnotatedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Event"
+    "@id" : "http://purl.org/sett/vocab#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#TransitionPoint"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent"
+    "@id" : "http://purl.org/sett/vocab#transitionPointAnnotatesEvent"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#givesDataTo",
+  "@id" : "http://purl.org/sett/vocab#givesDataTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#takesDataFrom"
+    "@id" : "http://purl.org/sett/vocab#takesDataFrom"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasAnnotationCriteriaDescription",
+  "@id" : "http://purl.org/sett/vocab#hasAnnotationCriteriaDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Provides a description of the semantic annotations- For instance, the thresholds used to classify certain values (e.g., slight, medium, strong) based on a given attribute."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotationCriteria"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotationCriteria"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasAttribute",
+  "@id" : "http://purl.org/sett/vocab#hasAttribute",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Component"
+    "@id" : "http://purl.org/sett/vocab#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Attribute"
+    "@id" : "http://purl.org/sett/vocab#Attribute"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isAttributeOf"
+    "@id" : "http://purl.org/sett/vocab#isAttributeOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasAttributeValue",
+  "@id" : "http://purl.org/sett/vocab#hasAttributeValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Attribute"
+    "@id" : "http://purl.org/sett/vocab#Attribute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasBroaderTheme",
+  "@id" : "http://purl.org/sett/vocab#hasBroaderTheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SeTT"
+    "@id" : "http://purl.org/sett/vocab#SeTT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Theme"
+    "@id" : "http://purl.org/sett/vocab#Theme"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isBroaderThemeOf"
+    "@id" : "http://purl.org/sett/vocab#isBroaderThemeOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasEpisode",
+  "@id" : "http://purl.org/sett/vocab#hasEpisode",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Episode"
+    "@id" : "http://purl.org/sett/vocab#Episode"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isEpisodeOf"
+    "@id" : "http://purl.org/sett/vocab#isEpisodeOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasEvent",
+  "@id" : "http://purl.org/sett/vocab#hasEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Event"
+    "@id" : "http://purl.org/sett/vocab#Event"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasExplanatoryFactor",
+  "@id" : "http://purl.org/sett/vocab#hasExplanatoryFactor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Event"
+    "@id" : "http://purl.org/sett/vocab#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#EventExplanatoryFactor"
+    "@id" : "http://purl.org/sett/vocab#EventExplanatoryFactor"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isExplanatoryFactorOf"
+    "@id" : "http://purl.org/sett/vocab#isExplanatoryFactorOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasExternalAttribute",
+  "@id" : "http://purl.org/sett/vocab#hasExternalAttribute",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Component"
+    "@id" : "http://purl.org/sett/vocab#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ExternalAttributes"
+    "@id" : "http://purl.org/sett/vocab#ExternalAttributes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasAttribute"
+    "@id" : "http://purl.org/sett/vocab#hasAttribute"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isExternalAttributeOf"
+    "@id" : "http://purl.org/sett/vocab#isExternalAttributeOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasIndicatorDescription",
+  "@id" : "http://purl.org/sett/vocab#hasIndicatorDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Indicator"
+    "@id" : "http://purl.org/sett/vocab#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasIndicatorFormula",
+  "@id" : "http://purl.org/sett/vocab#hasIndicatorFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Indicator"
+    "@id" : "http://purl.org/sett/vocab#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasIntrinsicAttribute",
+  "@id" : "http://purl.org/sett/vocab#hasIntrinsicAttribute",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Component"
+    "@id" : "http://purl.org/sett/vocab#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#IntrinsicAttributes"
+    "@id" : "http://purl.org/sett/vocab#IntrinsicAttributes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#hasAttribute"
+    "@id" : "http://purl.org/sett/vocab#hasAttribute"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isIntrinsicAttributeOf"
+    "@id" : "http://purl.org/sett/vocab#isIntrinsicAttributeOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasSeTT",
+  "@id" : "http://purl.org/sett/vocab#hasSeTT",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SeTT"
+    "@id" : "http://purl.org/sett/vocab#SeTT"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isSeTTOf"
+    "@id" : "http://purl.org/sett/vocab#isSeTTOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasSegment",
+  "@id" : "http://purl.org/sett/vocab#hasSegment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory"
+    "@id" : "http://purl.org/sett/vocab#StructuredTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Segment"
+    "@id" : "http://purl.org/sett/vocab#Segment"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isSegmentOf"
+    "@id" : "http://purl.org/sett/vocab#isSegmentOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasSemanticAnnotation",
+  "@id" : "http://purl.org/sett/vocab#hasSemanticAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicComponent"
+    "@id" : "http://purl.org/sett/vocab#ThematicComponent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isSemanticAnnotationOf"
+    "@id" : "http://purl.org/sett/vocab#isSemanticAnnotationOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasSemanticAnnotationCriteria",
+  "@id" : "http://purl.org/sett/vocab#hasSemanticAnnotationCriteria",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotationCriteria"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotationCriteria"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isSemanticAnnotationCriteriaOf"
+    "@id" : "http://purl.org/sett/vocab#isSemanticAnnotationCriteriaOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasSequenceOrder",
+  "@id" : "http://purl.org/sett/vocab#hasSequenceOrder",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Component"
+    "@id" : "http://purl.org/sett/vocab#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasSlice",
+  "@id" : "http://purl.org/sett/vocab#hasSlice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#RawTrajectory"
+    "@id" : "http://purl.org/sett/vocab#RawTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Slice"
+    "@id" : "http://purl.org/sett/vocab#Slice"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isSliceOf"
+    "@id" : "http://purl.org/sett/vocab#isSliceOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasStructurationMethodDescription",
+  "@id" : "http://purl.org/sett/vocab#hasStructurationMethodDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructurationMethod"
+    "@id" : "http://purl.org/sett/vocab#StructurationMethod"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasTemporalGranularity",
+  "@id" : "http://purl.org/sett/vocab#hasTemporalGranularity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TemporalGranularity"
+    "@id" : "http://purl.org/sett/vocab#TemporalGranularity"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isTemporalGranularityOf"
+    "@id" : "http://purl.org/sett/vocab#isTemporalGranularityOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasTemporalScale",
+  "@id" : "http://purl.org/sett/vocab#hasTemporalScale",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TemporalScale"
+    "@id" : "http://purl.org/sett/vocab#TemporalScale"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isTemporalScaleOf"
+    "@id" : "http://purl.org/sett/vocab#isTemporalScaleOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasThematicTrajectory",
+  "@id" : "http://purl.org/sett/vocab#hasThematicTrajectory",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SeTT"
+    "@id" : "http://purl.org/sett/vocab#SeTT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isThematicTrajectoryOf"
+    "@id" : "http://purl.org/sett/vocab#isThematicTrajectoryOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasTheme",
+  "@id" : "http://purl.org/sett/vocab#hasTheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Theme"
+    "@id" : "http://purl.org/sett/vocab#Theme"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isThemeOf"
+    "@id" : "http://purl.org/sett/vocab#isThemeOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasTotalEpisodes",
+  "@id" : "http://purl.org/sett/vocab#hasTotalEpisodes",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasTotalEvents",
+  "@id" : "http://purl.org/sett/vocab#hasTotalEvents",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#ThematicTrajectory"
+    "@id" : "http://purl.org/sett/vocab#ThematicTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasTotalSegments",
+  "@id" : "http://purl.org/sett/vocab#hasTotalSegments",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory"
+    "@id" : "http://purl.org/sett/vocab#StructuredTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasTotalSlices",
+  "@id" : "http://purl.org/sett/vocab#hasTotalSlices",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#RawTrajectory"
+    "@id" : "http://purl.org/sett/vocab#RawTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasTotalTransitionPoints",
+  "@id" : "http://purl.org/sett/vocab#hasTotalTransitionPoints",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory"
+    "@id" : "http://purl.org/sett/vocab#StructuredTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#hasTransitionPoint",
+  "@id" : "http://purl.org/sett/vocab#hasTransitionPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StructuredTrajectory"
+    "@id" : "http://purl.org/sett/vocab#StructuredTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#TransitionPoint"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isTransitionPointOf"
+    "@id" : "http://purl.org/sett/vocab#isTransitionPointOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#indicatorMonitoredBy",
+  "@id" : "http://purl.org/sett/vocab#indicatorMonitoredBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#monitorsIndicator"
+    "@id" : "http://purl.org/sett/vocab#monitorsIndicator"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isAttributeOf",
+  "@id" : "http://purl.org/sett/vocab#isAttributeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isAttributeOfSemanticAnnotation",
+  "@id" : "http://purl.org/sett/vocab#isAttributeOfSemanticAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute"
+    "@id" : "http://purl.org/sett/vocab#semanticAnnotationBasedOnAttribute"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isBroaderThemeOf",
+  "@id" : "http://purl.org/sett/vocab#isBroaderThemeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isCountryOf",
+  "@id" : "http://purl.org/sett/vocab#isCountryOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isDefinedByCriteria",
+  "@id" : "http://purl.org/sett/vocab#isDefinedByCriteria",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isEpisodeOf",
+  "@id" : "http://purl.org/sett/vocab#isEpisodeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isExplanatoryFactorOf",
+  "@id" : "http://purl.org/sett/vocab#isExplanatoryFactorOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isExternalAttributeOf",
+  "@id" : "http://purl.org/sett/vocab#isExternalAttributeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isAttributeOf"
+    "@id" : "http://purl.org/sett/vocab#isAttributeOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isIntrinsicAttributeOf",
+  "@id" : "http://purl.org/sett/vocab#isIntrinsicAttributeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#isAttributeOf"
+    "@id" : "http://purl.org/sett/vocab#isAttributeOf"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isSeTTOf",
+  "@id" : "http://purl.org/sett/vocab#isSeTTOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isSegmentOf",
+  "@id" : "http://purl.org/sett/vocab#isSegmentOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isSemanticAnnotationCriteriaOf",
+  "@id" : "http://purl.org/sett/vocab#isSemanticAnnotationCriteriaOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isSemanticAnnotationOf",
+  "@id" : "http://purl.org/sett/vocab#isSemanticAnnotationOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isSliceOf",
+  "@id" : "http://purl.org/sett/vocab#isSliceOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isStudyAreaOf",
+  "@id" : "http://purl.org/sett/vocab#isStudyAreaOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#studyArea"
+    "@id" : "http://purl.org/sett/vocab#studyArea"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isTemporalGranularityOf",
+  "@id" : "http://purl.org/sett/vocab#isTemporalGranularityOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isTemporalScaleOf",
+  "@id" : "http://purl.org/sett/vocab#isTemporalScaleOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isThematicTrajectoryOf",
+  "@id" : "http://purl.org/sett/vocab#isThematicTrajectoryOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isThemeOf",
+  "@id" : "http://purl.org/sett/vocab#isThemeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isTransitionPointOf",
+  "@id" : "http://purl.org/sett/vocab#isTransitionPointOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isUsedAsSegmentMethodFor",
+  "@id" : "http://purl.org/sett/vocab#isUsedAsSegmentMethodFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#isUsedAsTransitionPointMethodFor",
+  "@id" : "http://purl.org/sett/vocab#isUsedAsTransitionPointMethodFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#maxElevationMeters",
+  "@id" : "http://purl.org/sett/vocab#maxElevationMeters",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#maxSlopeDegrees",
+  "@id" : "http://purl.org/sett/vocab#maxSlopeDegrees",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#meanElevationMeters",
+  "@id" : "http://purl.org/sett/vocab#meanElevationMeters",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#meanSlopeDegrees",
+  "@id" : "http://purl.org/sett/vocab#meanSlopeDegrees",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#minElevationMeters",
+  "@id" : "http://purl.org/sett/vocab#minElevationMeters",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#minSlopeDegrees",
+  "@id" : "http://purl.org/sett/vocab#minSlopeDegrees",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#monitorsIndicator",
+  "@id" : "http://purl.org/sett/vocab#monitorsIndicator",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#RawTrajectory"
+    "@id" : "http://purl.org/sett/vocab#RawTrajectory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Indicator"
+    "@id" : "http://purl.org/sett/vocab#Indicator"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#segmentAnnotatesEpisode",
+  "@id" : "http://purl.org/sett/vocab#segmentAnnotatesEpisode",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#segmentIsDerivatedFrom",
+  "@id" : "http://purl.org/sett/vocab#segmentIsDerivatedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Segment"
+    "@id" : "http://purl.org/sett/vocab#Segment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Slice"
+    "@id" : "http://purl.org/sett/vocab#Slice"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#sliceUsedToDerivateSegment"
+    "@id" : "http://purl.org/sett/vocab#sliceUsedToDerivateSegment"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute",
+  "@id" : "http://purl.org/sett/vocab#semanticAnnotationBasedOnAttribute",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#SemanticAnnotation"
+    "@id" : "http://purl.org/sett/vocab#SemanticAnnotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Attribute"
+    "@id" : "http://purl.org/sett/vocab#Attribute"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#sliceDelimitedBy",
+  "@id" : "http://purl.org/sett/vocab#sliceDelimitedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#transitionPointDelimitSlice"
+    "@id" : "http://purl.org/sett/vocab#transitionPointDelimitSlice"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#sliceUsedToDerivateSegment",
+  "@id" : "http://purl.org/sett/vocab#sliceUsedToDerivateSegment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#stdElevationMeters",
+  "@id" : "http://purl.org/sett/vocab#stdElevationMeters",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#stdSlopeDegrees",
+  "@id" : "http://purl.org/sett/vocab#stdSlopeDegrees",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#studyArea",
+  "@id" : "http://purl.org/sett/vocab#studyArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#StudyArea"
+    "@id" : "http://purl.org/sett/vocab#StudyArea"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#takesDataFrom",
+  "@id" : "http://purl.org/sett/vocab#takesDataFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Indicator"
+    "@id" : "http://purl.org/sett/vocab#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Indicator"
+    "@id" : "http://purl.org/sett/vocab#Indicator"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#totalAreaInM2",
+  "@id" : "http://purl.org/sett/vocab#totalAreaInM2",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TerritorialUnit"
+    "@id" : "http://purl.org/sett/vocab#TerritorialUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent",
+  "@id" : "http://purl.org/sett/vocab#transitionPointAnnotatesEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "http://purl.org/net/sett/vocab#transitionPointDelimitSlice",
+  "@id" : "http://purl.org/sett/vocab#transitionPointDelimitSlice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#TransitionPoint"
+    "@id" : "http://purl.org/sett/vocab#TransitionPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/net/sett/vocab#Slice"
+    "@id" : "http://purl.org/sett/vocab#Slice"
   } ]
 }, {
   "@id" : "http://schema.org/citation",
