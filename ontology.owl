@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/net/sett/vocab#"
-     xml:base="http://purl.org/net/sett/vocab"
+<rdf:RDF xmlns="http://purl.org/sett/vocab#"
+     xml:base="http://purl.org/sett/vocab"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,8 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
-    <owl:Ontology rdf:about="http://purl.org/net/sett/vocab#">
-        <owl:versionIRI rdf:resource="http://purl.org/net/sett/vocab#1.0"/>
+    <owl:Ontology rdf:about="http://purl.org/sett/vocab#">
+        <owl:versionIRI rdf:resource="http://purl.org/sett/vocab#1.0"/>
         <dc:abstract xml:lang="en">The negative impact of human activities on our planet has increased the interest of stakeholders—from policymakers to citizens—in monitoring and understanding local environmental changes. However, these data are often complex and difficult for non-experts to interpret. To address this, we introduce the SeTT (Semantic Trajectory of a Territorial Unit) ontology, which describes the environmental evolution of Territorial Units (e.g., municipalities) through different perspectives—Raw, Structured, and Thematic—making this information more synthesized, accessible, and understandable for both expert and non-expert users.</dc:abstract>
         <dc:description xml:lang="en">SeTT is a multi-layered ontology specifically designed to describe the semantic trajectories of Territorial Units (TUs). It models three types of trajectories: Raw, Structured, and Semantic. Together, these trajectories create a comprehensive framework for capturing, organizing, and analyzing the evolution of TUs across various thematic domains, thereby improving users&apos; ability to interpret and understand complex data.</dc:description>
         <dc:title xml:lang="en">The SeTT ontology</dc:title>
@@ -113,536 +113,536 @@
     
 
 
-    <!-- http://purl.org/net/sett/vocab#IsEventOf -->
+    <!-- http://purl.org/sett/vocab#IsEventOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#IsEventOf">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#hasEvent"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#IsEventOf">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#hasEvent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#calculatedUsingSegmentMethod -->
+    <!-- http://purl.org/sett/vocab#calculatedUsingSegmentMethod -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#calculatedUsingSegmentMethod">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isUsedAsSegmentMethodFor"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#StructuredTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#SegmentationMethod"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#calculatedUsingSegmentMethod">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isUsedAsSegmentMethodFor"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#StructuredTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#SegmentationMethod"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod -->
+    <!-- http://purl.org/sett/vocab#calculatedUsingTransitionPointMethod -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#calculatedUsingTransitionPointMethod">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isUsedAsTransitionPointMethodFor"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#StructuredTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#calculatedUsingTransitionPointMethod">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isUsedAsTransitionPointMethodFor"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#StructuredTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#country -->
+    <!-- http://purl.org/sett/vocab#country -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#country">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isCountryOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Country"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#country">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isCountryOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Country"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#definesCriteriaFor -->
+    <!-- http://purl.org/sett/vocab#definesCriteriaFor -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#definesCriteriaFor">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isDefinedByCriteria"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotationCriteria"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#definesCriteriaFor">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isDefinedByCriteria"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#SemanticAnnotationCriteria"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom -->
+    <!-- http://purl.org/sett/vocab#episodeIsAnnotatedFrom -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#episodeIsAnnotatedFrom">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#segmentAnnotatesEpisode"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Episode"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Segment"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#episodeIsAnnotatedFrom">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#segmentAnnotatesEpisode"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Episode"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Segment"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#eventIsAnnotatedFrom -->
+    <!-- http://purl.org/sett/vocab#eventIsAnnotatedFrom -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#eventIsAnnotatedFrom">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Event"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#TransitionPoint"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#eventIsAnnotatedFrom">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#transitionPointAnnotatesEvent"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Event"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#TransitionPoint"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#givesDataTo -->
+    <!-- http://purl.org/sett/vocab#givesDataTo -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#givesDataTo">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#takesDataFrom"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#givesDataTo">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#takesDataFrom"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasAttribute -->
+    <!-- http://purl.org/sett/vocab#hasAttribute -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasAttribute">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isAttributeOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Component"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Attribute"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasAttribute">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isAttributeOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Component"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Attribute"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasBroaderTheme -->
+    <!-- http://purl.org/sett/vocab#hasBroaderTheme -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasBroaderTheme">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isBroaderThemeOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#SeTT"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Theme"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasBroaderTheme">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isBroaderThemeOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#SeTT"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Theme"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasEpisode -->
+    <!-- http://purl.org/sett/vocab#hasEpisode -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasEpisode">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isEpisodeOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Episode"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasEpisode">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isEpisodeOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Episode"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasEvent -->
+    <!-- http://purl.org/sett/vocab#hasEvent -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasEvent">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Event"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasEvent">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasExplanatoryFactor -->
+    <!-- http://purl.org/sett/vocab#hasExplanatoryFactor -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasExplanatoryFactor">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isExplanatoryFactorOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Event"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#EventExplanatoryFactor"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasExplanatoryFactor">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isExplanatoryFactorOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Event"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#EventExplanatoryFactor"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasExternalAttribute -->
+    <!-- http://purl.org/sett/vocab#hasExternalAttribute -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasExternalAttribute">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/sett/vocab#hasAttribute"/>
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isExternalAttributeOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Component"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#ExternalAttributes"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasExternalAttribute">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/sett/vocab#hasAttribute"/>
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isExternalAttributeOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Component"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#ExternalAttributes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasIntrinsicAttribute -->
+    <!-- http://purl.org/sett/vocab#hasIntrinsicAttribute -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasIntrinsicAttribute">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/sett/vocab#hasAttribute"/>
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isIntrinsicAttributeOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Component"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasIntrinsicAttribute">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/sett/vocab#hasAttribute"/>
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isIntrinsicAttributeOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Component"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasSeTT -->
+    <!-- http://purl.org/sett/vocab#hasSeTT -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasSeTT">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isSeTTOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#SeTT"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasSeTT">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isSeTTOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#SeTT"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasSegment -->
+    <!-- http://purl.org/sett/vocab#hasSegment -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasSegment">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isSegmentOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#StructuredTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Segment"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasSegment">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isSegmentOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#StructuredTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Segment"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasSemanticAnnotation -->
+    <!-- http://purl.org/sett/vocab#hasSemanticAnnotation -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasSemanticAnnotation">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isSemanticAnnotationOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#ThematicComponent"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasSemanticAnnotation">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isSemanticAnnotationOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#ThematicComponent"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasSemanticAnnotationCriteria -->
+    <!-- http://purl.org/sett/vocab#hasSemanticAnnotationCriteria -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasSemanticAnnotationCriteria">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isSemanticAnnotationCriteriaOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotationCriteria"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasSemanticAnnotationCriteria">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isSemanticAnnotationCriteriaOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#SemanticAnnotationCriteria"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasSlice -->
+    <!-- http://purl.org/sett/vocab#hasSlice -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasSlice">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isSliceOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#RawTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Slice"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasSlice">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isSliceOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#RawTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Slice"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasTemporalGranularity -->
+    <!-- http://purl.org/sett/vocab#hasTemporalGranularity -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasTemporalGranularity">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isTemporalGranularityOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#TemporalGranularity"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasTemporalGranularity">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isTemporalGranularityOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#TemporalGranularity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasTemporalScale -->
+    <!-- http://purl.org/sett/vocab#hasTemporalScale -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasTemporalScale">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isTemporalScaleOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#TemporalScale"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasTemporalScale">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isTemporalScaleOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#TemporalScale"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasThematicTrajectory -->
+    <!-- http://purl.org/sett/vocab#hasThematicTrajectory -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasThematicTrajectory">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isThematicTrajectoryOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#SeTT"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasThematicTrajectory">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isThematicTrajectoryOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#SeTT"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasTheme -->
+    <!-- http://purl.org/sett/vocab#hasTheme -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasTheme">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isThemeOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Theme"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasTheme">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isThemeOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Theme"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasTransitionPoint -->
+    <!-- http://purl.org/sett/vocab#hasTransitionPoint -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#hasTransitionPoint">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#isTransitionPointOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#StructuredTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#TransitionPoint"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#hasTransitionPoint">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#isTransitionPointOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#StructuredTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#TransitionPoint"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#indicatorMonitoredBy -->
+    <!-- http://purl.org/sett/vocab#indicatorMonitoredBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#indicatorMonitoredBy">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#monitorsIndicator"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#indicatorMonitoredBy">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#monitorsIndicator"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isAttributeOf -->
+    <!-- http://purl.org/sett/vocab#isAttributeOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isAttributeOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isAttributeOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isAttributeOfSemanticAnnotation -->
+    <!-- http://purl.org/sett/vocab#isAttributeOfSemanticAnnotation -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isAttributeOfSemanticAnnotation">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isAttributeOfSemanticAnnotation">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#semanticAnnotationBasedOnAttribute"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isBroaderThemeOf -->
+    <!-- http://purl.org/sett/vocab#isBroaderThemeOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isBroaderThemeOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isBroaderThemeOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isCountryOf -->
+    <!-- http://purl.org/sett/vocab#isCountryOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isCountryOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isCountryOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isDefinedByCriteria -->
+    <!-- http://purl.org/sett/vocab#isDefinedByCriteria -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isDefinedByCriteria"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isDefinedByCriteria"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isEpisodeOf -->
+    <!-- http://purl.org/sett/vocab#isEpisodeOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isEpisodeOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isEpisodeOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isExplanatoryFactorOf -->
+    <!-- http://purl.org/sett/vocab#isExplanatoryFactorOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isExplanatoryFactorOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isExplanatoryFactorOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isExternalAttributeOf -->
+    <!-- http://purl.org/sett/vocab#isExternalAttributeOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isExternalAttributeOf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/sett/vocab#isAttributeOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isExternalAttributeOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/sett/vocab#isAttributeOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isIntrinsicAttributeOf -->
+    <!-- http://purl.org/sett/vocab#isIntrinsicAttributeOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isIntrinsicAttributeOf">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/net/sett/vocab#isAttributeOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isIntrinsicAttributeOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/sett/vocab#isAttributeOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isSeTTOf -->
+    <!-- http://purl.org/sett/vocab#isSeTTOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isSeTTOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isSeTTOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isSegmentOf -->
+    <!-- http://purl.org/sett/vocab#isSegmentOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isSegmentOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isSegmentOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isSemanticAnnotationCriteriaOf -->
+    <!-- http://purl.org/sett/vocab#isSemanticAnnotationCriteriaOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isSemanticAnnotationCriteriaOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isSemanticAnnotationCriteriaOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isSemanticAnnotationOf -->
+    <!-- http://purl.org/sett/vocab#isSemanticAnnotationOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isSemanticAnnotationOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isSemanticAnnotationOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isSliceOf -->
+    <!-- http://purl.org/sett/vocab#isSliceOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isSliceOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isSliceOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isStudyAreaOf -->
+    <!-- http://purl.org/sett/vocab#isStudyAreaOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isStudyAreaOf">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#studyArea"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isStudyAreaOf">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#studyArea"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isTemporalGranularityOf -->
+    <!-- http://purl.org/sett/vocab#isTemporalGranularityOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isTemporalGranularityOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isTemporalGranularityOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isTemporalScaleOf -->
+    <!-- http://purl.org/sett/vocab#isTemporalScaleOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isTemporalScaleOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isTemporalScaleOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isThematicTrajectoryOf -->
+    <!-- http://purl.org/sett/vocab#isThematicTrajectoryOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isThematicTrajectoryOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isThematicTrajectoryOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isThemeOf -->
+    <!-- http://purl.org/sett/vocab#isThemeOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isThemeOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isThemeOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isTransitionPointOf -->
+    <!-- http://purl.org/sett/vocab#isTransitionPointOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isTransitionPointOf"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isTransitionPointOf"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isUsedAsSegmentMethodFor -->
+    <!-- http://purl.org/sett/vocab#isUsedAsSegmentMethodFor -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isUsedAsSegmentMethodFor"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isUsedAsSegmentMethodFor"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#isUsedAsTransitionPointMethodFor -->
+    <!-- http://purl.org/sett/vocab#isUsedAsTransitionPointMethodFor -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#isUsedAsTransitionPointMethodFor"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#isUsedAsTransitionPointMethodFor"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#monitorsIndicator -->
+    <!-- http://purl.org/sett/vocab#monitorsIndicator -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#monitorsIndicator">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#RawTrajectory"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Indicator"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#monitorsIndicator">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#RawTrajectory"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Indicator"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#segmentAnnotatesEpisode -->
+    <!-- http://purl.org/sett/vocab#segmentAnnotatesEpisode -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#segmentAnnotatesEpisode"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#segmentAnnotatesEpisode"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#segmentIsDerivatedFrom -->
+    <!-- http://purl.org/sett/vocab#segmentIsDerivatedFrom -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#segmentIsDerivatedFrom">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#sliceUsedToDerivateSegment"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Segment"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Slice"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#segmentIsDerivatedFrom">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#sliceUsedToDerivateSegment"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Segment"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Slice"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute -->
+    <!-- http://purl.org/sett/vocab#semanticAnnotationBasedOnAttribute -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#semanticAnnotationBasedOnAttribute">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Attribute"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#semanticAnnotationBasedOnAttribute">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Attribute"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#sliceDelimitedBy -->
+    <!-- http://purl.org/sett/vocab#sliceDelimitedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#sliceDelimitedBy">
-        <owl:inverseOf rdf:resource="http://purl.org/net/sett/vocab#transitionPointDelimitSlice"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#sliceDelimitedBy">
+        <owl:inverseOf rdf:resource="http://purl.org/sett/vocab#transitionPointDelimitSlice"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#sliceUsedToDerivateSegment -->
+    <!-- http://purl.org/sett/vocab#sliceUsedToDerivateSegment -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#sliceUsedToDerivateSegment"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#sliceUsedToDerivateSegment"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#studyArea -->
+    <!-- http://purl.org/sett/vocab#studyArea -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#studyArea">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#StudyArea"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#studyArea">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#StudyArea"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#takesDataFrom -->
+    <!-- http://purl.org/sett/vocab#takesDataFrom -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#takesDataFrom">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Indicator"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Indicator"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#takesDataFrom">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Indicator"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Indicator"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent -->
+    <!-- http://purl.org/sett/vocab#transitionPointAnnotatesEvent -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#transitionPointAnnotatesEvent"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#transitionPointAnnotatesEvent"/>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#transitionPointDelimitSlice -->
+    <!-- http://purl.org/sett/vocab#transitionPointDelimitSlice -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/net/sett/vocab#transitionPointDelimitSlice">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TransitionPoint"/>
-        <rdfs:range rdf:resource="http://purl.org/net/sett/vocab#Slice"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/sett/vocab#transitionPointDelimitSlice">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TransitionPoint"/>
+        <rdfs:range rdf:resource="http://purl.org/sett/vocab#Slice"/>
     </owl:ObjectProperty>
     
 
@@ -659,223 +659,223 @@
     
 
 
-    <!-- http://purl.org/net/sett/vocab#areaInHAnLake -->
+    <!-- http://purl.org/sett/vocab#areaInHAnLake -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#areaInHAnLake">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#areaInHAnLake">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#areaInM2 -->
+    <!-- http://purl.org/sett/vocab#areaInM2 -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#areaInM2">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#areaInM2">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasAnnotationCriteriaDescription -->
+    <!-- http://purl.org/sett/vocab#hasAnnotationCriteriaDescription -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasAnnotationCriteriaDescription">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotationCriteria"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasAnnotationCriteriaDescription">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#SemanticAnnotationCriteria"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Provides a description of the semantic annotations- For instance, the thresholds used to classify certain values (e.g., slight, medium, strong) based on a given attribute.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasAttributeValue -->
+    <!-- http://purl.org/sett/vocab#hasAttributeValue -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasAttributeValue">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Attribute"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasAttributeValue">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Attribute"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasIndicatorDescription -->
+    <!-- http://purl.org/sett/vocab#hasIndicatorDescription -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasIndicatorDescription">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Indicator"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasIndicatorDescription">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasIndicatorFormula -->
+    <!-- http://purl.org/sett/vocab#hasIndicatorFormula -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasIndicatorFormula">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Indicator"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasIndicatorFormula">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasSequenceOrder -->
+    <!-- http://purl.org/sett/vocab#hasSequenceOrder -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasSequenceOrder">
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasSequenceOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#Component"/>
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasStructurationMethodDescription -->
+    <!-- http://purl.org/sett/vocab#hasStructurationMethodDescription -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasStructurationMethodDescription">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#StructurationMethod"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasStructurationMethodDescription">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#StructurationMethod"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasTotalEpisodes -->
+    <!-- http://purl.org/sett/vocab#hasTotalEpisodes -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasTotalEpisodes">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasTotalEpisodes">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasTotalEvents -->
+    <!-- http://purl.org/sett/vocab#hasTotalEvents -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasTotalEvents">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasTotalEvents">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasTotalSegments -->
+    <!-- http://purl.org/sett/vocab#hasTotalSegments -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasTotalSegments">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#StructuredTrajectory"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasTotalSegments">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#StructuredTrajectory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasTotalSlices -->
+    <!-- http://purl.org/sett/vocab#hasTotalSlices -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasTotalSlices">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#RawTrajectory"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasTotalSlices">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#RawTrajectory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#hasTotalTransitionPoints -->
+    <!-- http://purl.org/sett/vocab#hasTotalTransitionPoints -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#hasTotalTransitionPoints">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#StructuredTrajectory"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#hasTotalTransitionPoints">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#StructuredTrajectory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#maxElevationMeters -->
+    <!-- http://purl.org/sett/vocab#maxElevationMeters -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#maxElevationMeters">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#maxElevationMeters">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#maxSlopeDegrees -->
+    <!-- http://purl.org/sett/vocab#maxSlopeDegrees -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#maxSlopeDegrees">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#maxSlopeDegrees">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#meanElevationMeters -->
+    <!-- http://purl.org/sett/vocab#meanElevationMeters -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#meanElevationMeters">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#meanElevationMeters">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#meanSlopeDegrees -->
+    <!-- http://purl.org/sett/vocab#meanSlopeDegrees -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#meanSlopeDegrees">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#meanSlopeDegrees">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#minElevationMeters -->
+    <!-- http://purl.org/sett/vocab#minElevationMeters -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#minElevationMeters">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#minElevationMeters">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#minSlopeDegrees -->
+    <!-- http://purl.org/sett/vocab#minSlopeDegrees -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#minSlopeDegrees">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#minSlopeDegrees">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#stdElevationMeters -->
+    <!-- http://purl.org/sett/vocab#stdElevationMeters -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#stdElevationMeters">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#stdElevationMeters">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#stdSlopeDegrees -->
+    <!-- http://purl.org/sett/vocab#stdSlopeDegrees -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#stdSlopeDegrees">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#stdSlopeDegrees">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#totalAreaInM2 -->
+    <!-- http://purl.org/sett/vocab#totalAreaInM2 -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/net/sett/vocab#totalAreaInM2">
-        <rdfs:domain rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/sett/vocab#totalAreaInM2">
+        <rdfs:domain rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
@@ -893,10 +893,10 @@
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Attribute -->
+    <!-- http://purl.org/sett/vocab#Attribute -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Attribute">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Attribute">
         <rdfs:comment>An Attribute provides additional descriptive information about a trajectory component.
 Attributes may hold a wide range of values, offering flexibility for representing various temporal or thematic aspects.</rdfs:comment>
         <rdfs:label>Attribute</rdfs:label>
@@ -904,12 +904,12 @@ Attributes may hold a wide range of values, offering flexibility for representin
     
 
 
-    <!-- http://purl.org/net/sett/vocab#BEAST -->
+    <!-- http://purl.org/sett/vocab#BEAST -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#BEAST">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SegmentationMethod"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#BEAST">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SegmentationMethod"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
         <terms:description>The Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) is a statistical algorithm used for detecting breakpoints, trends, and seasonal variations in time series data. It applies a Bayesian framework to estimate the number and location of change points, making it well-suited for analyzing environmental and remote sensing datasets.</terms:description>
         <schema:citation>https://doi.org/10.1016/j.rse.2019.04.034</schema:citation>
         <rdfs:comment>The Bayesian Estimator of Abrupt Change, Seasonality, and Trend (BEAST) is a statistical algorithm used for detecting breakpoints, trends, and seasonal variations in time series data. It applies a Bayesian framework to estimate the number and location of change points, making it well-suited for analyzing environmental and remote sensing datasets.</rdfs:comment>
@@ -917,12 +917,12 @@ Attributes may hold a wide range of values, offering flexibility for representin
     
 
 
-    <!-- http://purl.org/net/sett/vocab#BFAST -->
+    <!-- http://purl.org/sett/vocab#BFAST -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#BFAST">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SegmentationMethod"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#BFAST">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SegmentationMethod"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
         <terms:description>The Breaks For Additive Season and Trend (BFAST) algorithm is a statistical method for detecting structural changes in time series data. It decomposes a time series into seasonal, trend, and remainder components and identifies breakpoints where abrupt changes occur. BFAST is widely used in environmental monitoring and remote sensing applications to analyze long-term changes in vegetation, climate, and land cover.</terms:description>
         <schema:citation>https://doi.org/10.1016/j.rse.2009.08.014</schema:citation>
         <rdfs:comment>The Breaks For Additive Season and Trend (BFAST) algorithm is a statistical method for detecting structural changes in time series data. It decomposes a time series into seasonal, trend, and remainder components and identifies breakpoints where abrupt changes occur. BFAST is widely used in environmental monitoring and remote sensing applications to analyze long-term changes in vegetation, climate, and land cover.</rdfs:comment>
@@ -930,12 +930,12 @@ Attributes may hold a wide range of values, offering flexibility for representin
     
 
 
-    <!-- http://purl.org/net/sett/vocab#BFASTLite -->
+    <!-- http://purl.org/sett/vocab#BFASTLite -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#BFASTLite">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SegmentationMethod"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#BFASTLite">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SegmentationMethod"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
         <terms:description>The BFAST Lite algorithm is a simplified version of the BFAST framework designed for efficient detection of breakpoints, trends, and seasonal variations in large-scale time series data. Unlike the full BFAST model, which iteratively decomposes the time series, BFAST Lite focuses on detecting change points in a single-pass approach, making it computationally faster and suitable for large datasets. It is particularly useful for processing satellite-based Earth observation data and environmental monitoring at scale.</terms:description>
         <schema:citation>https://doi.org/10.3390/rs13163308</schema:citation>
         <rdfs:comment>The BFAST Lite algorithm is a simplified version of the BFAST framework designed for efficient detection of breakpoints, trends, and seasonal variations in large-scale time series data. Unlike the full BFAST model, which iteratively decomposes the time series, BFAST Lite focuses on detecting change points in a single-pass approach, making it computationally faster and suitable for large datasets. It is particularly useful for processing satellite-based Earth observation data and environmental monitoring at scale.</rdfs:comment>
@@ -943,12 +943,12 @@ Attributes may hold a wide range of values, offering flexibility for representin
     
 
 
-    <!-- http://purl.org/net/sett/vocab#BFASTMonitor -->
+    <!-- http://purl.org/sett/vocab#BFASTMonitor -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#BFASTMonitor">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SegmentationMethod"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#BFASTMonitor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SegmentationMethod"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
         <terms:description>The BFAST Monitor (Breaks For Additive Season and Trend Monitor) is a statistical algorithm designed for near-real-time monitoring of breakpoints, trends, and seasonal variations in time series data. It extends the BFAST framework by continuously detecting structural changes in new observations while preserving the existing trend and seasonal components. This makes it particularly useful for analyzing environmental and remote sensing datasets, where ongoing monitoring of land cover or vegetation changes is required.</terms:description>
         <schema:citation>https://doi.org/10.1016/j.rse.2012.02.022</schema:citation>
         <rdfs:comment>The BFAST Monitor (Breaks For Additive Season and Trend Monitor) is a statistical algorithm designed for near-real-time monitoring of breakpoints, trends, and seasonal variations in time series data. It extends the BFAST framework by continuously detecting structural changes in new observations while preserving the existing trend and seasonal components. This makes it particularly useful for analyzing environmental and remote sensing datasets, where ongoing monitoring of land cover or vegetation changes is required.</rdfs:comment>
@@ -956,12 +956,12 @@ Attributes may hold a wide range of values, offering flexibility for representin
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Binseg -->
+    <!-- http://purl.org/sett/vocab#Binseg -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Binseg">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SegmentationMethod"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Binseg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SegmentationMethod"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
         <terms:description>Binary Segmentation (Binseg) is a recursive, top-down approach that detects change points in a sequential manner. This method is less computatio ally intensive but sacrifices some level of optimality in exchange for speed.
 The algorithm works by splitting the time series into two parts at each iteration and testing whether there is a significant change between these two segments.
 If a change point is detected, the algorithm continues to split the time series recursively. It repeats this process until no further changes are detected or a predefined stopping criterion is met.</terms:description>
@@ -973,22 +973,22 @@ If a change point is detected, the algorithm continues to split the time series 
     
 
 
-    <!-- http://purl.org/net/sett/vocab#BreakPoint -->
+    <!-- http://purl.org/sett/vocab#BreakPoint -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#BreakPoint">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPoint"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#BreakPoint">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPoint"/>
         <rdfs:comment>A Break Point is a Transition Point that marks an abrupt and significant change in the data, such as a sudden increase or decrease.</rdfs:comment>
         <rdfs:label>Break Point</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#CCDC -->
+    <!-- http://purl.org/sett/vocab#CCDC -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#CCDC">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#CCDC">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
         <terms:description>The Continuous Change Detection and Classification (CCDC) algorithm is a time series analysis method designed for detecting land surface changes using satellite imagery. It continuously monitors time series data by fitting harmonic regression models to capture seasonal variations and trend changes. When significant deviations from the expected model occur, CCDC identifies them as change events. This method is widely used in remote sensing applications for land cover monitoring, forest disturbance detection, and environmental change analysis.</terms:description>
         <schema:citation>https://doi.org/10.1016/j.rse.2014.01.011</schema:citation>
         <rdfs:comment>The Continuous Change Detection and Classification (CCDC) algorithm is a time series analysis method designed for detecting land surface changes using satellite imagery. It continuously monitors time series data by fitting harmonic regression models to capture seasonal variations and trend changes. When significant deviations from the expected model occur, CCDC identifies them as change events. This method is widely used in remote sensing applications for land cover monitoring, forest disturbance detection, and environmental change analysis.</rdfs:comment>
@@ -996,10 +996,10 @@ If a change point is detected, the algorithm continues to split the time series 
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Component -->
+    <!-- http://purl.org/sett/vocab#Component -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Component">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Component">
         <rdfs:comment>A Component represents a part of a trajectory, defined by its position in the sequence and its descriptive attributes.
 The SeTT ontology defines three types of components: raw, structured, and thematic.</rdfs:comment>
         <rdfs:label>Component</rdfs:label>
@@ -1007,22 +1007,22 @@ The SeTT ontology defines three types of components: raw, structured, and themat
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Country -->
+    <!-- http://purl.org/sett/vocab#Country -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Country">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Country">
         <rdfs:comment>A Country represents the national entity in which a Territorial Unit is located.</rdfs:comment>
         <rdfs:label>Country</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#DBEST -->
+    <!-- http://purl.org/sett/vocab#DBEST -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#DBEST">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SegmentationMethod"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#DBEST">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SegmentationMethod"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
         <terms:description>The DBEST (Detecting Breakpoints and Estimating Segments in Trend) algorithm is a statistical method designed for detecting breakpoints and estimating trend segments in time series data. It is particularly effective in analyzing environmental changes, such as vegetation dynamics, by decomposing time series into meaningful segments. DBEST employs a data-driven approach to identify trend shifts and estimate their magnitude, making it well-suited for applications in remote sensing and ecological monitoring.</terms:description>
         <schema:citation>https://doi.org/10.1016/j.rse.2014.09.010</schema:citation>
         <rdfs:comment>The DBEST (Detecting Breakpoints and Estimating Segments in Trend) algorithm is a statistical method designed for detecting breakpoints and estimating trend segments in time series data. It is particularly effective in analyzing environmental changes, such as vegetation dynamics, by decomposing time series into meaningful segments. DBEST employs a data-driven approach to identify trend shifts and estimate their magnitude, making it well-suited for applications in remote sensing and ecological monitoring.</rdfs:comment>
@@ -1030,19 +1030,19 @@ The SeTT ontology defines three types of components: raw, structured, and themat
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Episode -->
+    <!-- http://purl.org/sett/vocab#Episode -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Episode">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#ThematicComponent"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Episode">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#ThematicComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#isEpisodeOf"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#isEpisodeOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://purl.org/net/sett/vocab#Event"/>
+        <owl:disjointWith rdf:resource="http://purl.org/sett/vocab#Event"/>
         <rdfs:comment>An Episode is derived from the semantic annotation of a Segment in the Structured Trajectory.
 It represents a continuous period characterized by a specific behavior or condition, as defined by semantic annotations and descriptive attributes.
 An Episode ends when an Event occurs, marking a discontinuity in the trajectory.</rdfs:comment>
@@ -1051,11 +1051,11 @@ An Episode ends when an Event occurs, marking a discontinuity in the trajectory.
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation -->
+    <!-- http://purl.org/sett/vocab#EpisodeBehaviorAnnotation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EpisodeBehaviorAnnotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
         <rdfs:comment>Semantic annotation that qualifies the overall dynamic of an Episode by integrating its temporal extent (short-term, moderate-term, long-term), the magnitude and direction of change (slope), the thematic focus (e.g., vegetation, temperature, population), and its vertical position (value level). 
 This annotation provides an integrated, syntezed and enriched view of how an Indicator changes over the course of the Episode.</rdfs:comment>
         <rdfs:label>Episode Behavior Annotation</rdfs:label>
@@ -1063,22 +1063,22 @@ This annotation provides an integrated, syntezed and enriched view of how an Ind
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EpisodeDurationAnnotation -->
+    <!-- http://purl.org/sett/vocab#EpisodeDurationAnnotation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EpisodeDurationAnnotation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EpisodeDurationAnnotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
         <rdfs:comment>Semantic annotation that qualifies the temporal extent of an Episode, categorizing it as short-term, moderate-term, or long-term</rdfs:comment>
         <rdfs:label>Episode Duration Annotation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EpisodeEndDate -->
+    <!-- http://purl.org/sett/vocab#EpisodeEndDate -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EpisodeEndDate">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EpisodeEndDate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Episode End Date</terms:title>
         <rdfs:comment>Episode End Date indicates the date on which an Episode concludes.</rdfs:comment>
         <rdfs:label>Episode End Date</rdfs:label>
@@ -1086,33 +1086,33 @@ This annotation provides an integrated, syntezed and enriched view of how an Ind
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation -->
+    <!-- http://purl.org/sett/vocab#EpisodeGradualMagnitudeAnnotation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EpisodeGradualMagnitudeAnnotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
         <rdfs:comment>Semantic annotation that qualifies the overall intensity of change throughout an Episode, based on the slope and duration of its corresponding segment. This gradual magnitude of change is computed as the product of slope magnitude and duration.</rdfs:comment>
         <rdfs:label>Episode Gradual Magnitude Annotation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation -->
+    <!-- http://purl.org/sett/vocab#EpisodeSlopeAnnotation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EpisodeSlopeAnnotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
         <rdfs:comment>Semantic annotation for an Episode based on the slope characteristics of its corresponding segment, considering both the slope direction (increase, decrease, or stable) and its magnitude.</rdfs:comment>
         <rdfs:label>Episode Slope Annotation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EpisodeStartDate -->
+    <!-- http://purl.org/sett/vocab#EpisodeStartDate -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EpisodeStartDate">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EpisodeStartDate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Episode Start Date</terms:title>
         <rdfs:comment>Episode Start Date indicates the date on which an Episode begins.</rdfs:comment>
         <rdfs:label>Episode Start Date</rdfs:label>
@@ -1120,49 +1120,49 @@ This annotation provides an integrated, syntezed and enriched view of how an Ind
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation -->
+    <!-- http://purl.org/sett/vocab#EpisodeStatisticalSignificanceAnnotation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EpisodeStatisticalSignificanceAnnotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
         <rdfs:comment>Semantic annotation that indicates the statistical confidence in the trend observed during the Episode.</rdfs:comment>
         <rdfs:label>Episode Statistical Significance Annotation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation -->
+    <!-- http://purl.org/sett/vocab#EpisodeThematicSlopeDirectionAnnotation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EpisodeThematicSlopeDirectionAnnotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
         <rdfs:comment>Semantic annotation that provides a theme-specific interpretation of an Episode’s slope direction—for example, Greening for vegetation, Warming for temperature, or Population Growth for population.</rdfs:comment>
         <rdfs:label>Episode Thematic Slope Annotation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation -->
+    <!-- http://purl.org/sett/vocab#EpisodeValueLevelAnnotation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EpisodeValueLevelAnnotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
         <rdfs:comment>Semantic annotation that qualifies the vertical position of an Episode’s start or end along the indicator’s value axis (i.e., the y-axis). It categorizes this position into levels such as very low, low, moderate, high, or very high.</rdfs:comment>
         <rdfs:label>Episode Value Level Annotation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Event -->
+    <!-- http://purl.org/sett/vocab#Event -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Event">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#ThematicComponent"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Event">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#ThematicComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#IsEventOf"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#IsEventOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>An Event represents a meaningful change in the trajectory that occurs at a specific moment in time, causing a discontinuity between Episodes in the Thematic Trajectory.
@@ -1172,11 +1172,11 @@ It is derived from the semantic annotation of a Transition Point and is describe
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EventDate -->
+    <!-- http://purl.org/sett/vocab#EventDate -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EventDate">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EventDate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Event Date</terms:title>
         <rdfs:comment>Event Date specifies the date on which an Event took place.</rdfs:comment>
         <rdfs:label>Event Date</rdfs:label>
@@ -1184,11 +1184,11 @@ It is derived from the semantic annotation of a Transition Point and is describe
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EventExplanatoryFactor -->
+    <!-- http://purl.org/sett/vocab#EventExplanatoryFactor -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EventExplanatoryFactor">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#ExternalAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EventExplanatoryFactor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#ExternalAttributes"/>
         <terms:title>Event Explanatory Factor</terms:title>
         <rdfs:comment>An Event Explanatory Factor refers to a potential driver or context that explains a change observed at a Transition Point, such as a Breakpoint.
 It may consist of external sources like bibliographic references, URLs, or links to Linked Open Data repositories.</rdfs:comment>
@@ -1197,23 +1197,23 @@ It may consist of external sources like bibliographic references, URLs, or links
     
 
 
-    <!-- http://purl.org/net/sett/vocab#EventTransitionAnnotation -->
+    <!-- http://purl.org/sett/vocab#EventTransitionAnnotation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#EventTransitionAnnotation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#EventTransitionAnnotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SemanticAnnotation"/>
         <rdfs:comment>Semantic annotation that qualifies both the direction and intensity of change at the Transition Point associated with an Event.</rdfs:comment>
         <rdfs:label>Event Transition Annotation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#ExternalAttributes -->
+    <!-- http://purl.org/sett/vocab#ExternalAttributes -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#ExternalAttributes">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Attribute"/>
-        <owl:disjointWith rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#ExternalAttributes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Attribute"/>
+        <owl:disjointWith rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <rdfs:comment>An External Attribute refers to contextual or auxiliary information that enhances the description of a trajectory component.
 These attributes are not intrinsic to the component itself but may be derived from external analyses, expert input, or supporting datasets.</rdfs:comment>
         <rdfs:label>External Attribute</rdfs:label>
@@ -1221,11 +1221,11 @@ These attributes are not intrinsic to the component itself but may be derived fr
     
 
 
-    <!-- http://purl.org/net/sett/vocab#HMM -->
+    <!-- http://purl.org/sett/vocab#HMM -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#HMM">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#HMM">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
         <terms:description>Hidden Markov Models (HMM) are a powerful statistical tool used to model time-series data, particularly when the data evolves through different underlying states that are not directly observable. These &quot;hidden&quot; states represent distinct environmental conditions or phases, and the system transitions between these states over time. For example, in environmental studies, the hidden states might represent different trends in data such as:
 • Stable Trend: No significant changes in the environmental variable (e.g., temper- ature, vegetation health).
 • Increasing Trend: A period of gradual increase in the environmental variable (e.g., warming temperatures, growing vegetation).
@@ -1239,54 +1239,54 @@ These attributes are not intrinsic to the component itself but may be derived fr
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Indicator -->
+    <!-- http://purl.org/sett/vocab#Indicator -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Indicator">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Indicator">
         <rdfs:comment>An Indicator is defined as a quantitative measure that captures the status of a situation or its variations over time.</rdfs:comment>
         <rdfs:label>Indicator</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#InflexionPoint -->
+    <!-- http://purl.org/sett/vocab#InflexionPoint -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#InflexionPoint">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPoint"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#InflexionPoint">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPoint"/>
         <rdfs:comment>An Inflexion Point indicates a subtle change in the trajectory where the direction or curvature shifts gradually, rather than abruptly.</rdfs:comment>
         <rdfs:label>Inflexion Point</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#InterruptionPoint -->
+    <!-- http://purl.org/sett/vocab#InterruptionPoint -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#InterruptionPoint">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPoint"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#InterruptionPoint">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPoint"/>
         <rdfs:comment>An Interruption Point marks a temporary disruption in the trajectory, such as a short-term deviation that is not sustained.</rdfs:comment>
         <rdfs:label>Interruption Point</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#IntrinsicAttributes -->
+    <!-- http://purl.org/sett/vocab#IntrinsicAttributes -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#IntrinsicAttributes">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Attribute"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#IntrinsicAttributes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Attribute"/>
         <rdfs:comment>An Intrinsic Attribute describes essential characteristics of a trajectory component that are inherent to its structure or behavior.</rdfs:comment>
         <rdfs:label>Intrinsic Attribute</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#LinearRegression -->
+    <!-- http://purl.org/sett/vocab#LinearRegression -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#LinearRegression">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SegmentationMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#LinearRegression">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SegmentationMethod"/>
         <terms:description>Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the data. It is commonly used for trend analysis, forecasting, and identifying patterns in datasets. In its simplest form, simple linear regression uses a straight line (y = mx + b) to represent the relationship between two variables, where m is the slope and b is the intercept. Linear regression is widely applied in various fields, including economics, environmental studies, and machine learning, to analyze trends and make predictions.</terms:description>
         <schema:citation>David A. Freedman (2009). Statistical Models: Theory and Practice. Cambridge University Press. p. 26. A simple regression equation has on the right hand side an intercept and an explanatory variable with a slope coefficient. A multiple regression e right hand side, each with its own slope coefficient</schema:citation>
         <rdfs:comment>Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the data. It is commonly used for trend analysis, forecasting, and identifying patterns in datasets. In its simplest form, simple linear regression uses a straight line (y = mx + b) to represent the relationship between two variables, where m is the slope and b is the intercept. Linear regression is widely applied in various fields, including economics, environmental studies, and machine learning, to analyze trends and make predictions.</rdfs:comment>
@@ -1294,33 +1294,33 @@ These attributes are not intrinsic to the component itself but may be derived fr
     
 
 
-    <!-- http://purl.org/net/sett/vocab#LinearSegment -->
+    <!-- http://purl.org/sett/vocab#LinearSegment -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#LinearSegment">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Segment"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#LinearSegment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Segment"/>
         <rdfs:comment>A Linear Segment is a type of Segment where the data follows a linear trend over time.</rdfs:comment>
         <rdfs:label>Linear Segment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#NonLinearSegment -->
+    <!-- http://purl.org/sett/vocab#NonLinearSegment -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#NonLinearSegment">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Segment"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#NonLinearSegment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Segment"/>
         <rdfs:comment>A Non Linear Segment is a type of Segment where the data shows a non-linear pattern over time, such as seasonal or cyclical behavior.</rdfs:comment>
         <rdfs:label>Non Linear Segment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#PELT -->
+    <!-- http://purl.org/sett/vocab#PELT -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#PELT">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#PELT">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPointDetectionMethod"/>
         <terms:description>The PELT (Pruned Exact Linear Time Algorithm) algorithm is designed to identify the most optimal segmentation of time series data by minimizing a penalized cost function. The method is particularly effective in providing an accurate segmentation while ensuring efficient computational performance.</terms:description>
         <schema:citation>10.11648/j.ajtas.20150406.30</schema:citation>
         <rdfs:comment>The PELT (Pruned Exact Linear Time Algorithm) algorithm is designed to identify the most optimal segmentation of time series data by minimizing a penalized cost function. The method is particularly effective in providing an accurate segmentation while ensuring efficient computational performance.</rdfs:comment>
@@ -1328,11 +1328,11 @@ These attributes are not intrinsic to the component itself but may be derived fr
     
 
 
-    <!-- http://purl.org/net/sett/vocab#PiecewiseRegression -->
+    <!-- http://purl.org/sett/vocab#PiecewiseRegression -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#PiecewiseRegression">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#SegmentationMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#PiecewiseRegression">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#SegmentationMethod"/>
         <terms:description>Piecewise Regression is a statistical technique used to model time series data by dividing it into multiple segments and fitting separate regression models to each segment. Unlike simple linear regression, which assumes a single trend across all observations, piecewise regression allows for structural changes, making it useful for detecting breakpoints and modeling non-linear trends in time series data. It is widely applied in environmental monitoring, remote sensing, and economic trend analysis.</terms:description>
         <schema:citation>https://doi.org/10.1080/01621459.1970.10481147</schema:citation>
         <rdfs:comment>Piecewise Regression is a statistical technique used to model time series data by dividing it into multiple segments and fitting separate regression models to each segment. Unlike simple linear regression, which assumes a single trend across all observations, piecewise regression allows for structural changes, making it useful for detecting breakpoints and modeling non-linear trends in time series data. It is widely applied in environmental monitoring, remote sensing, and economic trend analysis.</rdfs:comment>
@@ -1340,34 +1340,34 @@ These attributes are not intrinsic to the component itself but may be derived fr
     
 
 
-    <!-- http://purl.org/net/sett/vocab#RawComponent -->
+    <!-- http://purl.org/sett/vocab#RawComponent -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#RawComponent">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Component"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#RawComponent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Component"/>
         <rdfs:comment>A Raw Component is a type of Component used to build a Raw Trajectory.</rdfs:comment>
         <rdfs:label>Raw Component</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#RawTrajectory -->
+    <!-- http://purl.org/sett/vocab#RawTrajectory -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#RawTrajectory">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Trajectory"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#RawTrajectory">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Trajectory"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#hasSlice"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#hasSlice"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#Slice"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#Slice"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#monitorsIndicator"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#monitorsIndicator"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#Indicator"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#Indicator"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A Raw Trajectory consists of a time series that tracks changes in domain-specific indicators for a Territorial Unit (TU).
@@ -1377,33 +1377,33 @@ The time series is integrated into the Linked Open Data (LOD) Cloud using the Sl
     
 
 
-    <!-- http://purl.org/net/sett/vocab#RegimeChangePoint -->
+    <!-- http://purl.org/sett/vocab#RegimeChangePoint -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#RegimeChangePoint">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#TransitionPoint"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#RegimeChangePoint">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#TransitionPoint"/>
         <rdfs:comment>A Regime Change Point signals a transition between two distinct states or regimes in the data, characterized by long-term structural differences.</rdfs:comment>
         <rdfs:label>Regime Change Point</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SeTT -->
+    <!-- http://purl.org/sett/vocab#SeTT -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SeTT">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SeTT">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#hasThematicTrajectory"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#hasThematicTrajectory"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#ThematicTrajectory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#isSeTTOf"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#isSeTTOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#TerritorialUnit"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#TerritorialUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A SeTT (Semantic Trajectory of a Territorial Unit) represents a collection of Thematic Trajectories describing the evolution of a Territorial Unit across one or more domains.
@@ -1414,19 +1414,19 @@ A Territorial Unit may be associated with one or more SeTTs.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Segment -->
+    <!-- http://purl.org/sett/vocab#Segment -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Segment">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#StructuredComponent"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Segment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#StructuredComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#isSegmentOf"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#isSegmentOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#StructuredTrajectory"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#StructuredTrajectory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://purl.org/net/sett/vocab#TransitionPoint"/>
+        <owl:disjointWith rdf:resource="http://purl.org/sett/vocab#TransitionPoint"/>
         <rdfs:comment>A Segment is a continuous part of a trajectory where the data follows a consistent pattern.
 It has attributes that enhance its description, such as init, end, and slope.
 A Segment may start or end at a Transition Point, depending on how the trajectory is structured.</rdfs:comment>
@@ -1435,11 +1435,11 @@ A Segment may start or end at a Transition Point, depending on how the trajector
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentDuration -->
+    <!-- http://purl.org/sett/vocab#SegmentDuration -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentDuration">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentDuration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Segment Duration</terms:title>
         <rdfs:comment>Segment Duration refers to the number of observations that make up a Segment, indicating how long the segment lasts in the time series.</rdfs:comment>
         <rdfs:label>Segment Duration</rdfs:label>
@@ -1447,11 +1447,11 @@ A Segment may start or end at a Transition Point, depending on how the trajector
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentEndX -->
+    <!-- http://purl.org/sett/vocab#SegmentEndX -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentEndX">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentEndX">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Segment End X</terms:title>
         <rdfs:comment>Segment End X specifies the x-coordinate, i.e., the time value, that marks the end of a segment.</rdfs:comment>
         <rdfs:label>Segment End X</rdfs:label>
@@ -1459,11 +1459,11 @@ A Segment may start or end at a Transition Point, depending on how the trajector
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentEndY -->
+    <!-- http://purl.org/sett/vocab#SegmentEndY -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentEndY">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentEndY">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Segment End Y</terms:title>
         <rdfs:comment>Segment End Y specifies the y-coordinate, i.e., the measured value, marking the end of a Segment.</rdfs:comment>
         <rdfs:label>Segment End Y</rdfs:label>
@@ -1471,11 +1471,11 @@ A Segment may start or end at a Transition Point, depending on how the trajector
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentGradualMagnitude -->
+    <!-- http://purl.org/sett/vocab#SegmentGradualMagnitude -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentGradualMagnitude">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#ExternalAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentGradualMagnitude">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#ExternalAttributes"/>
         <terms:title>Segment Gradual Magnitude</terms:title>
         <rdfs:comment>Segment Gradual Magnitude describes the overall strength of change within a segment, such as a Linear Trend.
 It is computed by multiplying the slope magnitude by the segment duration.</rdfs:comment>
@@ -1484,11 +1484,11 @@ It is computed by multiplying the slope magnitude by the segment duration.</rdfs
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentPValue -->
+    <!-- http://purl.org/sett/vocab#SegmentPValue -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentPValue">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#ExternalAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentPValue">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#ExternalAttributes"/>
         <terms:title>Segment p-value</terms:title>
         <rdfs:comment>Segment p-value indicates the statistical significance of a segment’s trend, such as in a Linear Segment.
 It reflects the confidence level of the detected change.</rdfs:comment>
@@ -1497,11 +1497,11 @@ It reflects the confidence level of the detected change.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentSlopeDirection -->
+    <!-- http://purl.org/sett/vocab#SegmentSlopeDirection -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentSlopeDirection">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentSlopeDirection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Segment Slope Direction</terms:title>
         <rdfs:comment>Segment Slope Direction indicates whether the slope of a Trend Segment is increasing, decreasing, or flat.</rdfs:comment>
         <rdfs:label>Segment Slope Direction</rdfs:label>
@@ -1509,11 +1509,11 @@ It reflects the confidence level of the detected change.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentSlopeIntercept -->
+    <!-- http://purl.org/sett/vocab#SegmentSlopeIntercept -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentSlopeIntercept">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentSlopeIntercept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Segment Slope Intercept</terms:title>
         <rdfs:comment>Segment Slope Intercept is the y-value at which a linear trend line intersects the y-axis, representing the expected value when x is zero.</rdfs:comment>
         <rdfs:label>Segment Slope Intercept</rdfs:label>
@@ -1521,11 +1521,11 @@ It reflects the confidence level of the detected change.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentSlopeMagnitude -->
+    <!-- http://purl.org/sett/vocab#SegmentSlopeMagnitude -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentSlopeMagnitude">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentSlopeMagnitude">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Segment Slope Magnitude</terms:title>
         <rdfs:comment>Segment Slope Magnitude represents the absolute value of the slope of a linear segment, indicating the strength of change regardless of direction.</rdfs:comment>
         <rdfs:label>Segment Slope Magnitude</rdfs:label>
@@ -1533,11 +1533,11 @@ It reflects the confidence level of the detected change.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentStartX -->
+    <!-- http://purl.org/sett/vocab#SegmentStartX -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentStartX">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentStartX">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Segment Start X</terms:title>
         <rdfs:comment>Segment Start X specifies the x-coordinate, i.e., the time value, that marks the start of a segment.</rdfs:comment>
         <rdfs:label>Segment Start X</rdfs:label>
@@ -1545,11 +1545,11 @@ It reflects the confidence level of the detected change.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentStartY -->
+    <!-- http://purl.org/sett/vocab#SegmentStartY -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentStartY">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentStartY">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Segment Start Y</terms:title>
         <rdfs:comment>Segment Start Y specifies the y-coordinate, i.e., the measured value, marking the start of a Segment.</rdfs:comment>
         <rdfs:label>Segment Start Y</rdfs:label>
@@ -1557,46 +1557,46 @@ It reflects the confidence level of the detected change.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SegmentationMethod -->
+    <!-- http://purl.org/sett/vocab#SegmentationMethod -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SegmentationMethod">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#StructurationMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SegmentationMethod">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#StructurationMethod"/>
         <rdfs:comment>A Segmentation Method is a technique used to divide a time series into meaningful segments, typically based on patterns such as trends or value stability. These methods help identify consistent intervals within the data where the behavior remains relatively uniform.</rdfs:comment>
         <rdfs:label>Segmentation Method</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SemanticAnnotation -->
+    <!-- http://purl.org/sett/vocab#SemanticAnnotation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SemanticAnnotation">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SemanticAnnotation">
         <rdfs:comment>A Semantic Annotation enriches a Thematic component—such as an Episode or Event—by linking it to a meaningful concept, typically defined in a controlled vocabulary or ontology.</rdfs:comment>
         <rdfs:label>Semantic Annotation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SemanticAnnotationCriteria -->
+    <!-- http://purl.org/sett/vocab#SemanticAnnotationCriteria -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SemanticAnnotationCriteria">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SemanticAnnotationCriteria">
         <rdfs:comment>Semantic annotation criteria define the formal conditions and/or thresholds used to determine how specific annotations are assigned and interpreted. They may also specify the method applied to derive the annotation. These parameter selections are applied consistently across all annotations related to the thematic components—Episodes and Events—of the Thematic Trajectories.</rdfs:comment>
         <rdfs:label>Semantic Annotation Criteria</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Slice -->
+    <!-- http://purl.org/sett/vocab#Slice -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Slice">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#RawComponent"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Slice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#RawComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#isSliceOf"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/net/sett/vocab#RawTrajectory"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#isSliceOf"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/sett/vocab#RawTrajectory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A Slice represents a portion of raw data defined as a Slice in the RDF Data Cube vocabulary. It is used to compute Segments in the Structured Trajectory.</rdfs:comment>
@@ -1605,44 +1605,44 @@ It reflects the confidence level of the detected change.</rdfs:comment>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SliceEndObservation -->
+    <!-- http://purl.org/sett/vocab#SliceEndObservation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SliceEndObservation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SliceEndObservation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <rdfs:comment>Slice End Observation identifies the final observation included in a Slice.</rdfs:comment>
         <rdfs:label>Slice End Observation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SliceStartObservation -->
+    <!-- http://purl.org/sett/vocab#SliceStartObservation -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SliceStartObservation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SliceStartObservation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <rdfs:comment>Slice Start Observation identifies the first observation included in a Slice.</rdfs:comment>
         <rdfs:label>Slice Start Observation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#SliceTotalObservations -->
+    <!-- http://purl.org/sett/vocab#SliceTotalObservations -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#SliceTotalObservations">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#SliceTotalObservations">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <rdfs:comment>Slice Total Observations indicates the number of observations contained in a Slice.</rdfs:comment>
         <rdfs:label>Slice Total Observations</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#StateSegment -->
+    <!-- http://purl.org/sett/vocab#StateSegment -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#StateSegment">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Segment"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#StateSegment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Segment"/>
         <rdfs:comment>A State Segment is a type of Segment where the data remains relatively stable over time, with no significant trends or seasonal patterns.
 It typically represents a steady state or period of minimal change.</rdfs:comment>
         <rdfs:label>State Segment</rdfs:label>
@@ -1650,44 +1650,44 @@ It typically represents a steady state or period of minimal change.</rdfs:commen
     
 
 
-    <!-- http://purl.org/net/sett/vocab#StructurationMethod -->
+    <!-- http://purl.org/sett/vocab#StructurationMethod -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#StructurationMethod">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#StructurationMethod">
         <rdfs:comment>A Structuration Method is a technique used to give structure to a time series by identifying meaningful components, such as Segments and Transition Points.</rdfs:comment>
         <rdfs:label>Structuration Method</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#StructuredComponent -->
+    <!-- http://purl.org/sett/vocab#StructuredComponent -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#StructuredComponent">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Component"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#StructuredComponent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Component"/>
         <rdfs:comment>A Structured Component is a type of Component used to build a Structured Trajectory.</rdfs:comment>
         <rdfs:label>Structured Component</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#StructuredTrajectory -->
+    <!-- http://purl.org/sett/vocab#StructuredTrajectory -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#StructuredTrajectory">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Trajectory"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#StructuredTrajectory">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Trajectory"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#hasSegment"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#hasSegment"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#Segment"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#Segment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#hasTransitionPoint"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#hasTransitionPoint"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#TransitionPoint"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#TransitionPoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A Structured Trajectory results from organizing a Raw trajectory into a more structured format.
@@ -1698,45 +1698,45 @@ If no Transition Point is detected, the Structured Trajectory consists solely of
     
 
 
-    <!-- http://purl.org/net/sett/vocab#StudyArea -->
+    <!-- http://purl.org/sett/vocab#StudyArea -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#StudyArea">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#StudyArea">
         <rdfs:comment>A Study Area defines the broader geographical context in which one or more Territorial Units are analyzed.</rdfs:comment>
         <rdfs:label>Study Area</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#TemporalGranularity -->
+    <!-- http://purl.org/sett/vocab#TemporalGranularity -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#TemporalGranularity">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#TemporalGranularity">
         <rdfs:comment>Indicates how often measured values occur in a Thematic trajectory. It describes the temporal resolution of the data, such as daily, monthly, or yearly intervals.</rdfs:comment>
         <rdfs:label>Temporal Granularity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#TemporalScale -->
+    <!-- http://purl.org/sett/vocab#TemporalScale -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#TemporalScale">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#TemporalScale">
         <rdfs:comment>Defines the temporal coverage of a thematic trajectory by specifying the time of year it represents. Examples include Winter, Spring, Summer, Autumn or All Seasons.</rdfs:comment>
         <rdfs:label>Temporal Scale</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#TerritorialUnit -->
+    <!-- http://purl.org/sett/vocab#TerritorialUnit -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#TerritorialUnit">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#TerritorialUnit">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#hasSeTT"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#hasSeTT"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#SeTT"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#SeTT"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A Territorial Unit (TU) represents a geographically defined area, typically aligned with the lowest level of administrative division (e.g., municipalities, sub-districts, or townships).
@@ -1748,41 +1748,41 @@ Each TU is associated with one or more Semantic Trajectories of Territorial Tran
     
 
 
-    <!-- http://purl.org/net/sett/vocab#ThematicComponent -->
+    <!-- http://purl.org/sett/vocab#ThematicComponent -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#ThematicComponent">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Component"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#ThematicComponent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Component"/>
         <rdfs:comment>A Thematic Component is a type of Component used to build a Thematic Trajectory.</rdfs:comment>
         <rdfs:label>Thematic Component</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#ThematicTrajectory -->
+    <!-- http://purl.org/sett/vocab#ThematicTrajectory -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#ThematicTrajectory">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#Trajectory"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#ThematicTrajectory">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#Trajectory"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#hasEpisode"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#hasEpisode"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#Episode"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#Episode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#hasEvent"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#hasEvent"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#Event"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#Event"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#isThematicTrajectoryOf"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#isThematicTrajectoryOf"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#SeTT"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#SeTT"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A Thematic Trajectory is a semantically enriched representation of a Territorial Unit&apos;s (TU) trajectory, associated with a specific theme.
@@ -1793,36 +1793,36 @@ A Thematic Trajectory consists solely of a single Episode if no Event is present
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Theme -->
+    <!-- http://purl.org/sett/vocab#Theme -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Theme">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Theme">
         <rdfs:comment>A Theme characterizes the subject of a Thematic trajectory, providing a descriptive label for the whole trajectory.</rdfs:comment>
         <rdfs:label>Theme</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#Trajectory -->
+    <!-- http://purl.org/sett/vocab#Trajectory -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#Trajectory">
+    <owl:Class rdf:about="http://purl.org/sett/vocab#Trajectory">
         <rdfs:comment>A Trajectory represents the synthesized temporal evolution of a Territorial Unit (TU) based on observed data. It serves as an abstract concept that underlies the Raw, Structured, and Thematic trajectories, providing a unified view of change over time.</rdfs:comment>
         <rdfs:label>Trajectory</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/net/sett/vocab#TransitionPoint -->
+    <!-- http://purl.org/sett/vocab#TransitionPoint -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#TransitionPoint">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#StructuredComponent"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#TransitionPoint">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#StructuredComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/net/sett/vocab#isTransitionPointOf"/>
+                <owl:onProperty rdf:resource="http://purl.org/sett/vocab#isTransitionPointOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/net/sett/vocab#StructuredTrajectory"/>
+                <owl:onClass rdf:resource="http://purl.org/sett/vocab#StructuredTrajectory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A Transition Point represents a change in the trajectory that causes a discontinuity between Segments or Slices.
@@ -1832,11 +1832,11 @@ It occurs at a specific moment in time and is described using attributes that ch
     
 
 
-    <!-- http://purl.org/net/sett/vocab#TransitionPointDetectionMethod -->
+    <!-- http://purl.org/sett/vocab#TransitionPointDetectionMethod -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#TransitionPointDetectionMethod">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#StructurationMethod"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#TransitionPointDetectionMethod">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#StructurationMethod"/>
         <rdfs:comment>A Transition Point Detection Method is a technique used to detect changes in a time series by identifying Transition Points, such as Break Points or Inflexion Points.
 These methods analyze patterns in the data to determine when significant shifts occur.</rdfs:comment>
         <rdfs:label>Transition Point Detection Method</rdfs:label>
@@ -1844,11 +1844,11 @@ These methods analyze patterns in the data to determine when significant shifts 
     
 
 
-    <!-- http://purl.org/net/sett/vocab#TransitionPointMagnitude -->
+    <!-- http://purl.org/sett/vocab#TransitionPointMagnitude -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#TransitionPointMagnitude">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#ExternalAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#TransitionPointMagnitude">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#ExternalAttributes"/>
         <terms:title>Transition Point Magnitude</terms:title>
         <rdfs:comment>Transition Point Magnitude quantifies the intensity of change at a Transition Point, such as a Breakpoint.
 It is computed as the difference between the value at the point and the value immediately before or after it, depending on how the segment is defined.</rdfs:comment>
@@ -1857,11 +1857,11 @@ It is computed as the difference between the value at the point and the value im
     
 
 
-    <!-- http://purl.org/net/sett/vocab#TransitionPointProbability -->
+    <!-- http://purl.org/sett/vocab#TransitionPointProbability -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#TransitionPointProbability">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#ExternalAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#TransitionPointProbability">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#ExternalAttributes"/>
         <terms:title>Transition Point Probability</terms:title>
         <rdfs:comment>Transition Point Probability expresses the likelihood that a Transition Point has occurred, based on statistical analysis.</rdfs:comment>
         <rdfs:label>Transition Point Probability</rdfs:label>
@@ -1869,11 +1869,11 @@ It is computed as the difference between the value at the point and the value im
     
 
 
-    <!-- http://purl.org/net/sett/vocab#TransitionPointX -->
+    <!-- http://purl.org/sett/vocab#TransitionPointX -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#TransitionPointX">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#TransitionPointX">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Transition Point X</terms:title>
         <rdfs:comment>Transition Point X denotes the x-coordinate, i.e., time value, where a Transition Point occurs in the trajectory.</rdfs:comment>
         <rdfs:label>Transition Point X</rdfs:label>
@@ -1881,11 +1881,11 @@ It is computed as the difference between the value at the point and the value im
     
 
 
-    <!-- http://purl.org/net/sett/vocab#TransitionPointY -->
+    <!-- http://purl.org/sett/vocab#TransitionPointY -->
 
 
-    <owl:Class rdf:about="http://purl.org/net/sett/vocab#TransitionPointY">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/sett/vocab#IntrinsicAttributes"/>
+    <owl:Class rdf:about="http://purl.org/sett/vocab#TransitionPointY">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sett/vocab#IntrinsicAttributes"/>
         <terms:title>Transition Point Y</terms:title>
         <rdfs:comment>Transition Point Y denotes the y-coordinate, i.e., the measured value, at which a Transition Point occurs in the trajectory.</rdfs:comment>
         <rdfs:label>Transition Point Y</rdfs:label>
@@ -1905,97 +1905,97 @@ It is computed as the difference between the value at the point and the value im
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#Attribute"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#Component"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#Country"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#Indicator"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SeTT"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SemanticAnnotation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SemanticAnnotationCriteria"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#StructurationMethod"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#StudyArea"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#TemporalGranularity"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#TemporalScale"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#TerritorialUnit"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#Theme"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#Trajectory"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#Attribute"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#Component"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#Country"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#Indicator"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SeTT"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SemanticAnnotation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SemanticAnnotationCriteria"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#StructurationMethod"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#StudyArea"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#TemporalGranularity"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#TemporalScale"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#TerritorialUnit"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#Theme"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#Trajectory"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#BreakPoint"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#InflexionPoint"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#InterruptionPoint"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#RegimeChangePoint"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#BreakPoint"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#InflexionPoint"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#InterruptionPoint"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#RegimeChangePoint"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EpisodeBehaviorAnnotation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EpisodeDurationAnnotation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EpisodeGradualMagnitudeAnnotation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EpisodeSlopeAnnotation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EpisodeStatisticalSignificanceAnnotation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EpisodeThematicSlopeDirectionAnnotation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EpisodeValueLevelAnnotation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EventTransitionAnnotation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EpisodeBehaviorAnnotation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EpisodeDurationAnnotation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EpisodeGradualMagnitudeAnnotation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EpisodeSlopeAnnotation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EpisodeStatisticalSignificanceAnnotation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EpisodeThematicSlopeDirectionAnnotation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EpisodeValueLevelAnnotation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EventTransitionAnnotation"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EpisodeEndDate"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EpisodeStartDate"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EventDate"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentDuration"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentEndX"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentEndY"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentSlopeDirection"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentSlopeIntercept"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentSlopeMagnitude"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentStartX"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentStartY"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SliceEndObservation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SliceStartObservation"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SliceTotalObservations"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#TransitionPointX"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#TransitionPointY"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EpisodeEndDate"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EpisodeStartDate"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EventDate"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentDuration"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentEndX"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentEndY"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentSlopeDirection"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentSlopeIntercept"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentSlopeMagnitude"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentStartX"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentStartY"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SliceEndObservation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SliceStartObservation"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SliceTotalObservations"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#TransitionPointX"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#TransitionPointY"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#EventExplanatoryFactor"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentGradualMagnitude"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#SegmentPValue"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#TransitionPointMagnitude"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#TransitionPointProbability"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#EventExplanatoryFactor"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentGradualMagnitude"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#SegmentPValue"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#TransitionPointMagnitude"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#TransitionPointProbability"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#LinearSegment"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#NonLinearSegment"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#StateSegment"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#LinearSegment"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#NonLinearSegment"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#StateSegment"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#RawComponent"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#StructuredComponent"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#ThematicComponent"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#RawComponent"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#StructuredComponent"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#ThematicComponent"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#RawTrajectory"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#StructuredTrajectory"/>
-            <rdf:Description rdf:about="http://purl.org/net/sett/vocab#ThematicTrajectory"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#RawTrajectory"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#StructuredTrajectory"/>
+            <rdf:Description rdf:about="http://purl.org/sett/vocab#ThematicTrajectory"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
