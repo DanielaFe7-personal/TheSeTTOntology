@@ -28,10 +28,10 @@ RewriteRule ^ontology/(.+) index.html#$1 [R=303,NE]
 
 # Rewrite rule to serve RDF/XML content from the vocabulary URI if requested
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule ^ontology/ ontologies/sett.rdf [R=303]
+RewriteRule ^ontology/ ontologies/sett-ontology.rdf [R=303]
 
 # Rewrite rule to serve text/turtle content from the vocabulary URI if requested
 RewriteCond %{HTTP_ACCEPT} text/turtle
-RewriteRule ^ontology/ ontologies/sett.ttl [R=303]
+RewriteRule ^ontology/ ontologies/sett-ontology.ttl [R=303]
 
-RewriteRule ^ontology/ ontologies/sett.ttl
+RewriteRule ^ontology/ ontologies/sett-ontology.ttl
